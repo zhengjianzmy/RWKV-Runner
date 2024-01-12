@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import asyncio
 import json
 from threading import Lock
@@ -12,6 +13,21 @@ import tiktoken
 from utils.rwkv import *
 from utils.log import quick_log
 import global_var
+
+# from tkinter import messagebox
+
+import os
+import sys
+import logging
+
+from tencentcloud.common import credential
+from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
+# 导入对应产品模块的client models。
+from tencentcloud.tms.v20201229 import tms_client, models
+
+# 导入可选配置类
+from tencentcloud.common.profile.client_profile import ClientProfile
+from tencentcloud.common.profile.http_profile import HttpProfile
 
 router = APIRouter()
 
@@ -78,6 +94,9 @@ class ChatCompletionBody(ModelConfigBody):
         }
     }
 
+class TencentCloudBody(BaseModel):
+    content: str
+
 
 class CompletionBody(ModelConfigBody):
     prompt: Union[str, List[str], None]
@@ -107,6 +126,107 @@ completion_lock = Lock()
 
 requests_num = 0
 
+def tencentcloudinput(content):
+    try:
+        cred = credential.Credential(
+                os.environ.get("TENCENTCLOUD_SECRET_ID"),
+                os.environ.get("TENCENTCLOUD_SECRET_KEY"))
+        httpProfile = HttpProfile()
+        httpProfile.scheme = "https"  # 在外网互通的网络环境下支持http协议(默认是https协议),建议使用https协议
+        httpProfile.keepAlive = True  # 状态保持，默认是False
+        httpProfile.reqMethod = "POST"  # get请求(默认为post请求)
+        httpProfile.reqTimeout = 30    # 请求超时时间，单位为秒(默认60秒)
+        httpProfile.endpoint = "tms.tencentcloudapi.com"  # 指定接入地域域名(默认就近接入)
+
+        clientProfile = ClientProfile()
+        clientProfile.signMethod = "TC3-HMAC-SHA256"  # 指定签名算法
+        clientProfile.language = "en-US"  # 指定展示英文（默认为中文）
+        clientProfile.httpProfile = httpProfile
+
+        client = tms_client.TmsClient(cred, "ap-guangzhou", clientProfile)
+        req = models.TextModerationRequest()
+        data = str('' + content)
+        encoded_data = base64.b64encode(data.encode())
+        # print(encoded_data)
+        decoded_data = encoded_data.decode('utf-8')
+        # print(decoded_data)
+        # InputBizType = "1744914766515671040"
+        InputBizType = "NLNChat_model_input"
+        # OutputBizType = "1744927766656061440"
+        OutputBizType = "NLNChat_model_output"
+        params = {
+            "Content": decoded_data,
+            "BizType": InputBizType
+        }
+        # print(params)
+        req.from_json_string(json.dumps(params))
+
+        resp = client.TextModeration(req)
+
+        # print(resp.to_json_string(indent=2))
+        # messagebox.showinfo("tencentcloudresult", resp.to_json_string(indent=2))
+        return resp.to_json_string(indent=2)
+    except TencentCloudSDKException as err:
+        print(err)
+        return err
+
+
+def tencentcloudoutput(content):
+    try:
+        cred = credential.Credential(
+                os.environ.get("TENCENTCLOUD_SECRET_ID"),
+                os.environ.get("TENCENTCLOUD_SECRET_KEY"))
+        httpProfile = HttpProfile()
+        httpProfile.scheme = "https"  # 在外网互通的网络环境下支持http协议(默认是https协议),建议使用https协议
+        httpProfile.keepAlive = True  # 状态保持，默认是False
+        httpProfile.reqMethod = "POST"  # get请求(默认为post请求)
+        httpProfile.reqTimeout = 30    # 请求超时时间，单位为秒(默认60秒)
+        httpProfile.endpoint = "tms.tencentcloudapi.com"  # 指定接入地域域名(默认就近接入)
+
+        clientProfile = ClientProfile()
+        clientProfile.signMethod = "TC3-HMAC-SHA256"  # 指定签名算法
+        clientProfile.language = "en-US"  # 指定展示英文（默认为中文）
+        clientProfile.httpProfile = httpProfile
+
+        client = tms_client.TmsClient(cred, "ap-guangzhou", clientProfile)
+        req = models.TextModerationRequest()
+        data = str('' + content)
+        encoded_data = base64.b64encode(data.encode())
+        # print(encoded_data)
+        decoded_data = encoded_data.decode('utf-8')
+        # print(decoded_data)
+        # InputBizType = "1744914766515671040"
+        InputBizType = "NLNChat_model_input"
+        # OutputBizType = "1744927766656061440"
+        OutputBizType = "NLNChat_model_output"
+        params = {
+            "Content": decoded_data,
+            "BizType": OutputBizType
+        }
+        # print(params)
+        req.from_json_string(json.dumps(params))
+
+        resp = client.TextModeration(req)
+
+        # print(resp.to_json_string(indent=2))
+        # messagebox.showinfo("tencentcloudresult", resp.to_json_string(indent=2))
+        return resp.to_json_string(indent=2)
+    except TencentCloudSDKException as err:
+        print(err)
+        return err
+
+def chat_evl(content: TencentCloudBody):
+    # print("content:")
+    # print(content)
+    # print(content.content)
+    loaded_data = json.loads(tencentcloudoutput(content.content))
+    # 将 Python 对象重新转换为格式化的 JSON 字符串
+    yield json.dumps(loaded_data)
+
+@router.post("/v1/chat/tencentcloud", tags=["Tencentcloud"])
+def chat_tencentcloud(content: TencentCloudBody):
+    return EventSourceResponse(chat_evl(content))
+
 
 async def eval_rwkv(
     model: AbstractRWKV,
@@ -117,7 +237,9 @@ async def eval_rwkv(
     stop: Union[str, List[str], None],
     chat_mode: bool,
 ):
+    tencentcloudresult = tencentcloudinput(body.messages[-1].content)
     global requests_num
+    # global tencentcloudoutputresult
     requests_num = requests_num + 1
     quick_log(request, None, "Start Waiting. RequestsNum: " + str(requests_num))
     while completion_lock.locked():
@@ -158,7 +280,8 @@ async def eval_rwkv(
                             "object": "chat.completion.chunk"
                             if chat_mode
                             else "text_completion",
-                            # "response": response,
+                            "response": response,
+                            "tencentcloudresult": tencentcloudresult,
                             "model": model.name,
                             "choices": [
                                 {
@@ -176,6 +299,11 @@ async def eval_rwkv(
                         }
                     )
             # torch_gc()
+            tencentcloudoutputresult = tencentcloudoutput(response)
+            print("tencentcloudoutputresult:")
+            # print(tencentcloudoutputresult)
+            print("response:")
+            # print(response)
             requests_num = requests_num - 1
             if await request.is_disconnected():
                 print(f"{request.client} Stop Waiting")
@@ -253,6 +381,7 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
     if body.messages is None or body.messages == []:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "messages not found")
 
+    # print(body.messages[-1].content)
     interface = model.interface
     user = model.user if body.user_name is None else body.user_name
     bot = model.bot if body.assistant_name is None else body.assistant_name

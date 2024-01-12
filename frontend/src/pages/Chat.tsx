@@ -35,6 +35,8 @@ import { Labeled } from '../components/Labeled';
 import { ValuedSlider } from '../components/ValuedSlider';
 import { PresetsButton } from './PresetsManager/PresetsButton';
 import { webOpenOpenFileDialog } from '../utils/web-file-operations';
+// import * as tencentcloud from "tencentcloud-sdk-nodejs-tms";
+import { Buffer } from 'buffer';
 
 let chatSseControllers: {
   [id: string]: AbortController
@@ -365,6 +367,8 @@ const ChatPanel: FC = observer(() => {
   // if answerId is not null, override the answer with new response;
   // if startUuid is null, start generating api body messages from first message;
   // if endUuid is null, generate api body messages until last message;
+  const [shouldExecuteSecond, setShouldExecuteSecond] = useState(true);
+  let tencentresponse = '';
   const onSubmit = useCallback((message: string | null = null, answerId: string | null = null,
     startUuid: string | null = null, endUuid: string | null = null, includeEndUuid: boolean = false) => {
     if (message) {
@@ -435,6 +439,7 @@ const ChatPanel: FC = observer(() => {
     let answer = '';
     const chatSseController = new AbortController();
     chatSseControllers[answerId] = chatSseController;
+    let tencentcloudresult = '';
     fetchEventSource( // https://api.openai.com/v1/chat/completions || http://127.0.0.1:${port}/v1/chat/completions
       getServerRoot(port, true) + '/v1/chat/completions',
       {
@@ -476,6 +481,15 @@ const ChatPanel: FC = observer(() => {
           }
           if (data.model)
             commonStore.setLastModelName(data.model);
+          if(data.tencentcloudresult) {
+            tencentcloudresult = data.tencentcloudresult;
+            // console.log(data.tencentcloudresult);
+            // window.alert(data.tencentcloudresult);
+          }
+          if(data.response) {
+            tencentresponse = data.response;
+            // console.log(data.response);
+          }
           if (data.choices && Array.isArray(data.choices) && data.choices.length > 0) {
             answer += data.choices[0]?.delta?.content || '';
             commonStore.conversation[answerId!].content = answer;
@@ -494,6 +508,49 @@ const ChatPanel: FC = observer(() => {
         onclose() {
           if (answerId! in chatSseControllers)
             delete chatSseControllers[answerId!];
+          // console.log(tencentresponse);
+          window.alert(tencentcloudresult);
+          let tencentcloudoutput = '';
+          fetchEventSource(
+            getServerRoot(port, true) + '/v1/chat/tencentcloud',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${commonStore.settings.apiKey}`
+              },
+              body: JSON.stringify({
+                content: tencentresponse
+              }),
+              onmessage(e) {
+                // console.log(e)
+                // tencentcloudoutput = e.data;
+                if (e.data.trim() === '[DONE]') {
+                  return;
+                }
+                let data;
+                try {
+                  data = JSON.parse(e.data);
+                } catch (error) {
+                  console.debug('json error', error);
+                  return;
+                }
+                tencentcloudoutput = data;
+              },
+              async onopen(response) {
+                if (response.status !== 200) {
+                  setTimeout(scrollToBottom);
+                }
+              },
+              onclose() {
+                // console.log(tencentcloudoutput);
+                window.alert(JSON.stringify(tencentcloudoutput));
+                console.log('Connection closed');
+              },
+              onerror(err) {
+                throw err;
+              }
+            });
           console.log('Connection closed');
         },
         onerror(err) {
@@ -510,7 +567,7 @@ const ChatPanel: FC = observer(() => {
           throw err;
         }
       });
-  }, []);
+  }, [shouldExecuteSecond]);
 
   return (
     <div className="flex h-full grow pt-4 overflow-hidden">

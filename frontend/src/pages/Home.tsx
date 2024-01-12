@@ -28,24 +28,6 @@ const clientNavCards: NavCard[] = [
     desc: 'Go to chat page',
     path: '/chat',
     icon: <Chat20Regular />
-  },
-  {
-    label: 'Completion',
-    desc: 'Writer, Translator, Role-playing',
-    path: '/completion',
-    icon: <ClipboardEdit20Regular />
-  },
-  {
-    label: 'Configs',
-    desc: 'Manage your configs',
-    path: '/configs',
-    icon: <DocumentSettings20Regular />
-  },
-  {
-    label: 'Models',
-    desc: 'Manage models',
-    path: '/models',
-    icon: <DataUsageSettings20Regular />
   }
 ];
 
@@ -55,24 +37,6 @@ const webNavCards: NavCard[] = [
     desc: 'Go to chat page',
     path: '/chat',
     icon: <Chat20Regular />
-  },
-  {
-    label: 'Completion',
-    desc: 'Writer, Translator, Role-playing',
-    path: '/completion',
-    icon: <ClipboardEdit20Regular />
-  },
-  {
-    label: 'Composition',
-    desc: '',
-    path: '/composition',
-    icon: <MusicNote220Regular />
-  },
-  {
-    label: 'Settings',
-    desc: '',
-    path: '/settings',
-    icon: <Settings20Regular />
   }
 ];
 
