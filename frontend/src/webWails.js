@@ -10,7 +10,8 @@ function defineApp(name, func) {
 
 if (!window.runtime) {
   window.runtime = {}
-  document.title += ' WebUI'
+  // document.title += ' WebUI'
+  document.title = 'Luxi-NLMChat'
 
   // not implemented
   defineRuntime('EventsOnMultiple', () => {
