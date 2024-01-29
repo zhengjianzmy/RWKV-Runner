@@ -107,7 +107,7 @@ func main() {
 
 	// Create application with options
 	err = wails.Run(&options.App{
-		Title:                    "RWKV-Runner",
+		Title:                    "Luxi-NLMChat",
 		Width:                    1024,
 		Height:                   700,
 		MinWidth:                 375,

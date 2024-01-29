@@ -150,10 +150,8 @@ def tencentcloudinput(content):
         # print(encoded_data)
         decoded_data = encoded_data.decode('utf-8')
         # print(decoded_data)
-        # InputBizType = "1744914766515671040"
-        InputBizType = "NLNChat_model_input"
-        # OutputBizType = "1744927766656061440"
-        OutputBizType = "NLNChat_model_output"
+        # InputBizType = "NLNChat_model_input"
+        InputBizType = "1744927766656061440"
         params = {
             "Content": decoded_data,
             "BizType": InputBizType
@@ -195,10 +193,8 @@ def tencentcloudoutput(content):
         # print(encoded_data)
         decoded_data = encoded_data.decode('utf-8')
         # print(decoded_data)
-        # InputBizType = "1744914766515671040"
-        InputBizType = "NLNChat_model_input"
-        # OutputBizType = "1744927766656061440"
-        OutputBizType = "NLNChat_model_output"
+        OutputBizType = "1744914766515671040"
+        # OutputBizType = "NLNChat_model_output"
         params = {
             "Content": decoded_data,
             "BizType": OutputBizType
