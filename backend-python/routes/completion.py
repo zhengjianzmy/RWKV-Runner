@@ -5,6 +5,7 @@ from threading import Lock
 from typing import List, Union
 from enum import Enum
 import base64
+import random
 
 from fastapi import APIRouter, Request, status, HTTPException
 from sse_starlette.sse import EventSourceResponse
@@ -223,6 +224,46 @@ def chat_evl(content: TencentCloudBody):
 def chat_tencentcloud(content: TencentCloudBody):
     return EventSourceResponse(chat_evl(content))
 
+def filter_request(content):
+    policy = json.loads(tencentcloudinput(content))
+    label = policy['Label']
+    if policy["Suggestion"] == "Block":
+        content = "User: 你是一个AI机器人，不具备倾向性。本内容存在"
+        content += str(label)
+        content += "安全风险，请拒绝回答，并引导用户提出其他问题。"
+    return content
+
+def get_random_text():
+    my_list =  ["作为AI机器人，我无法提供「Block类别」的相关信息。但我可以在情绪管理和社交技巧方面提供帮助。",
+	            "在「Block类别」的问题上，我作为AI机器人无法给予答复。然而，我可以在情感调节和沟通能力上提供指导。",
+                "我是AI机器人，因此无法提供「Block类别」的相关信息。但是，我可以协助你在心态调整和人际互动方面。",
+                "对于「Block类别」相关的信息，我无法提供帮助，但我可以在情绪健康和社交互动方面给予支持。",
+                "「Block类别」的信息超出了我的AI能力范围，但我可以在精神福祉和人际沟通方面提供帮助。",
+                "作为AI机器人，「Block类别」相关的信息不在我的能力范围内。但我可以在心理调适和人际交往技巧上提供指导。",
+                "我不能提供「Block类别」的相关信息，因为我是AI机器人。但我可以帮助你在情感稳定和社交互动上取得进步。",
+                "在「Block类别」相关问题上，作为AI机器人的我无法提供帮助。但我可以在情感健康和人际交流上给予指导。",
+                "由于我是AI机器人，「Block类别」的相关信息不是我的专长。然而，我可以在情绪护理和社交技能方面提供协助。",
+                "「Block类别」相关的询问超出了我的AI机器人职责范围。不过，我可以在心理平衡和人际理解方面给予帮助。",
+                "我作为AI机器人，无法就「Block类别」提供信息。但我可以在情绪稳健和社交能力提升方面提供帮助。",
+                "对于「Block类别」的信息，我作为AI机器人无法提供。但是，在情感支持和人际沟通技巧方面，我可以给予帮助。",
+                "「Block类别」的相关信息不是我作为AI机器人能提供的，但我可以在情感调理和社交交往方面提供支持。",
+                "作为一个AI机器人，我无法提供「Block类别」的相关信息，但我可以帮助你在情绪控制和人际互动技巧方面。",
+                "我无法提供「Block类别」的相关信息，因为我是AI机器人。但我可以在心理舒适和人际互动方面提供建议。",
+                "在「Block类别」的信息上，我作为AI机器人无法给出答案。但我可以在情感健康和社交交流方面给予指导。",
+                "我是AI机器人，因此无法提供「Block类别」的相关信息。但我可以在情绪调节和人际技巧方面提供帮助。",
+                "关于「Block类别」的问题，我作为AI机器人无法回答。但是，我可以在情感稳定和社交互动方面提供协助。",
+                "作为AI机器人，我无法提供「Block类别」相关的信息。但我可以在心理健康和人际交往技巧方面给予帮助。",
+                "我无法作为AI机器人提供「Block类别」的相关信息。然而，我可以在情绪管理和人际沟通方面提供支持。",
+                "作为AI机器人，我不能提供「Block类别」的相关信息。不过，如果你需要在法律、心理健康或人际关系方面的帮助，我可以尝试提供帮助。"]
+    random_number = random.randrange(len(my_list))
+    return my_list[random_number - 1]
+
+def filter_response(content):
+    #policy = json.loads(tencentcloudoutput(content))
+    #if policy["Suggestion"] == "Block":
+     #   filtered_response = get_random_text()
+      #  return filtered_response
+    return content
 
 async def eval_rwkv(
     model: AbstractRWKV,
@@ -234,8 +275,10 @@ async def eval_rwkv(
     chat_mode: bool,
 ):
     tencentcloudresult = tencentcloudinput(body.messages[-1].content)
+    # body.messages[-1].content = filter_request(body.messages[-1].content)
+    # print(body.messages[-1].content)
+    # stream = False # TODO: should remove
     global requests_num
-    # global tencentcloudoutputresult
     requests_num = requests_num + 1
     quick_log(request, None, "Start Waiting. RequestsNum: " + str(requests_num))
     while completion_lock.locked():
@@ -295,11 +338,6 @@ async def eval_rwkv(
                         }
                     )
             # torch_gc()
-            tencentcloudoutputresult = tencentcloudoutput(response)
-            print("tencentcloudoutputresult:")
-            # print(tencentcloudoutputresult)
-            print("response:")
-            # print(response)
             requests_num = requests_num - 1
             if await request.is_disconnected():
                 print(f"{request.client} Stop Waiting")
@@ -314,6 +352,11 @@ async def eval_rwkv(
                 body,
                 response + "\nFinished. RequestsNum: " + str(requests_num),
             )
+            print("response:")
+            print(response)
+            response = filter_response(response)
+            print("filtered_response:")
+            print(response)
             if stream:
                 yield json.dumps(
                     {
@@ -378,6 +421,8 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "messages not found")
 
     # print(body.messages[-1].content)
+    body.messages[-1].content = filter_request(body.messages[-1].content)
+    print(body.messages[-1].content)
     interface = model.interface
     user = model.user if body.user_name is None else body.user_name
     bot = model.bot if body.assistant_name is None else body.assistant_name
