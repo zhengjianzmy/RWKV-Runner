@@ -21,6 +21,12 @@ def get_args(args: Union[Sequence[str], None] = None):
         default="127.0.0.1",
         help="host to run the server on (default: 127.0.0.1)",
     )
+    group.add_argument(
+        "--workers",
+        type=str,
+        default=1,
+        help="workers to run the server (default: 1)",
+    )
     group = parser.add_argument_group(title="mode arguments")
     group.add_argument(
         "--webui",
@@ -141,4 +147,4 @@ def init():
 if __name__ == "__main__":
     os.environ["RWKV_RUNNER_PARAMS"] = " ".join(sys.argv[1:])
     print("--- %s seconds ---" % (time.time() - start_time))
-    uvicorn.run("main:app", port=args.port, host=args.host, workers=1)
+    uvicorn.run("main:app", port=args.port, host=args.host, workers=int(args.workers))
