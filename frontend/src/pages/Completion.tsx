@@ -71,6 +71,13 @@ const CompletionPanel: FC = observer(() => {
   const onSubmit = (prompt: string) => {
     commonStore.setCompletionSubmittedPrompt(prompt);
 
+    if (commonStore.settings.username == '') {
+      console.log(commonStore.settings.username)
+      console.log("请先登录")
+      window.alert(t('Login First'));
+      return;
+    }
+
     if (commonStore.status.status === ModelStatus.Offline && !commonStore.settings.apiUrl && commonStore.platform !== 'web') {
       toast(t('Please click the button in the top right corner to start the model'), { type: 'warning' });
       commonStore.setCompletionGenerating(false);

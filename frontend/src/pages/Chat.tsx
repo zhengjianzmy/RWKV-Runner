@@ -35,7 +35,6 @@ import { Labeled } from '../components/Labeled';
 import { ValuedSlider } from '../components/ValuedSlider';
 import { PresetsButton } from './PresetsManager/PresetsButton';
 import { webOpenOpenFileDialog } from '../utils/web-file-operations';
-// import * as tencentcloud from "tencentcloud-sdk-nodejs-tms";
 import { Buffer } from 'buffer';
 
 let chatSseControllers: {
@@ -85,7 +84,7 @@ const ChatMessageItem: FC<{
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const messageItem = commonStore.conversation[uuid];
 
-  console.log(uuid);
+  // console.log(uuid);
 
   const setEditingInner = (editing: boolean) => {
     setEditing(editing);
@@ -371,6 +370,14 @@ const ChatPanel: FC = observer(() => {
   let tencentresponse = '';
   const onSubmit = useCallback((message: string | null = null, answerId: string | null = null,
     startUuid: string | null = null, endUuid: string | null = null, includeEndUuid: boolean = false) => {
+
+    if (commonStore.settings.username == '' && commonStore.settings.phoneNumber == '') {
+      console.log(commonStore.settings.username)
+      console.log("请先登录")
+      window.alert(t('Login First'));
+      return;
+    }
+
     if (message) {
       const newId = uuid();
       commonStore.conversation[newId] = {
@@ -483,6 +490,7 @@ const ChatPanel: FC = observer(() => {
             commonStore.setLastModelName(data.model);
           if(data.tencentcloudresult) {
             tencentcloudresult = data.tencentcloudresult;
+            
             // console.log(data.tencentcloudresult);
             // window.alert(data.tencentcloudresult);
           }
@@ -508,7 +516,6 @@ const ChatPanel: FC = observer(() => {
         onclose() {
           if (answerId! in chatSseControllers)
             delete chatSseControllers[answerId!];
-          // console.log(tencentresponse);
           window.alert(tencentcloudresult);
           let tencentcloudoutput = '';
           fetchEventSource(
@@ -545,6 +552,41 @@ const ChatPanel: FC = observer(() => {
               onclose() {
                 // console.log(tencentcloudoutput);
                 window.alert(JSON.stringify(tencentcloudoutput));
+                fetchEventSource(
+                  getServerRoot(port, true) + '/v1/insert_chat',
+                  {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      Authorization: `Bearer ${commonStore.settings.apiKey}`
+                    },
+                    body: JSON.stringify({
+                      id: commonStore.settings.uuid,
+                      input: messages[messages.length - 1].content.replace(/"/g, "").replace(/'/g, ""),
+                      filtered_input: JSON.stringify(tencentcloudresult),
+                      output: tencentresponse.replace(/"/g, "").replace(/'/g, ""),
+                      filtered_output: JSON.stringify(tencentcloudoutput)
+                    }),
+                    onmessage(e) {
+                      // console.log(e)
+                      let data;
+                      try {
+                        data = JSON.parse(e.data);
+                      } catch (error) {
+                        console.debug('json error', error);
+                        return;
+                      }
+                    },
+                    async onopen(response) {
+                      console.log(response)
+                    },
+                    onclose() {
+                      console.log('Connection closed');
+                    },
+                    onerror(err) {
+                      throw err;
+                    }
+                  });
                 console.log('Connection closed');
               },
               onerror(err) {

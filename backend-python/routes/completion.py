@@ -30,6 +30,13 @@ from tencentcloud.tms.v20201229 import tms_client, models
 from tencentcloud.common.profile.client_profile import ClientProfile
 from tencentcloud.common.profile.http_profile import HttpProfile
 
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+
+from .login import User
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
 router = APIRouter()
 
 
@@ -217,6 +224,7 @@ def chat_evl(content: TencentCloudBody):
     # print(content)
     # print(content.content)
     loaded_data = json.loads(tencentcloudoutput(content.content))
+    (content.content, loaded_data)
     # 将 Python 对象重新转换为格式化的 JSON 字符串
     yield json.dumps(loaded_data)
 
@@ -353,10 +361,10 @@ async def eval_rwkv(
                 response + "\nFinished. RequestsNum: " + str(requests_num),
             )
             print("response:")
-            print(response)
+            # print(response)
             response = filter_response(response)
             print("filtered_response:")
-            print(response)
+            # print(response)
             if stream:
                 yield json.dumps(
                     {
@@ -422,7 +430,7 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
 
     # print(body.messages[-1].content)
     body.messages[-1].content = filter_request(body.messages[-1].content)
-    print(body.messages[-1].content)
+    # print(body.messages[-1].content)
     interface = model.interface
     user = model.user if body.user_name is None else body.user_name
     bot = model.bot if body.assistant_name is None else body.assistant_name

@@ -28,6 +28,12 @@ const clientNavCards: NavCard[] = [
     desc: 'Go to chat page',
     path: '/chat',
     icon: <Chat20Regular />
+  },
+  {
+    label: 'Profile',
+    desc: 'Go to profile page',
+    path: '/profile',
+    icon: <Settings20Regular />
   }
 ];
 
@@ -37,6 +43,12 @@ const webNavCards: NavCard[] = [
     desc: 'Go to chat page',
     path: '/chat',
     icon: <Chat20Regular />
+  },
+  {
+    label: 'Profile',
+    desc: 'Go to profile page',
+    path: '/profile',
+    icon: <Settings20Regular />
   }
 ];
 

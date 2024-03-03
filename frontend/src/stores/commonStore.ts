@@ -178,7 +178,27 @@ class CommonStore {
     apiKey: '',
     apiChatModelName: 'rwkv',
     apiCompletionModelName: 'rwkv',
-    coreApiUrl: ''
+    coreApiUrl: '',
+    username: '',
+    password: '',
+    email: '',
+    phoneNumber: '',
+    code: '',
+    token: '',
+    oldCode: '',
+    uuid: '',
+    privacyConfirmed: true,
+    notTruth: false,
+    timeout: false,
+    notLogin: false,
+    notChat: false,
+    bodyHit: false,
+    policy: false,
+    sex: false,
+    notHealthy: false,
+    others: false,
+    description: '',
+    contact: ''
   };
   // about
   about: AboutContent = manifest.about;
