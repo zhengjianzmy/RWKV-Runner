@@ -25,7 +25,7 @@ class AbstractRWKV(ABC):
     def __init__(self, model, pipeline):
         self.EOS_ID = 0
 
-        self.name = "rwkv"
+        self.name = "luxi-nlm"
         self.model = model
         self.pipeline = pipeline
         self.model_state = None

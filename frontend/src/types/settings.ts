@@ -1,7 +1,6 @@
 export const Languages = {
   dev: 'English', // i18n default
-  zh: '简体中文',
-  ja: '日本語'
+  zh: '简体中文'
 };
 export type Language = keyof typeof Languages;
 export type SettingsType = {
@@ -29,6 +28,7 @@ export type SettingsType = {
   oldCode: String
   uuid: String
   privacyConfirmed: boolean
+  notInteresting: boolean
   notTruth: boolean
   timeout: boolean
   notLogin: boolean
@@ -39,5 +39,6 @@ export type SettingsType = {
   notHealthy: boolean
   others: boolean
   description: string
-  contact: string
+  contactPhone: string
+  contactEmail: string
 }

@@ -7,6 +7,8 @@ import {
   AccordionPanel,
   Button,
   Checkbox,
+  Text,
+  Link,
   Dropdown,
   Input,
   Option,
@@ -139,6 +141,16 @@ export const AdvancedGeneralSettings: FC = observer(() => {
     console.log('Connection closed');
   };
 
+  const handleAgreement = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    window.alert(t('Agreement Text'));
+  };
+
+  const handlePolicy = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    window.alert(t('Private Policy Text'));
+  };
+
   return <div className="flex flex-col gap-2">
     <Labeled label={t('Phone Number')}
       content={
@@ -164,10 +176,17 @@ export const AdvancedGeneralSettings: FC = observer(() => {
           <Button appearance="primary" onClick={confirmCode}>{t('Login')}</Button>
         </div>
       } />
-    <Labeled label={t('Privacy')}
+    <Labeled label={t('Register') }
       content={
           <Checkbox className="select-none"
-                  size="large" label={t('Privacy Confirmed')}
+                  size="large" label={(
+                    <>
+                      <Text>{t('You Confirmed')}</Text>
+                      <Link href="#" onClick={handleAgreement}>{t('Agreement')}</Link>
+                      <Text>{t('And')}</Text>
+                      <Link href="#" onClick={handlePolicy}>{t('Private Policy')}</Link>
+                    </>
+                  )}
                   checked={commonStore.settings.privacyConfirmed}
                   onChange={(_, data) => {
                     commonStore.setSettings({

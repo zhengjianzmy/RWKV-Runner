@@ -36,6 +36,13 @@ export const pages: NavigationItem[] = [
     top: true
   },
   {
+    label: 'Setting',
+    path: '/setting',
+    icon: <Settings20Regular />,
+    element: lazy(() => import('./Setting')),
+    top: true
+  },
+  {
     label: 'Profile',
     path: '/profile',
     icon: <Info20Regular />,

@@ -68,7 +68,7 @@ default_stop = [
 
 class ChatCompletionBody(ModelConfigBody):
     messages: Union[List[Message], None]
-    model: Union[str, None] = "rwkv"
+    model: Union[str, None] = "luxi-nlm"
     stream: bool = False
     stop: Union[str, List[str], None] = default_stop
     user_name: Union[str, None] = Field(
@@ -87,7 +87,7 @@ class ChatCompletionBody(ModelConfigBody):
                 "messages": [
                     {"role": Role.User.value, "content": "hello", "raw": False}
                 ],
-                "model": "rwkv",
+                "model": "luxi-nlm",
                 "stream": False,
                 "stop": None,
                 "user_name": None,
@@ -117,7 +117,7 @@ class CompletionBody(ModelConfigBody):
             "example": {
                 "prompt": "The following is an epic science fiction masterpiece that is immortalized, "
                 + "with delicate descriptions and grand depictions of interstellar civilization wars.\nChapter 1.\n",
-                "model": "rwkv",
+                "model": "luxi-nlm",
                 "stream": False,
                 "stop": None,
                 "max_tokens": 100,
@@ -281,8 +281,11 @@ async def eval_rwkv(
     stream: bool,
     stop: Union[str, List[str], None],
     chat_mode: bool,
+    old_content: str = None
 ):
-    tencentcloudresult = tencentcloudinput(body.messages[-1].content)
+    if old_content is None:
+        old_content = body.messages[-1].content
+    tencentcloudresult = tencentcloudinput(old_content)
     # body.messages[-1].content = filter_request(body.messages[-1].content)
     # print(body.messages[-1].content)
     # stream = False # TODO: should remove
@@ -429,6 +432,7 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "messages not found")
 
     # print(body.messages[-1].content)
+    old_content = body.messages[-1].content
     body.messages[-1].content = filter_request(body.messages[-1].content)
     # print(body.messages[-1].content)
     interface = model.interface
@@ -518,7 +522,7 @@ The following is a coherent verbose detailed conversation between a girl named {
     if body.stream:
         return EventSourceResponse(
             eval_rwkv(
-                model, request, body, completion_text, body.stream, body.stop, True
+                model, request, body, completion_text, body.stream, body.stop, True, old_content
             )
         )
     else:
@@ -566,7 +570,7 @@ class EmbeddingsBody(BaseModel):
         "json_schema_extra": {
             "example": {
                 "input": "a big apple",
-                "model": "rwkv",
+                "model": "luxi-nlm",
                 "encoding_format": None,
                 "fast_mode": False,
             }

@@ -48,6 +48,7 @@ class Category(BaseModel):
 
 class Feedback(BaseModel):
     id: str
+    notInteresting: bool
     notTruth: bool
     timeout: bool
     notLogin: bool
@@ -58,7 +59,8 @@ class Feedback(BaseModel):
     notHealthy: bool
     others: bool
     description: str
-    contact: str
+    phoneNumber: str
+    email: str
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
@@ -166,7 +168,7 @@ def insert_feedback_db(feedback: Feedback):
     random_uuid = uuid.uuid4()
     now = datetime.now()
     now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("INSERT INTO feedback (id,feedback_id,is_not_truth,is_timeout,is_not_login,is_not_chat,is_body_hit,is_policy,is_sex,is_not_healthy,is_others,description,contact,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (feedback.id,random_uuid,feedback.notTruth,feedback.timeout,feedback.notLogin,feedback.notChat,feedback.bodyHit,feedback.policy,feedback.sex,feedback.notHealthy,feedback.others,feedback.description,feedback.contact,now))
+    cursor.execute("INSERT INTO feedback (id,feedback_id,is_not_interesting,is_not_truth,is_timeout,is_not_login,is_not_chat,is_body_hit,is_policy,is_sex,is_not_healthy,is_others,description,phone_number,email,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (feedback.id,random_uuid,feedback.notInteresting,feedback.notTruth,feedback.timeout,feedback.notLogin,feedback.notChat,feedback.bodyHit,feedback.policy,feedback.sex,feedback.notHealthy,feedback.others,feedback.description,feedback.phoneNumber,feedback.email,now))
     # 使用 commit() 方法
     conn.commit()
     # 关闭数据库连接

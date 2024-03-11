@@ -43,6 +43,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
         },
         body: JSON.stringify({
           id: commonStore.settings.uuid,
+          notInteresting: commonStore.settings.notInteresting,
           notTruth: commonStore.settings.notTruth,
           timeout: commonStore.settings.timeout,
           notLogin: commonStore.settings.notLogin,
@@ -53,7 +54,8 @@ export const AdvancedGeneralSettings: FC = observer(() => {
           notHealthy: commonStore.settings.notHealthy,
           others: commonStore.settings.others,
           description: commonStore.settings.description,
-          contact: commonStore.settings.contact
+          phoneNumber: commonStore.settings.contactPhone,
+          email: commonStore.settings.contactEmail
         }),
         onmessage(e) {
           console.log(e.data)
@@ -69,7 +71,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
           console.log(response);
         },
         onclose() {
-          window.alert(t('Update Success'));
+          window.alert(t('Feedback Success'));
           console.log('Connection closed');
         },
         onerror(err) {
@@ -80,6 +82,17 @@ export const AdvancedGeneralSettings: FC = observer(() => {
   };
 
   return <div className="flex flex-col gap-2">
+    <Labeled label={t('Not Interesting')}
+      content={
+          <Checkbox className="select-none"
+                  size="large" label={t('Not Interesting')}
+                  checked={commonStore.settings.notInteresting}
+                  onChange={(_, data) => {
+                    commonStore.setSettings({
+                      notInteresting: data.checked as boolean
+                    });
+                  }} />
+      } />
     <Labeled label={t('Not Truth')}
       content={
           <Checkbox className="select-none"
@@ -189,19 +202,29 @@ export const AdvancedGeneralSettings: FC = observer(() => {
               });
             }} />
       } />
-    <Labeled label={t('Contact')}
+    <Labeled label={t('Contact Phone')}
       content={
-          <Input style={{ minWidth: 0 }} className="grow" placeholder="contact"
-            value={commonStore.settings.contact}
+          <Input style={{ minWidth: 0 }} className="grow" placeholder="phone_number"
+            value={commonStore.settings.contactPhone}
             onChange={(e, data) => {
               commonStore.setSettings({
-                contact: data.value
+                contactPhone: data.value
               });
             }} />
       } />
-      <Labeled label={t('Save')}
+    <Labeled label={t('Contact Email')}
+      content={
+          <Input style={{ minWidth: 0 }} className="grow" placeholder="email"
+            value={commonStore.settings.contactEmail}
+            onChange={(e, data) => {
+              commonStore.setSettings({
+                contactEmail: data.value
+              });
+            }} />
+      } />
+      <Labeled label={t('Upload')}
         content={
-            <Button appearance="primary" onClick={saveAll}>{t('Save')}</Button>
+            <Button appearance="primary" onClick={saveAll}>{t('Upload')}</Button>
       } />
   </div>;
 });
@@ -216,7 +239,7 @@ const Feedback: FC = observer(() => {
   }, []);
 
   return (
-    <Page title={t('Feedback')} content={
+    <Page title={t('Feedback(Multi Selected)')} content={
       <div className="flex flex-col gap-2 overflow-y-auto overflow-x-hidden p-1">
         {
           commonStore.platform === 'web' ?

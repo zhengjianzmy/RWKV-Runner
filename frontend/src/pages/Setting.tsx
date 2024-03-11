@@ -5,7 +5,6 @@ import {
   AccordionHeader,
   AccordionItem,
   AccordionPanel,
-  Button,
   Dropdown,
   Input,
   Option,
@@ -18,174 +17,66 @@ import { useTranslation } from 'react-i18next';
 import { checkUpdate, toastWithButton } from '../utils';
 import { RestartApp } from '../../wailsjs/go/backend_golang/App';
 import { Language, Languages } from '../types/settings';
-import { fetchEventSource } from '@microsoft/fetch-event-source';
-import { getServerRoot } from '../utils';
 
-
-export const AdvancedGeneralSettings: FC = observer(() => {
+export const GeneralSettings: FC = observer(() => {
   const { t } = useTranslation();
 
-  let code: string = "";
-  let phone_number: string = "";
-
-  const currentConfig = commonStore.getCurrentModelConfig();
-  const apiParams = currentConfig.apiParameters;
-  const port = apiParams.apiPort;
-  
-  const saveAll = () => {
-    fetchEventSource(
-      getServerRoot(port, true) + '/v1/update_user',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${commonStore.settings.apiKey}`
-        },
-        body: JSON.stringify({
-          username: commonStore.settings.username,
-          email: commonStore.settings.email,
-          password: commonStore.settings.password,
-          phone_number: commonStore.settings.phoneNumber
-        }),
-        onmessage(e) {
-          console.log(e.data)
-          let data;
-          try {
-            data = JSON.parse(e.data);
-          } catch (error) {
-            console.debug('json error', error);
-            return;
-          }
-          commonStore.setSettings({
-            email: data.email
-          });
-          commonStore.setSettings({
-            username: data.username
-          });
-          commonStore.setSettings({
-            password: data.password
-          });
-        },
-        async onopen(response) {
-          console.log(response);
-        },
-        onclose() {
-          window.alert(t('Update Success'));
-          console.log('Connection closed');
-        },
-        onerror(err) {
-          throw err;
-        }
-      });
-    console.log('Connection closed');
-  };
-
-  const deleteUser = () => {
-    fetchEventSource(
-      getServerRoot(port, true) + '/v1/update_user',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${commonStore.settings.apiKey}`
-        },
-        body: JSON.stringify({
-          username: "",
-          email: "",
-          password: "",
-          phone_number: commonStore.settings.phoneNumber
-        }),
-        onmessage(e) {
-          console.log(e.data)
-          let data;
-          try {
-            data = JSON.parse(e.data);
-          } catch (error) {
-            console.debug('json error', error);
-            return;
-          }
-        },
-        async onopen(response) {
-          console.log(response);
-        },
-        onclose() {
-          window.alert(t('Update Success'));
-          console.log('Connection closed');
-        },
-        onerror(err) {
-          throw err;
-        }
-      });
-    commonStore.setSettings({
-      username: ""
-    });
-    commonStore.setSettings({
-      password: ""
-    });
-    commonStore.setSettings({
-      email: ""
-    });
-    commonStore.setSettings({
-      phoneNumber: ""
-    });
-    commonStore.setSettings({
-      code: ""
-    });
-    commonStore.setSettings({
-      token: ""
-    });
-    commonStore.setSettings({
-      oldCode: ""
-    });
-    commonStore.setSettings({
-      uuid: ""
-    });
-    window.alert(t('Delete User'));
-    console.log('Connection closed');
-  };
-
   return <div className="flex flex-col gap-2">
-    <Labeled label={t('Email')}
-      content={
-        <Input style={{ minWidth: 0 }} className="grow" placeholder="email" value={commonStore.settings.email}
-          onChange={(e, data) => {
+    <Labeled label={t('Language')} flex spaceBetween content={
+      <Dropdown style={{ minWidth: 0 }} listbox={{ style: { minWidth: 'fit-content' } }}
+        value={Languages[commonStore.settings.language]}
+        selectedOptions={[commonStore.settings.language]}
+        onOptionSelect={(_, data) => {
+          if (data.optionValue) {
+            const lang = data.optionValue as Language;
             commonStore.setSettings({
-              email: data.value
+              language: lang
             });
-          }} />
-      } />
-    <Labeled label={t('User Name')}
-      content={
-          <Input style={{ minWidth: 0 }} className="grow" placeholder="username"
-            value={commonStore.settings.username}
-            onChange={(e, data) => {
+          }
+        }}>
+        {
+          Object.entries(Languages).map(([langKey, desc]) =>
+            <Option key={langKey} value={langKey}>{desc}</Option>)
+        }
+      </Dropdown>
+    } />
+    {
+      commonStore.platform === 'windows' &&
+      <Labeled label={t('DPI Scaling')} flex spaceBetween content={
+        <Dropdown style={{ minWidth: 0 }} listbox={{ style: { minWidth: 'fit-content' } }}
+          value={commonStore.settings.dpiScaling + '%'}
+          selectedOptions={[commonStore.settings.dpiScaling.toString()]}
+          onOptionSelect={(_, data) => {
+            if (data.optionValue) {
               commonStore.setSettings({
-                username: data.value
+                dpiScaling: Number(data.optionValue)
               });
-            }} />
-      } />
-    <Labeled label={t('Password')}
-      content={
-          <Input type="password" className="grow" placeholder="password"
-            value={commonStore.settings.password}
-            onChange={(e, data) => {
-              commonStore.setSettings({
-                password: data.value
+              toastWithButton(t('Restart the app to apply DPI Scaling.'), t('Restart'), () => {
+                RestartApp();
+              }, {
+                autoClose: 5000
               });
-            }} />
+            }
+          }}>
+          {
+            Array.from({ length: 7 }, (_, i) => (i + 2) * 25).map((v, i) =>
+              <Option key={i} value={v.toString()}>{v + '%'}</Option>)
+          }
+        </Dropdown>
       } />
-    <Labeled label={t('Save')}
-      content={
-          <Button appearance="primary" onClick={saveAll}>{t('Save')}</Button>
-      } />
-    <Labeled label={t('Delete User')}
-      content={
-          <Button appearance="primary" onClick={deleteUser}>{t('Delete')}</Button>
-      } />
+    }
+    <Labeled label={t('Dark Mode')} flex spaceBetween content={
+      <Switch checked={commonStore.settings.darkMode}
+        onChange={(e, data) => {
+          commonStore.setSettings({
+            darkMode: data.checked
+          });
+        }} />
+    } />
   </div>;
 });
 
-const UserSetting: FC = observer(() => {
+const Setting: FC = observer(() => {
   const { t } = useTranslation();
   const advancedHeaderRef = useRef<HTMLDivElement>(null);
 
@@ -195,18 +86,19 @@ const UserSetting: FC = observer(() => {
   }, []);
 
   return (
-    <Page title={t('UserSetting')} content={
+    <Page title={t('Setting')} content={
       <div className="flex flex-col gap-2 overflow-y-auto overflow-x-hidden p-1">
         {
           commonStore.platform === 'web' ?
             (
               <div className="flex flex-col gap-2">
-                <AdvancedGeneralSettings />
+                <GeneralSettings />
               </div>
             )
             :
             (
               <div className="flex flex-col gap-2">
+                <GeneralSettings />
                 <Labeled label={t('Automatic Updates Check')} flex spaceBetween content={
                   <Switch checked={commonStore.settings.autoUpdatesCheck}
                     onChange={(e, data) => {
@@ -279,7 +171,6 @@ const UserSetting: FC = observer(() => {
                                 });
                               }} />
                           } />
-                        <AdvancedGeneralSettings />
                       </div>
                     </AccordionPanel>
                   </AccordionItem>
@@ -292,4 +183,4 @@ const UserSetting: FC = observer(() => {
   );
 });
 
-export default UserSetting;
+export default Setting;

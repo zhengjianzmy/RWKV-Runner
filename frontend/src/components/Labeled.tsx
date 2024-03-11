@@ -26,7 +26,7 @@ export const Labeled: FC<{
   return (
     <div className={classnames(
       !breakline ? 'items-center' : '',
-      flex ? 'flex' : 'grid grid-cols-2',
+      flex ? 'flex' : 'grid',
       breakline ? 'flex-col' : '',
       spaceBetween && 'justify-between')
     }>

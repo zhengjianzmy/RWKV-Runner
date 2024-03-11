@@ -176,8 +176,8 @@ class CommonStore {
     customPythonPath: '',
     apiUrl: '',
     apiKey: '',
-    apiChatModelName: 'rwkv',
-    apiCompletionModelName: 'rwkv',
+    apiChatModelName: 'luxi-nlm',
+    apiCompletionModelName: 'luxi-nlm',
     coreApiUrl: '',
     username: '',
     password: '',
@@ -188,6 +188,7 @@ class CommonStore {
     oldCode: '',
     uuid: '',
     privacyConfirmed: true,
+    notInteresting: false,
     notTruth: false,
     timeout: false,
     notLogin: false,
@@ -198,7 +199,8 @@ class CommonStore {
     notHealthy: false,
     others: false,
     description: '',
-    contact: ''
+    contactPhone: '',
+    contactEmail: ''
   };
   // about
   about: AboutContent = manifest.about;
