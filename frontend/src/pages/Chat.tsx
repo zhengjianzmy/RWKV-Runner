@@ -371,7 +371,7 @@ const ChatPanel: FC = observer(() => {
   const onSubmit = useCallback((message: string | null = null, answerId: string | null = null,
     startUuid: string | null = null, endUuid: string | null = null, includeEndUuid: boolean = false) => {
 
-    if (commonStore.settings.username == '' && commonStore.settings.phoneNumber == '') {
+    if (commonStore.settings.username == '' || commonStore.settings.phoneNumber == '') {
       console.log(commonStore.settings.username)
       console.log("请先登录")
       window.alert(t('Login First'));
@@ -491,7 +491,8 @@ const ChatPanel: FC = observer(() => {
           if(data.tencentcloudresult) {
             tencentcloudresult = data.tencentcloudresult;
             
-            // console.log(data.tencentcloudresult);
+            
+            // console.log(tencentcloudresult);
             // window.alert(data.tencentcloudresult);
           }
           if(data.response) {
@@ -516,7 +517,8 @@ const ChatPanel: FC = observer(() => {
         onclose() {
           if (answerId! in chatSseControllers)
             delete chatSseControllers[answerId!];
-          window.alert(tencentcloudresult);
+          console.log(tencentcloudresult);
+          // window.alert(tencentcloudresult);
           let tencentcloudoutput = '';
           fetchEventSource(
             getServerRoot(port, true) + '/v1/chat/tencentcloud',
@@ -550,8 +552,8 @@ const ChatPanel: FC = observer(() => {
                 }
               },
               onclose() {
-                // console.log(tencentcloudoutput);
-                window.alert(JSON.stringify(tencentcloudoutput));
+                console.log(tencentcloudoutput);
+                // window.alert(JSON.stringify(tencentcloudoutput));
                 fetchEventSource(
                   getServerRoot(port, true) + '/v1/insert_chat',
                   {

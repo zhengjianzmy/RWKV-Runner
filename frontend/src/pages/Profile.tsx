@@ -100,7 +100,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
       } />
     <Labeled label={t('Phone Number')}
       content={
-        <Input style={{ minWidth: 0 }} className="grow" placeholder={commonStore.settings.password} readOnly/>
+        <Input style={{ minWidth: 0 }} className="grow" placeholder={commonStore.settings.phoneNumber} readOnly/>
       } />   
   </div>;
 });

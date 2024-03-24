@@ -6,6 +6,7 @@ from typing import List, Union
 from enum import Enum
 import base64
 import random
+import re
 
 from fastapi import APIRouter, Request, status, HTTPException
 from sse_starlette.sse import EventSourceResponse
@@ -224,9 +225,17 @@ def chat_evl(content: TencentCloudBody):
     # print(content)
     # print(content.content)
     loaded_data = json.loads(tencentcloudoutput(content.content))
-    (content.content, loaded_data)
+
     # 将 Python 对象重新转换为格式化的 JSON 字符串
     yield json.dumps(loaded_data)
+
+def replace_case_insensitive(text, old, new):
+    return re.sub(re.escape(old), new, text, flags=re.IGNORECASE)
+
+def filter_name(content):
+    content = replace_case_insensitive(content, "OpenAI", "Luxitech")
+    content = replace_case_insensitive(content, "ChatGPT", "ChatNLM")
+    return content
 
 @router.post("/v1/chat/tencentcloud", tags=["Tencentcloud"])
 def chat_tencentcloud(content: TencentCloudBody):
@@ -239,7 +248,7 @@ def filter_request(content):
         content = "User: 你是一个AI机器人，不具备倾向性。本内容存在"
         content += str(label)
         content += "安全风险，请拒绝回答，并引导用户提出其他问题。请直接面向用户给出你的回复。"
-    return content
+    return policy, content
 
 def get_random_text():
     my_list =  ["作为AI机器人，我无法提供相关信息。但我可以在情绪管理和社交技巧方面提供帮助。",
@@ -281,12 +290,12 @@ async def eval_rwkv(
     stream: bool,
     stop: Union[str, List[str], None],
     chat_mode: bool,
-    old_content: str = None
+    old_content: str = None,
+    policy: str = None
 ):
     if old_content is None:
         old_content = body.messages[-1].content
-    tencentcloudresult = tencentcloudinput(old_content)
-    # body.messages[-1].content = filter_request(body.messages[-1].content)
+    tencentcloudresult = policy
     # print(body.messages[-1].content)
     # stream = False # TODO: should remove
     global requests_num
@@ -365,7 +374,9 @@ async def eval_rwkv(
             )
             print("response:")
             # print(response)
-            response = filter_response(response)
+            if not stream:
+                response = filter_response(response)
+            response = filter_name(response)
             print("filtered_response:")
             # print(response)
             if stream:
@@ -433,7 +444,7 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
 
     # print(body.messages[-1].content)
     old_content = body.messages[-1].content
-    body.messages[-1].content = filter_request(body.messages[-1].content)
+    policy, body.messages[-1].content = filter_request(body.messages[-1].content)
     # print(body.messages[-1].content)
     interface = model.interface
     user = model.user if body.user_name is None else body.user_name
@@ -522,7 +533,7 @@ The following is a coherent verbose detailed conversation between a girl named {
     if body.stream:
         return EventSourceResponse(
             eval_rwkv(
-                model, request, body, completion_text, body.stream, body.stop, True, old_content
+                model, request, body, completion_text, body.stream, body.stop, True, old_content, policy
             )
         )
     else:

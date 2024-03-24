@@ -8,6 +8,7 @@ import {
   Button,
   Checkbox,
   Text,
+  Textarea,
   Link,
   Dropdown,
   Input,
@@ -84,7 +85,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
       window.alert(t('Need Phone Number'));
       return;
     }
-    if (commonStore.settings.code !== commonStore.settings.oldCode) {
+    if (commonStore.settings.code == "" || commonStore.settings.code !== commonStore.settings.oldCode) {
       console.log(code)
       window.alert(t('Verification Fail'));
       return;
@@ -151,6 +152,16 @@ export const AdvancedGeneralSettings: FC = observer(() => {
     window.alert(t('Private Policy Text'));
   };
 
+  if (commonStore.settings.username != '' && commonStore.settings.phoneNumber != '') {
+    return <div className="flex flex-col gap-2">
+      <Labeled label={t('Already Login')}
+        content={
+          <div className="flex gap-2">
+          </div>
+        } />
+    </div>;
+  }
+
   return <div className="flex flex-col gap-2">
     <Labeled label={t('Phone Number')}
       content={
@@ -182,9 +193,9 @@ export const AdvancedGeneralSettings: FC = observer(() => {
                   size="large" label={(
                     <>
                       <Text>{t('You Confirmed')}</Text>
-                      <Link href="#" onClick={handleAgreement}>{t('Agreement')}</Link>
+                      <Link href="http://www.luxitech.cn/agreement.html" target="_blank">{t('Agreement')}</Link>
                       <Text>{t('And')}</Text>
-                      <Link href="#" onClick={handlePolicy}>{t('Private Policy')}</Link>
+                      <Link href="http://www.luxitech.cn/privacy.html" target="_blank">{t('Private Policy')}</Link>
                     </>
                   )}
                   checked={commonStore.settings.privacyConfirmed}
