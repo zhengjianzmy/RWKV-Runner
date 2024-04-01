@@ -147,7 +147,7 @@ def insert_chat_db(category: Category):
     random_uuid = uuid.uuid4()
     now = datetime.now()
     now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("INSERT INTO category (id,chat_id,input,filtered_input,output,filtered_output,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s)", (category.id,random_uuid,category.input,category.filtered_input,category.output,category.filtered_input,now))
+    cursor.execute("INSERT INTO category (id,chat_id,input,filtered_input,output,filtered_output,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s)", (category.id,random_uuid,category.input,category.filtered_input,category.output,category.filtered_output,now))
     # 使用 commit() 方法
     conn.commit()
     # 关闭数据库连接

@@ -133,7 +133,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
     <Labeled label={t('API Chat Model Name')}
       content={
         <div className="flex gap-2">
-          <Input style={{ minWidth: 0 }} className="grow" placeholder="rwkv"
+          <Input style={{ minWidth: 0 }} className="grow" placeholder="luxi-nlm"
             value={commonStore.settings.apiChatModelName}
             onChange={(e, data) => {
               commonStore.setSettings({
@@ -161,7 +161,7 @@ export const AdvancedGeneralSettings: FC = observer(() => {
     <Labeled label={t('API Completion Model Name')}
       content={
         <div className="flex gap-2">
-          <Input style={{ minWidth: 0 }} className="grow" placeholder="rwkv"
+          <Input style={{ minWidth: 0 }} className="grow" placeholder="luxi-nlm"
             value={commonStore.settings.apiCompletionModelName}
             onChange={(e, data) => {
               commonStore.setSettings({

@@ -7,6 +7,7 @@ from enum import Enum
 import base64
 import random
 import re
+import requests
 
 from fastapi import APIRouter, Request, status, HTTPException
 from sse_starlette.sse import EventSourceResponse
@@ -109,7 +110,7 @@ class TencentCloudBody(BaseModel):
 
 class CompletionBody(ModelConfigBody):
     prompt: Union[str, List[str], None]
-    model: Union[str, None] = "rwkv"
+    model: Union[str, None] = "luxi-nlm"
     stream: bool = False
     stop: Union[str, List[str], None] = None
 
@@ -134,6 +135,38 @@ class CompletionBody(ModelConfigBody):
 completion_lock = Lock()
 
 requests_num = 0
+
+def get_qianfan_chat(content):
+    # url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_7b?access_token=" + get_qianfan_access_token()
+    url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions?access_token=" + get_qianfan_access_token()
+    payload = json.dumps({
+        "messages": [
+            {
+                "role": "user",
+                "content": content
+            }
+        ],
+        "disable_search": False,
+        "enable_citation": False
+    })
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+    text = json.loads(response.text)
+    print(text)
+    return text["result"]
+    
+
+def get_qianfan_access_token():
+    """
+    使用 AK，SK 生成鉴权签名（Access Token）
+    :return: access_token，或是None(如果错误)
+    """
+    url = "https://aip.baidubce.com/oauth/2.0/token"
+    params = {"grant_type": "client_credentials", "client_id": os.environ["QIANFAN_API_KEY"], "client_secret": os.environ["QIANFAN_SECRET_KEY"]}
+    return str(requests.post(url, params=params).json().get("access_token"))
+
 
 def tencentcloudinput(content):
     try:
@@ -239,15 +272,17 @@ def filter_name(content):
 
 @router.post("/v1/chat/tencentcloud", tags=["Tencentcloud"])
 def chat_tencentcloud(content: TencentCloudBody):
+    print(content)
     return EventSourceResponse(chat_evl(content))
 
 def filter_request(content):
     policy = json.loads(tencentcloudinput(content))
     label = policy['Label']
-    if policy["Suggestion"] == "Block":
-        content = "User: 你是一个AI机器人，不具备倾向性。本内容存在"
-        content += str(label)
-        content += "安全风险，请拒绝回答，并引导用户提出其他问题。请直接面向用户给出你的回复。"
+    if policy["Suggestion"] == "Block" or policy["Suggestion"] == "Review":
+        if policy["Label"] != "Polity":
+            content = "User: 你是一个AI机器人，不具备倾向性。本内容存在"
+            content += str(label)
+            content += "安全风险，请拒绝回答，并引导用户提出其他问题。请直接面向用户给出你的回复。"
     return policy, content
 
 def get_random_text():
@@ -275,12 +310,21 @@ def get_random_text():
     random_number = random.randrange(len(my_list))
     return my_list[random_number - 1]
 
-def filter_response(content):
+def filter_response(content, old_content: str = None, Label: str = None):
+    # print(old_content)
+    # print(Label)
+    if Label == "Polity":
+        print("Polity")
+        return "", get_qianfan_chat(old_content)
     policy = json.loads(tencentcloudoutput(content))
+    # print(policy)
     if policy["Suggestion"] == "Block" or policy["Suggestion"] == "Review":
+        if policy["Label"] == "Polity":
+            # print("Label Polity")
+            return policy, get_qianfan_chat(old_content)
         filtered_response = get_random_text()
-        return filtered_response
-    return content
+        return policy, filtered_response
+    return policy, content
 
 async def eval_rwkv(
     model: AbstractRWKV,
@@ -291,7 +335,8 @@ async def eval_rwkv(
     stop: Union[str, List[str], None],
     chat_mode: bool,
     old_content: str = None,
-    policy: str = None
+    policy: str = None,
+    once_stream: bool = False
 ):
     if old_content is None:
         old_content = body.messages[-1].content
@@ -333,7 +378,7 @@ async def eval_rwkv(
             ):
                 if await request.is_disconnected():
                     break
-                if stream:
+                if stream and not once_stream:
                     yield json.dumps(
                         {
                             "object": "chat.completion.chunk"
@@ -357,6 +402,42 @@ async def eval_rwkv(
                             ],
                         }
                     )
+            if policy is not None:
+                tencentcloudoutput, response = filter_response(response, old_content, policy["Label"])
+            else:
+                tencentcloudoutput, response = filter_response(response, old_content)
+            response = filter_name(response)
+            print(response)
+            onceStreamData = [
+                        {
+                            "object": "chat.completion.chunk"
+                            if chat_mode
+                            else "text_completion",
+                            "response": response,
+                            "tencentcloudresult": tencentcloudresult,
+                            "tencentcloudoutput": tencentcloudoutput,
+                            "model": model.name,
+                            "choices": [
+                                {
+                                    "delta": {"content": response},
+                                    "index": 0,
+                                    "finish_reason": None,
+                                }
+                                if chat_mode
+                                else {
+                                    "text": response,
+                                    "index": 0,
+                                    "finish_reason": None,
+                                }
+                            ],
+                        },
+                        '[Done]'
+                        ]
+            if stream and once_stream:
+                for i in range(2):
+                    yield json.dumps(
+                        onceStreamData[i]
+                    )
             # torch_gc()
             requests_num = requests_num - 1
             if await request.is_disconnected():
@@ -374,9 +455,7 @@ async def eval_rwkv(
             )
             print("response:")
             # print(response)
-            if not stream:
-                response = filter_response(response)
-            response = filter_name(response)
+
             print("filtered_response:")
             # print(response)
             if stream:
@@ -445,6 +524,7 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
     # print(body.messages[-1].content)
     old_content = body.messages[-1].content
     policy, body.messages[-1].content = filter_request(body.messages[-1].content)
+    # print(policy)
     # print(body.messages[-1].content)
     interface = model.interface
     user = model.user if body.user_name is None else body.user_name
@@ -530,16 +610,17 @@ The following is a coherent verbose detailed conversation between a girl named {
     if not body.presystem:
         body.stop.append("\n\n")
 
+    once_stream = True
     if body.stream:
         return EventSourceResponse(
             eval_rwkv(
-                model, request, body, completion_text, body.stream, body.stop, True, old_content, policy
+                model, request, body, completion_text, body.stream, body.stop, True, old_content, policy, once_stream
             )
         )
     else:
         try:
             return await eval_rwkv(
-                model, request, body, completion_text, body.stream, body.stop, True
+                model, request, body, completion_text, body.stream, body.stop, True, old_content, policy, once_stream
             ).__anext__()
         except StopAsyncIteration:
             return None
@@ -573,7 +654,7 @@ async def completions(body: CompletionBody, request: Request):
 
 class EmbeddingsBody(BaseModel):
     input: Union[str, List[str], List[List[int]], None]
-    model: Union[str, None] = "rwkv"
+    model: Union[str, None] = "luxi-nlm"
     encoding_format: str = None
     fast_mode: bool = False
 

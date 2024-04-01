@@ -83,7 +83,7 @@ fake_models = [
 @router.get("/models", tags=["MISC"])
 def models():
     model: AbstractRWKV = global_var.get(global_var.Model)
-    model_name = model.name if model else "rwkv"
+    model_name = model.name if model else "luxi-nlm"
 
     return {
         "object": "list",
@@ -91,7 +91,7 @@ def models():
             {
                 "id": model_name,
                 "object": "model",
-                "owned_by": "rwkv",
+                "owned_by": "luxi-nlm",
                 "root": model_name,
                 "parent": None,
             },
@@ -107,13 +107,13 @@ def model(model_id: str):
         if fake_model["id"] == model_id:
             return fake_model
 
-    if "rwkv" in model_id.lower():
+    if "luxi-nlm" in model_id.lower():
         model: AbstractRWKV = global_var.get(global_var.Model)
-        model_name = model.name if model else "rwkv"
+        model_name = model.name if model else "luxi-nlm"
         return {
             "id": model_name,
             "object": "model",
-            "owned_by": "rwkv",
+            "owned_by": "luxi-nlm",
             "root": model_name,
             "parent": None,
         }

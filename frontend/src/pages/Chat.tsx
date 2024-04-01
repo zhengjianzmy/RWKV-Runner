@@ -447,6 +447,7 @@ const ChatPanel: FC = observer(() => {
     const chatSseController = new AbortController();
     chatSseControllers[answerId] = chatSseController;
     let tencentcloudresult = '';
+    let tencentcloudoutput = '';
     fetchEventSource( // https://api.openai.com/v1/chat/completions || http://127.0.0.1:${port}/v1/chat/completions
       getServerRoot(port, true) + '/v1/chat/completions',
       {
@@ -469,6 +470,7 @@ const ChatPanel: FC = observer(() => {
         }),
         signal: chatSseController?.signal,
         onmessage(e) {
+          console.log(e)
           scrollToBottom();
           if (e.data.trim() === '[DONE]') {
             if (answerId! in chatSseControllers)
@@ -495,6 +497,10 @@ const ChatPanel: FC = observer(() => {
             // console.log(tencentcloudresult);
             // window.alert(data.tencentcloudresult);
           }
+          if(data.tencentcloudoutput) {
+            tencentcloudoutput = data.tencentcloudoutput;
+            console.log(tencentcloudresult);
+          }
           if(data.response) {
             tencentresponse = data.response;
             // console.log(data.response);
@@ -517,11 +523,11 @@ const ChatPanel: FC = observer(() => {
         onclose() {
           if (answerId! in chatSseControllers)
             delete chatSseControllers[answerId!];
-          console.log(tencentcloudresult);
+          // console.log(tencentcloudresult);
           // window.alert(tencentcloudresult);
-          let tencentcloudoutput = '';
+          // console.log(tencentcloudoutput);
           fetchEventSource(
-            getServerRoot(port, true) + '/v1/chat/tencentcloud',
+            getServerRoot(port, true) + '/v1/insert_chat',
             {
               method: 'POST',
               headers: {
@@ -529,14 +535,14 @@ const ChatPanel: FC = observer(() => {
                 Authorization: `Bearer ${commonStore.settings.apiKey}`
               },
               body: JSON.stringify({
-                content: tencentresponse
+                id: commonStore.settings.uuid,
+                input: messages[messages.length - 1].content.replace(/"/g, "").replace(/'/g, ""),
+                filtered_input: JSON.stringify(tencentcloudresult),
+                output: tencentresponse.replace(/"/g, "").replace(/'/g, ""),
+                filtered_output: JSON.stringify(tencentcloudoutput)
               }),
               onmessage(e) {
                 // console.log(e)
-                // tencentcloudoutput = e.data;
-                if (e.data.trim() === '[DONE]') {
-                  return;
-                }
                 let data;
                 try {
                   data = JSON.parse(e.data);
@@ -544,51 +550,11 @@ const ChatPanel: FC = observer(() => {
                   console.debug('json error', error);
                   return;
                 }
-                tencentcloudoutput = data;
               },
               async onopen(response) {
-                if (response.status !== 200) {
-                  setTimeout(scrollToBottom);
-                }
+                console.log(response)
               },
               onclose() {
-                console.log(tencentcloudoutput);
-                // window.alert(JSON.stringify(tencentcloudoutput));
-                fetchEventSource(
-                  getServerRoot(port, true) + '/v1/insert_chat',
-                  {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                      Authorization: `Bearer ${commonStore.settings.apiKey}`
-                    },
-                    body: JSON.stringify({
-                      id: commonStore.settings.uuid,
-                      input: messages[messages.length - 1].content.replace(/"/g, "").replace(/'/g, ""),
-                      filtered_input: JSON.stringify(tencentcloudresult),
-                      output: tencentresponse.replace(/"/g, "").replace(/'/g, ""),
-                      filtered_output: JSON.stringify(tencentcloudoutput)
-                    }),
-                    onmessage(e) {
-                      // console.log(e)
-                      let data;
-                      try {
-                        data = JSON.parse(e.data);
-                      } catch (error) {
-                        console.debug('json error', error);
-                        return;
-                      }
-                    },
-                    async onopen(response) {
-                      console.log(response)
-                    },
-                    onclose() {
-                      console.log('Connection closed');
-                    },
-                    onerror(err) {
-                      throw err;
-                    }
-                  });
                 console.log('Connection closed');
               },
               onerror(err) {
@@ -777,7 +743,7 @@ const ChatPanel: FC = observer(() => {
             }} />
         </div>
       </div>
-      <SidePanel />
+      {/* <SidePanel /> */}
     </div>
   );
 });
