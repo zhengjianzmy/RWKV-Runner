@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, status
 from utils.rwkv import AbstractRWKV
 import global_var
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 
 @router.get("/dashboard/billing/credit_grants", tags=["MISC"])

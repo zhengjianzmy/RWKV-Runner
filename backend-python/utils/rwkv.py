@@ -10,6 +10,7 @@ from fastapi import HTTPException
 from pydantic import BaseModel, Field
 from routes import state_cache
 import global_var
+from typing import Optional
 
 os.environ["TORCH_EXTENSIONS_DIR"] = f"{pathlib.Path(__file__).parent.parent.resolve()}"
 
@@ -603,7 +604,7 @@ class ModelConfigBody(BaseModel):
     temperature: float = Field(default=None, ge=0, le=2)
     top_p: float = Field(default=None, ge=0, le=1)
     presence_penalty: float = Field(default=None, ge=-2, le=2)
-    frequency_penalty: float = Field(default=None, ge=-2, le=2)
+    frequency_penalty: Optional[float] = Field(default=None, ge=-2, le=2)
 
     model_config = {
         "json_schema_extra": {

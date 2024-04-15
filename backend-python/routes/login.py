@@ -28,7 +28,7 @@ from tencentcloud.common.profile.http_profile import HttpProfile
 from tencentcloud.common.exception.tencent_cloud_sdk_exception import TencentCloudSDKException
 from tencentcloud.sms.v20210111 import sms_client, models
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 class TencentCloudBody(BaseModel):
     phone_number: str

@@ -94,12 +94,12 @@ class ChatCompletionBody(ModelConfigBody):
                 "stop": None,
                 "user_name": None,
                 "assistant_name": None,
-                "presystem": True,
-                "max_tokens": 1000,
-                "temperature": 1.2,
-                "top_p": 0.5,
-                "presence_penalty": 0.4,
-                "frequency_penalty": 0.4,
+                # "presystem": True,
+                # "max_tokens": 1000,
+                # "temperature": 1.2,
+                # "top_p": 0.5,
+                # "presence_penalty": 0.4,
+                # "frequency_penalty": 0.4,
             }
         }
     }
@@ -265,12 +265,21 @@ def chat_evl(content: TencentCloudBody):
 def replace_case_insensitive(text, old, new):
     return re.sub(re.escape(old), new, text, flags=re.IGNORECASE)
 
-def filter_name(content):
-    content = replace_case_insensitive(content, "OpenAI", "Luxitech")
+def filter_name(old_content: str, content: str):
+    if "OPENAI" in old_content.upper() or "CHATGPT" in old_content.upper():
+        return content
+    content = replace_case_insensitive(content, "OpenAI", "LuxiTech")
     content = replace_case_insensitive(content, "ChatGPT", "ChatNLM")
     return content
 
-@router.post("/v1/chat/tencentcloud", tags=["Tencentcloud"])
+def filter_messages(messages: Union[List[Message], None]):
+    if len(messages) != 1:
+        return messages
+    messages.insert(0, Message(role="user", content="你是谁？", raw=True))
+    messages.insert(1, Message(role="assistant", content="我是ChatNLM，由LuxiTech公司开发。", raw=True))
+    return messages
+
+@router.post("/v1/chat/tencentcloud", tags=["Tencentcloud"], include_in_schema=False)
 def chat_tencentcloud(content: TencentCloudBody):
     print(content)
     return EventSourceResponse(chat_evl(content))
@@ -406,7 +415,7 @@ async def eval_rwkv(
                 tencentcloudoutput, response = filter_response(response, old_content, policy["Label"])
             else:
                 tencentcloudoutput, response = filter_response(response, old_content)
-            response = filter_name(response)
+            response = filter_name(old_content, response)
             print(response)
             onceStreamData = [
                         {
@@ -521,6 +530,8 @@ async def chat_completions(body: ChatCompletionBody, request: Request):
     if body.messages is None or body.messages == []:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "messages not found")
 
+    body.messages = filter_messages(body.messages)
+
     # print(body.messages[-1].content)
     old_content = body.messages[-1].content
     policy, body.messages[-1].content = filter_request(body.messages[-1].content)
@@ -626,8 +637,8 @@ The following is a coherent verbose detailed conversation between a girl named {
             return None
 
 
-@router.post("/v1/completions", tags=["Completions"])
-@router.post("/completions", tags=["Completions"])
+@router.post("/v1/completions", tags=["Completions"], include_in_schema=False)
+@router.post("/completions", tags=["Completions"], include_in_schema=False)
 async def completions(body: CompletionBody, request: Request):
     model: AbstractRWKV = global_var.get(global_var.Model)
     if model is None:
@@ -676,10 +687,10 @@ def embedding_base64(embedding: List[float]) -> str:
     return base64.b64encode(np.array(embedding).astype(np.float32)).decode("utf-8")
 
 
-@router.post("/v1/embeddings", tags=["Embeddings"])
-@router.post("/embeddings", tags=["Embeddings"])
-@router.post("/v1/engines/text-embedding-ada-002/embeddings", tags=["Embeddings"])
-@router.post("/engines/text-embedding-ada-002/embeddings", tags=["Embeddings"])
+@router.post("/v1/embeddings", tags=["Embeddings"], include_in_schema=False)
+@router.post("/embeddings", tags=["Embeddings"], include_in_schema=False)
+@router.post("/v1/engines/text-embedding-ada-002/embeddings", tags=["Embeddings"], include_in_schema=False)
+@router.post("/engines/text-embedding-ada-002/embeddings", tags=["Embeddings"], include_in_schema=False)
 async def embeddings(body: EmbeddingsBody, request: Request):
     model: AbstractRWKV = global_var.get(global_var.Model)
     if model is None:

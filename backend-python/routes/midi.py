@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from utils.midi import *
 from midi2audio import FluidSynth
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 
 class TextToMidiBody(BaseModel):

@@ -6,7 +6,7 @@ import gc
 import copy
 import global_var
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 trie = None
 dtrie: Dict = {}

@@ -7,7 +7,7 @@ from utils.rwkv import *
 from utils.torch import *
 import global_var
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 
 class SwitchModelBody(BaseModel):

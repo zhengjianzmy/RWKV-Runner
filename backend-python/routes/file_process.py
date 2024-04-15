@@ -10,7 +10,7 @@ from fastapi import (
 from pydantic import BaseModel
 from typing import Iterator
 
-router = APIRouter()
+router = APIRouter(include_in_schema=False)
 
 
 class FileToTextParams(BaseModel):
