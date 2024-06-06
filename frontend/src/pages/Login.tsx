@@ -142,6 +142,76 @@ export const AdvancedGeneralSettings: FC = observer(() => {
     console.log('Connection closed');
   };
 
+  const confirmPassword = () => {
+    if (commonStore.settings.privacyConfirmed !== true) {
+      window.alert(t('Privacy Confirmed First'));
+      return;
+    }
+    if (commonStore.settings.phoneNumber == "") {
+      window.alert(t('Need Phone Number'));
+      return;
+    }
+    if (commonStore.settings.password == "") {
+      window.alert(t('Need Password'));
+      return;
+    }
+    fetchEventSource(
+      getServerRoot(port, true) + '/v1/login/password',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${commonStore.settings.apiKey}`
+        },
+        body: JSON.stringify({
+          username: commonStore.settings.username,
+          email: commonStore.settings.email,
+          password: commonStore.settings.password,
+          phone_number: commonStore.settings.phoneNumber
+        }),
+        onmessage(e) {
+          // console.log("test");
+          // console.log(e)
+          console.log(e.data)
+          let data;
+          try {
+            data = JSON.parse(e.data);
+          } catch (error) {
+            console.debug('json error', error);
+            return;
+          }
+          commonStore.setSettings({
+            uuid: data.uuid
+          });
+          commonStore.setSettings({
+            email: data.email
+          });
+          commonStore.setSettings({
+            username: data.username
+          });
+          commonStore.setSettings({
+            password: data.password
+          });
+        },
+        async onopen(response) {
+          console.log(response);
+        },
+        onclose() {
+          if (commonStore.settings.uuid != "") {
+            window.alert(t('Login Success'));
+            console.log('Connection closed');
+          } else {
+            window.alert(t('Login Fail'));
+            console.log(commonStore.settings.password);
+          }
+        },
+        onerror(err) {
+          throw err;
+        }
+      });
+    console.log('Connection closed');
+  };
+
   const handleAgreement = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
     window.alert(t('Agreement Text'));
@@ -185,6 +255,18 @@ export const AdvancedGeneralSettings: FC = observer(() => {
               });
             }} />
           <Button appearance="primary" onClick={confirmCode}>{t('Login')}</Button>
+        </div>
+      } />
+    <Labeled label={t('Password')}
+      content={
+        <div className="flex gap-2">
+          <Input type="password" className="grow" placeholder="Password" value={commonStore.settings.password}
+            onChange={(e, data) => {
+              commonStore.setSettings({
+                password: data.value
+              });
+            }} />
+          <Button appearance="primary" onClick={confirmPassword}>{t('LoginByPassword')}</Button>
         </div>
       } />
     <Labeled label={t('Register') }

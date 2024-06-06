@@ -235,7 +235,10 @@ def create_access_token(data: dict, expires_delta: Union[timedelta, None] = None
     return encoded_jwt
 
 @router.post("/v1/login/password")
-def login(form_data: OAuth2PasswordRequestForm = Depends()):
+def login_password(user: User):
+    return EventSourceResponse(login_by_password(user))
+
+def login_token(form_data: OAuth2PasswordRequestForm = Depends()):
     user = authenticate_user(form_data.username, form_data.password)
     if not user:
         raise HTTPException(
@@ -282,6 +285,17 @@ def login_by_phone(user: User):
     # print(result)
     # result = json.dumps(result)
     # print(result)
+    yield result
+
+def login_by_password(user: User):
+    old_user = get_user_by_phone_number(user.phone_number)
+    if not old_user:
+        result = {"uuid": "", "username": "", "password": "", "email": ""}
+        result = json.dumps(result) 
+    else:
+        old_user = json.loads(old_user)
+        result = {"uuid": old_user["id"], "username": old_user["username"], "password": old_user["password"], "email": old_user["email"]}
+        result = json.dumps(result)
     yield result
 
 @router.post("/v1/insert_chat")

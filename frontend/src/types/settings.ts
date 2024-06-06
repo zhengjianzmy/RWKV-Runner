@@ -1,6 +1,6 @@
 export const Languages = {
-  dev: 'English', // i18n default
-  zh: '简体中文'
+  zh: '简体中文',
+  dev: 'English' // i18n default
 };
 export type Language = keyof typeof Languages;
 export type SettingsType = {

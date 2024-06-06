@@ -249,7 +249,7 @@ export function getUserLanguage(): Language {
 
   const l = navigator.language.substring(0, 2);
   if (l in Languages) return l as Language;
-  return 'dev';
+  return 'zh';
 }
 
 export function isSystemLightMode() {
