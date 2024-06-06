@@ -31,6 +31,8 @@ from tencentcloud.tms.v20201229 import tms_client, models
 # 导入可选配置类
 from tencentcloud.common.profile.client_profile import ClientProfile
 from tencentcloud.common.profile.http_profile import HttpProfile
+# doubao
+from volcenginesdkarkruntime import Ark
 
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
@@ -135,6 +137,58 @@ class CompletionBody(ModelConfigBody):
 completion_lock = Lock()
 
 requests_num = 0
+
+client = Ark()
+
+def get_doubao_chat(content):
+    # Non-streaming:
+    print("----- standard request -----")
+    completion = client.chat.completions.create(
+        model="ep-20240531083414-lpzvg",
+        messages=[
+            {
+                "role": "user",
+                "content": content,
+            },
+        ]
+    )
+    print(completion.choices[0].message.content)
+    return completion.choices[0].message.content
+
+def get_stream_doubao_chat(content, use_stream: bool = False):
+    if use_stream is False:
+        # Non-streaming:
+        print("----- standard request -----")
+        completion = client.chat.completions.create(
+            model="ep-20240531083414-lpzvg",
+            messages=[
+                {
+                    "role": "user",
+                    "content": content,
+                },
+            ]
+        )
+        print(completion.choices[0].message.content)
+        return completion.choices[0].message.content
+    else:
+        # Streaming:
+        print("----- streaming request -----")
+        stream = client.chat.completions.create(
+            model="ep-20240531083414-lpzvg",
+            messages=[
+                {
+                    "role": "user",
+                    "content": content,
+                },
+            ],
+            stream=True
+        )
+        for chunk in stream:
+            if not chunk.choices:
+                continue
+            print(chunk.choices[0].delta.content, end="")
+            yield chunk.choices[0].delta.content
+
 
 def get_qianfan_chat(content):
     # url = "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/qianfan_chinese_llama_2_7b?access_token=" + get_qianfan_access_token()
@@ -270,6 +324,8 @@ def filter_name(old_content: str, content: str):
         return content
     content = replace_case_insensitive(content, "OpenAI", "LuxiTech")
     content = replace_case_insensitive(content, "ChatGPT", "ChatNLM")
+    content = replace_case_insensitive(content, "GPT3.5", "ChatNLM")
+    content = replace_case_insensitive(content, "GPT-3.5", "ChatNLM")
     return content
 
 def filter_messages(messages: Union[List[Message], None]):
@@ -324,13 +380,15 @@ def filter_response(content, old_content: str = None, Label: str = None):
     # print(Label)
     if Label == "Polity":
         print("Polity")
-        return "", get_qianfan_chat(old_content)
+        # return "", get_qianfan_chat(old_content)
+        return "", get_doubao_chat(old_content)
     policy = json.loads(tencentcloudoutput(content))
     # print(policy)
     if policy["Suggestion"] == "Block" or policy["Suggestion"] == "Review":
         if policy["Label"] == "Polity":
             # print("Label Polity")
-            return policy, get_qianfan_chat(old_content)
+            # return policy, get_qianfan_chat(old_content)
+            return policy, get_doubao_chat(old_content)
         filtered_response = get_random_text()
         return policy, filtered_response
     return policy, content
