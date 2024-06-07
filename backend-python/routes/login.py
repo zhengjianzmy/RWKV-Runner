@@ -82,124 +82,6 @@ def sha256Encrypt(data):
     encryptedData = digest.hex()
     return encryptedData
 
-def get_user_by_username(username: str):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    cursor.execute("SELECT id,username,password,phone_number,email FROM user WHERE username = %s limit 1", username)
-    # 使用 fetchone() 方法获取单条数据.
-    # 返回为一个根据用户名查询到的字典{'username': 'test', 'password': '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'}
-    result = cursor.fetchone()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    # print('get_user返回',data)
-    if result is not None:
-        result = dict(result)
-        result = json.dumps(result)
-    return result
-
-def get_user_by_phone_number(phone_number: str):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    cursor.execute("SELECT id,username,password,phone_number,email FROM user WHERE phone_number = %s limit 1", phone_number)
-    # 使用 fetchone() 方法获取单条数据.
-    # 返回为一个根据用户名查询到的字典{'username': 'test', 'password': '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'}
-    result = cursor.fetchone()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    # print('get_user返回',data)
-    if result is not None:
-        result = dict(result)
-        result = json.dumps(result)
-    return result
-
-def insert_register_user(user: User):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    random_uuid = uuid.uuid4()
-    now = datetime.now()
-    now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("INSERT INTO user (id,username,phone_number,create_time) VALUES(%s,%s,%s,%s)", (random_uuid,user.phone_number,user.phone_number,now))
-    # 使用 commit() 方法
-    conn.commit()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    # print('insert 成功')
-    result = {"uuid": str(random_uuid), "username": user.phone_number, "email": "", "password": ""}
-    # print(result)
-    result = json.dumps(result)
-    # print(result)
-    return result
-
-def insert_chat_db(category: Category):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    random_uuid = uuid.uuid4()
-    now = datetime.now()
-    now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("INSERT INTO category (id,chat_id,input,filtered_input,output,filtered_output,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s)", (category.id,random_uuid,category.input,category.filtered_input,category.output,category.filtered_output,now))
-    # 使用 commit() 方法
-    conn.commit()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    # print('insert 成功')
-    result = {"uuid": str(random_uuid)}
-    # print(result)
-    result = json.dumps(result)
-    # print(result)
-    return result
-
-def insert_feedback_db(feedback: Feedback):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    random_uuid = uuid.uuid4()
-    now = datetime.now()
-    now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("INSERT INTO feedback (id,feedback_id,is_not_interesting,is_not_truth,is_timeout,is_not_login,is_not_chat,is_body_hit,is_policy,is_sex,is_not_healthy,is_others,description,phone_number,email,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (feedback.id,random_uuid,feedback.notInteresting,feedback.notTruth,feedback.timeout,feedback.notLogin,feedback.notChat,feedback.bodyHit,feedback.policy,feedback.sex,feedback.notHealthy,feedback.others,feedback.description,feedback.phoneNumber,feedback.email,now))
-    # 使用 commit() 方法
-    conn.commit()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    # print('insert 成功')
-    result = {"uuid": str(random_uuid)}
-    # print(result)
-    result = json.dumps(result)
-    # print(result)
-    return result
-
-def update_user_db(user: User):
-    conn = get_connection()
-    # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
-    cursor = conn.cursor(pymysql.cursors.DictCursor)
-    # 使用 execute()  方法执行 SQL 查询
-    now = datetime.now()
-    now = now.strftime("%Y-%m-%d %H:%M:%S")
-    cursor.execute("UPDATE user SET username=%s,password=%s,email=%s,modify_time=%s WHERE(phone_number=%s)", (user.username,user.password,user.email,now,user.phone_number))
-    # 使用 commit() 方法
-    conn.commit()
-    # 关闭数据库连接
-    cursor.close()
-    conn.close()
-    result = {"username": user.username, "email": user.email, "password": user.password}
-    # print(result)
-    result = json.dumps(result)
-    # print(result)
-    return result
-
 # ---- 用pymysql 操作数据库
 def get_connection():
     host = 'localhost'
@@ -209,6 +91,128 @@ def get_connection():
     password = os.environ.get("MYSQL_ROOT_PASSWORD")
     conn = pymysql.connect(host=host, port=port, db=db, user=user, password=password)
     return conn
+
+conn = get_connection()
+# 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+cursor = conn.cursor(pymysql.cursors.DictCursor)
+
+def get_user_by_username(username: str):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    cursor.execute("SELECT id,username,password,phone_number,email FROM user WHERE username = %s limit 1", username)
+    # 使用 fetchone() 方法获取单条数据.
+    # 返回为一个根据用户名查询到的字典{'username': 'test', 'password': '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'}
+    result = cursor.fetchone()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    # print('get_user返回',data)
+    if result is not None:
+        result = dict(result)
+        result = json.dumps(result)
+    return result
+
+def get_user_by_phone_number(phone_number: str):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    cursor.execute("SELECT id,username,password,phone_number,email FROM user WHERE phone_number = %s limit 1", phone_number)
+    # 使用 fetchone() 方法获取单条数据.
+    # 返回为一个根据用户名查询到的字典{'username': 'test', 'password': '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'}
+    result = cursor.fetchone()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    # print('get_user返回',data)
+    if result is not None:
+        result = dict(result)
+        result = json.dumps(result)
+    return result
+
+def insert_register_user(user: User):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    random_uuid = uuid.uuid4()
+    now = datetime.now()
+    now = now.strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("INSERT INTO user (id,username,phone_number,create_time) VALUES(%s,%s,%s,%s)", (random_uuid,user.phone_number,user.phone_number,now))
+    # 使用 commit() 方法
+    conn.commit()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    # print('insert 成功')
+    result = {"uuid": str(random_uuid), "username": user.phone_number, "email": "", "password": ""}
+    # print(result)
+    result = json.dumps(result)
+    # print(result)
+    return result
+
+def insert_chat_db(category: Category):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    random_uuid = uuid.uuid4()
+    now = datetime.now()
+    now = now.strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("INSERT INTO category (id,chat_id,input,filtered_input,output,filtered_output,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s)", (category.id,random_uuid,category.input,category.filtered_input,category.output,category.filtered_output,now))
+    # 使用 commit() 方法
+    conn.commit()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    # print('insert 成功')
+    result = {"uuid": str(random_uuid)}
+    # print(result)
+    result = json.dumps(result)
+    # print(result)
+    return result
+
+def insert_feedback_db(feedback: Feedback):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    random_uuid = uuid.uuid4()
+    now = datetime.now()
+    now = now.strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("INSERT INTO feedback (id,feedback_id,is_not_interesting,is_not_truth,is_timeout,is_not_login,is_not_chat,is_body_hit,is_policy,is_sex,is_not_healthy,is_others,description,phone_number,email,create_time) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (feedback.id,random_uuid,feedback.notInteresting,feedback.notTruth,feedback.timeout,feedback.notLogin,feedback.notChat,feedback.bodyHit,feedback.policy,feedback.sex,feedback.notHealthy,feedback.others,feedback.description,feedback.phoneNumber,feedback.email,now))
+    # 使用 commit() 方法
+    conn.commit()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    # print('insert 成功')
+    result = {"uuid": str(random_uuid)}
+    # print(result)
+    result = json.dumps(result)
+    # print(result)
+    return result
+
+def update_user_db(user: User):
+    # conn = get_connection()
+    # # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+    # cursor = conn.cursor(pymysql.cursors.DictCursor)
+    # 使用 execute()  方法执行 SQL 查询
+    now = datetime.now()
+    now = now.strftime("%Y-%m-%d %H:%M:%S")
+    cursor.execute("UPDATE user SET username=%s,password=%s,email=%s,modify_time=%s WHERE(phone_number=%s)", (user.username,user.password,user.email,now,user.phone_number))
+    # 使用 commit() 方法
+    conn.commit()
+    # 关闭数据库连接
+    # cursor.close()
+    # conn.close()
+    result = {"username": user.username, "email": user.email, "password": user.password}
+    # print(result)
+    result = json.dumps(result)
+    # print(result)
+    return result
 
 def authenticate_user(username: str, password: str):
     user = get_user(username)

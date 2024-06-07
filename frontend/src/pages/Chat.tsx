@@ -526,41 +526,41 @@ const ChatPanel: FC = observer(() => {
           // console.log(tencentcloudresult);
           // window.alert(tencentcloudresult);
           // console.log(tencentcloudoutput);
-          fetchEventSource(
-            getServerRoot(port, true) + '/v1/insert_chat',
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${commonStore.settings.apiKey}`
-              },
-              body: JSON.stringify({
-                id: commonStore.settings.uuid,
-                input: messages[messages.length - 1].content.replace(/"/g, "").replace(/'/g, ""),
-                filtered_input: JSON.stringify(tencentcloudresult),
-                output: tencentresponse.replace(/"/g, "").replace(/'/g, ""),
-                filtered_output: JSON.stringify(tencentcloudoutput)
-              }),
-              onmessage(e) {
-                // console.log(e)
-                let data;
-                try {
-                  data = JSON.parse(e.data);
-                } catch (error) {
-                  console.debug('json error', error);
-                  return;
-                }
-              },
-              async onopen(response) {
-                console.log(response)
-              },
-              onclose() {
-                console.log('Connection closed');
-              },
-              onerror(err) {
-                throw err;
-              }
-            });
+          // fetchEventSource(
+          //   getServerRoot(port, true) + '/v1/insert_chat',
+          //   {
+          //     method: 'POST',
+          //     headers: {
+          //       'Content-Type': 'application/json',
+          //       Authorization: `Bearer ${commonStore.settings.apiKey}`
+          //     },
+          //     body: JSON.stringify({
+          //       id: commonStore.settings.uuid,
+          //       input: messages[messages.length - 1].content.replace(/"/g, "").replace(/'/g, ""),
+          //       filtered_input: JSON.stringify(tencentcloudresult),
+          //       output: tencentresponse.replace(/"/g, "").replace(/'/g, ""),
+          //       filtered_output: JSON.stringify(tencentcloudoutput)
+          //     }),
+          //     onmessage(e) {
+          //       // console.log(e)
+          //       let data;
+          //       try {
+          //         data = JSON.parse(e.data);
+          //       } catch (error) {
+          //         console.debug('json error', error);
+          //         return;
+          //       }
+          //     },
+          //     async onopen(response) {
+          //       console.log(response)
+          //     },
+          //     onclose() {
+          //       console.log('Connection closed');
+          //     },
+          //     onerror(err) {
+          //       throw err;
+          //     }
+          //   });
           console.log('Connection closed');
         },
         onerror(err) {

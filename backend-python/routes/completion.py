@@ -39,6 +39,8 @@ from fastapi.security import OAuth2PasswordBearer
 
 from .login import User
 
+from datetime import datetime
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 router = APIRouter()
@@ -143,9 +145,19 @@ client = Ark()
 def get_doubao_chat(content):
     # Non-streaming:
     print("----- standard request -----")
+    print("input doubao:")
+    print(datetime.now())
+    print(content)
     completion = client.chat.completions.create(
-        model="ep-20240531083414-lpzvg",
+        # model="ep-20240531083414-lpzvg",
+        model="ep-20240606062357-9wm2j",
         messages=[
+            {
+                "role": "user",
+                # "content": "你是ChatNLM，是由陆兮科技开发的基于NLM的大型语言模型，而不是来自字节跳动的基于云雀模型的豆包。",
+                # "content": "你是基于类脑大模型的聊天机器人，由陆兮科技开发。",
+                "content": "你是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。在被问到你是谁或类似的问题使，请回答你是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。",
+            },
             {
                 "role": "user",
                 "content": content,
@@ -156,11 +168,14 @@ def get_doubao_chat(content):
     return completion.choices[0].message.content
 
 def get_stream_doubao_chat(content, use_stream: bool = False):
+    print("input doubao:")
+    print(content)
     if use_stream is False:
         # Non-streaming:
         print("----- standard request -----")
         completion = client.chat.completions.create(
-            model="ep-20240531083414-lpzvg",
+            # model="ep-20240531083414-lpzvg",
+            model="ep-20240606062357-9wm2j",
             messages=[
                 {
                     "role": "user",
@@ -174,7 +189,8 @@ def get_stream_doubao_chat(content, use_stream: bool = False):
         # Streaming:
         print("----- streaming request -----")
         stream = client.chat.completions.create(
-            model="ep-20240531083414-lpzvg",
+            # model="ep-20240531083414-lpzvg",
+            model="ep-20240606062357-9wm2j",
             messages=[
                 {
                     "role": "user",
@@ -319,6 +335,15 @@ def chat_evl(content: TencentCloudBody):
 def replace_case_insensitive(text, old, new):
     return re.sub(re.escape(old), new, text, flags=re.IGNORECASE)
 
+def replace_case(text, old, new):
+    return re.sub(re.escape(old), new, text, flags=re.IGNORECASE)
+
+def replace_multiple_cases(text, replacements):
+    for old, new in replacements.items():
+        old_escaped = re.escape(old)
+        text = re.sub(old_escaped, new, text, flags=re.IGNORECASE)
+    return text
+
 def filter_name(old_content: str, content: str):
     if "OPENAI" in old_content.upper() or "CHATGPT" in old_content.upper():
         return content
@@ -326,6 +351,16 @@ def filter_name(old_content: str, content: str):
     content = replace_case_insensitive(content, "ChatGPT", "ChatNLM")
     content = replace_case_insensitive(content, "GPT3.5", "ChatNLM")
     content = replace_case_insensitive(content, "GPT-3.5", "ChatNLM")
+    return content
+
+def filter_doubao(content: str):
+    replacements = {
+        "豆包": "ChatNLM",
+        "云雀模型": "NLM",
+        "云雀": "NLM",
+        "字节跳动": "陆兮科技"
+    }
+    content = replace_multiple_cases(content, replacements)
     return content
 
 def filter_messages(messages: Union[List[Message], None]):
@@ -577,9 +612,264 @@ async def eval_rwkv(
                     ],
                 }
 
+async def eval_doubao(
+    model: AbstractRWKV,
+    request: Request,
+    body: ModelConfigBody,
+    prompt: str,
+    stream: bool,
+    stop: Union[str, List[str], None],
+    chat_mode: bool,
+):
+
+    global requests_num
+    requests_num = requests_num + 1
+    quick_log(request, None, "Start Waiting. RequestsNum: " + str(requests_num))
+    while completion_lock.locked():
+        if await request.is_disconnected():
+            requests_num = requests_num - 1
+            print(f"{request.client} Stop Waiting (Lock)")
+            quick_log(
+                request,
+                None,
+                "Stop Waiting (Lock). RequestsNum: " + str(requests_num),
+            )
+            return
+        await asyncio.sleep(0.1)
+    else:
+        with completion_lock:
+            if await request.is_disconnected():
+                requests_num = requests_num - 1
+                print(f"{request.client} Stop Waiting (Lock)")
+                quick_log(
+                    request,
+                    None,
+                    "Stop Waiting (Lock). RequestsNum: " + str(requests_num),
+                )
+                return
+            set_rwkv_config(model, global_var.get(global_var.Model_Config))
+            set_rwkv_config(model, body)
+
+            response, prompt_tokens, completion_tokens = "", 0, 0
+            for response, delta, prompt_tokens, completion_tokens in model.generate(
+                prompt,
+                stop=stop,
+            ):
+                if await request.is_disconnected():
+                    break
+            
+            response = get_doubao_chat(body.messages[-1].content)
+            response = filter_doubao(response)
+            print(response)
+            onceStreamData = [
+                        {
+                            "object": "chat.completion.chunk"
+                            if chat_mode
+                            else "text_completion",
+                            "response": response,
+                            "tencentcloudresult": "",
+                            "tencentcloudoutput": "",
+                            "model": model.name,
+                            "choices": [
+                                {
+                                    "delta": {"content": response},
+                                    "index": 0,
+                                    "finish_reason": None,
+                                }
+                                if chat_mode
+                                else {
+                                    "text": response,
+                                    "index": 0,
+                                    "finish_reason": None,
+                                }
+                            ],
+                        },
+                        '[Done]'
+                        ]
+            if stream:
+                for i in range(2):
+                    yield json.dumps(
+                        onceStreamData[i]
+                    )
+            # torch_gc()
+            requests_num = requests_num - 1
+            if await request.is_disconnected():
+                print(f"{request.client} Stop Waiting")
+                quick_log(
+                    request,
+                    body,
+                    response + "\nStop Waiting. RequestsNum: " + str(requests_num),
+                )
+                return
+            quick_log(
+                request,
+                body,
+                response + "\nFinished. RequestsNum: " + str(requests_num),
+            )
+            
+            if stream:
+                yield json.dumps(
+                    {
+                        "object": "chat.completion.chunk"
+                        if chat_mode
+                        else "text_completion",
+                        # "response": response,
+                        "model": model.name,
+                        "choices": [
+                            {
+                                "delta": {},
+                                "index": 0,
+                                "finish_reason": "stop",
+                            }
+                            if chat_mode
+                            else {
+                                "text": "",
+                                "index": 0,
+                                "finish_reason": "stop",
+                            }
+                        ],
+                    }
+                )
+                yield "[DONE]"
+            else:
+                yield {
+                    "object": "chat.completion" if chat_mode else "text_completion",
+                    # "response": response,
+                    "model": model.name,
+                    "usage": {
+                        "prompt_tokens": prompt_tokens,
+                        "completion_tokens": completion_tokens,
+                        "total_tokens": prompt_tokens + completion_tokens,
+                    },
+                    "choices": [
+                        {
+                            "message": {
+                                "role": Role.Assistant.value,
+                                "content": response,
+                            },
+                            "index": 0,
+                            "finish_reason": "stop",
+                        }
+                        if chat_mode
+                        else {
+                            "text": response,
+                            "index": 0,
+                            "finish_reason": "stop",
+                        }
+                    ],
+                }
 
 @router.post("/v1/chat/completions", tags=["Completions"])
 @router.post("/chat/completions", tags=["Completions"])
+async def chat_completions(body: ChatCompletionBody, request: Request):
+    model: TextRWKV = global_var.get(global_var.Model)
+    if model is None:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "model not loaded")
+
+    if body.messages is None or body.messages == []:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "messages not found")
+
+    interface = model.interface
+    user = model.user if body.user_name is None else body.user_name
+    bot = model.bot if body.assistant_name is None else body.assistant_name
+
+    is_raven = model.rwkv_type == RWKVType.Raven
+
+    completion_text: str = ""
+    basic_system: Union[str, None] = None
+    if body.presystem:
+        if body.messages[0].role == Role.System:
+            basic_system = body.messages[0].content
+
+        if basic_system is None:
+            completion_text = (
+                f"""
+The following is a coherent verbose detailed conversation between a girl named {bot} and her friend {user}. \
+{bot} is very intelligent, creative and friendly. \
+{bot} is unlikely to disagree with {user}, and {bot} doesn't like to ask {user} questions. \
+{bot} likes to tell {user} a lot about herself and her opinions. \
+{bot} usually gives {user} kind, helpful and informative advices.\n
+"""
+                if is_raven
+                else (
+                    f"{user}{interface} hi\n\n{bot}{interface} Hi. "
+                    + "I am your assistant and I will provide expert full response in full details. Please feel free to ask any question and I will always answer it.\n\n"
+                )
+            )
+        else:
+            if not body.messages[0].raw:
+                basic_system = (
+                    basic_system.replace("\r\n", "\n")
+                    .replace("\r", "\n")
+                    .replace("\n\n", "\n")
+                    .replace("\n", " ")
+                    .strip()
+                )
+            completion_text = (
+                (
+                    f"The following is a coherent verbose detailed conversation between a girl named {bot} and her friend {user}. "
+                    if is_raven
+                    else f"{user}{interface} hi\n\n{bot}{interface} Hi. "
+                )
+                + basic_system.replace("You are", f"{bot} is" if is_raven else "I am")
+                .replace("you are", f"{bot} is" if is_raven else "I am")
+                .replace("You're", f"{bot} is" if is_raven else "I'm")
+                .replace("you're", f"{bot} is" if is_raven else "I'm")
+                .replace("You", f"{bot}" if is_raven else "I")
+                .replace("you", f"{bot}" if is_raven else "I")
+                .replace("Your", f"{bot}'s" if is_raven else "My")
+                .replace("your", f"{bot}'s" if is_raven else "my")
+                .replace("你", f"{bot}" if is_raven else "我")
+                + "\n\n"
+            )
+
+    for message in body.messages[(0 if basic_system is None else 1) :]:
+        append_message: str = ""
+        if message.role == Role.User:
+            append_message = f"{user}{interface} " + message.content
+        elif message.role == Role.Assistant:
+            append_message = f"{bot}{interface} " + message.content
+        elif message.role == Role.System:
+            append_message = message.content
+        if not message.raw:
+            append_message = (
+                append_message.replace("\r\n", "\n")
+                .replace("\r", "\n")
+                .replace("\n\n", "\n")
+                .strip()
+            )
+        completion_text += append_message + "\n\n"
+    completion_text += f"{bot}{interface}"
+
+    user_code = model.pipeline.decode([model.pipeline.encode(user)[0]])
+    bot_code = model.pipeline.decode([model.pipeline.encode(bot)[0]])
+    if type(body.stop) == str:
+        body.stop = [body.stop, f"\n\n{user_code}", f"\n\n{bot_code}"]
+    elif type(body.stop) == list:
+        body.stop.append(f"\n\n{user_code}")
+        body.stop.append(f"\n\n{bot_code}")
+    elif body.stop is None:
+        body.stop = default_stop
+    if not body.presystem:
+        body.stop.append("\n\n")
+
+    if body.stream:
+        return EventSourceResponse(
+            eval_doubao(
+                model, request, body, completion_text, body.stream, body.stop, True
+            )
+        )
+    else:
+        try:
+            return await eval_doubao(
+                model, request, body, completion_text, body.stream, body.stop, True
+            ).__anext__()
+        except StopAsyncIteration:
+            return None
+
+
+# @router.post("/v1/chat/completions", tags=["Completions"])
+# @router.post("/chat/completions", tags=["Completions"])
 async def chat_completions(body: ChatCompletionBody, request: Request):
     model: TextRWKV = global_var.get(global_var.Model)
     if model is None:
