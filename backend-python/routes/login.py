@@ -82,6 +82,20 @@ def sha256Encrypt(data):
     encryptedData = digest.hex()
     return encryptedData
 
+# ---- 用pymysql 操作数据库
+def get_connection():
+    host = 'localhost'
+    user = 'root'
+    port = 3306
+    db = 'luxitech'
+    password = os.environ.get("MYSQL_ROOT_PASSWORD")
+    conn = pymysql.connect(host=host, port=port, db=db, user=user, password=password)
+    return conn
+
+# conn = get_connection()
+# # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
+# cursor = conn.cursor(pymysql.cursors.DictCursor)
+
 def get_user_by_username(username: str):
     conn = get_connection()
     # 使用 cursor() 方法创建一个 dict 格式的游标对象 cursor
@@ -199,16 +213,6 @@ def update_user_db(user: User):
     result = json.dumps(result)
     # print(result)
     return result
-
-# ---- 用pymysql 操作数据库
-def get_connection():
-    host = 'localhost'
-    user = 'root'
-    port = 3306
-    db = 'luxitech'
-    password = os.environ.get("MYSQL_ROOT_PASSWORD")
-    conn = pymysql.connect(host=host, port=port, db=db, user=user, password=password)
-    return conn
 
 def authenticate_user(username: str, password: str):
     user = get_user(username)
