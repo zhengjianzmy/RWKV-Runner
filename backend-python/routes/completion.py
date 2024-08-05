@@ -759,8 +759,8 @@ async def eval_doubao(
                     ],
                 }
 
-@router.post("/v1/chat/completions", tags=["Completions"])
-@router.post("/chat/completions", tags=["Completions"])
+# @router.post("/v1/chat/completions", tags=["Completions"])
+# @router.post("/chat/completions", tags=["Completions"])
 async def chat_completions(body: ChatCompletionBody, request: Request):
     model: TextRWKV = global_var.get(global_var.Model)
     if model is None:
@@ -868,8 +868,8 @@ The following is a coherent verbose detailed conversation between a girl named {
             return None
 
 
-# @router.post("/v1/chat/completions", tags=["Completions"])
-# @router.post("/chat/completions", tags=["Completions"])
+@router.post("/v1/chat/completions", tags=["Completions"])
+@router.post("/chat/completions", tags=["Completions"])
 async def chat_completions(body: ChatCompletionBody, request: Request):
     model: TextRWKV = global_var.get(global_var.Model)
     if model is None:
