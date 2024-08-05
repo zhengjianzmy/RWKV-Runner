@@ -16,7 +16,8 @@ def get_doubao_chat(content):
     # Non-streaming:
     print("----- standard request -----")
     completion = client.chat.completions.create(
-        model="ep-20240531083414-lpzvg",
+        #model="ep-20240531083414-lpzvg",
+        model="ep-20240606062357-9wm2j",
         messages=[
             {
                 "role": "user",
