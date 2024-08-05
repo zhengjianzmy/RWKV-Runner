@@ -41,4 +41,6 @@ export type SettingsType = {
   description: string
   contactPhone: string
   contactEmail: string
+  fileName: string
+  key: string
 }

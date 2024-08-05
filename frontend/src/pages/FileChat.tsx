@@ -378,6 +378,12 @@ const ChatPanel: FC = observer(() => {
       return;
     }
 
+    if (commonStore.settings.fileName == '') {
+      console.log("请先上传文件")
+      window.alert(t('Upload File First'));
+      return;
+    }
+
     if (message) {
       const newId = uuid();
       commonStore.conversation[newId] = {
@@ -448,8 +454,8 @@ const ChatPanel: FC = observer(() => {
     chatSseControllers[answerId] = chatSseController;
     let tencentcloudresult = '';
     let tencentcloudoutput = '';
-    fetchEventSource( // https://api.openai.com/v1/chat/completions || http://127.0.0.1:${port}/v1/chat/completions
-      getServerRoot(port, true) + '/v1/chat/completions',
+    fetchEventSource(
+      getServerRoot(port, true) + '/v1/file/reply',
       {
         method: 'POST',
         headers: {
@@ -457,16 +463,8 @@ const ChatPanel: FC = observer(() => {
           Authorization: `Bearer ${commonStore.settings.apiKey}`
         },
         body: JSON.stringify({
-          messages,
-          stream: true,
-          model: commonStore.settings.apiChatModelName, // 'gpt-3.5-turbo'
-          temperature: commonStore.chatParams.temperature,
-          top_p: commonStore.chatParams.topP,
-          presence_penalty: commonStore.chatParams.presencePenalty,
-          frequency_penalty: commonStore.chatParams.frequencyPenalty,
-          user_name: commonStore.activePreset?.userName || undefined,
-          assistant_name: commonStore.activePreset?.assistantName || undefined,
-          presystem: commonStore.activePreset?.presystem && undefined
+          'query': message,
+          'key': commonStore.settings.key
         }),
         signal: chatSseController?.signal,
         onmessage(e) {
@@ -492,8 +490,6 @@ const ChatPanel: FC = observer(() => {
             commonStore.setLastModelName(data.model);
           if(data.tencentcloudresult) {
             tencentcloudresult = data.tencentcloudresult;
-            
-            
             // console.log(tencentcloudresult);
             // window.alert(data.tencentcloudresult);
           }
@@ -748,7 +744,7 @@ const ChatPanel: FC = observer(() => {
   );
 });
 
-const Chat: FC = observer(() => {
+const FileChat: FC = observer(() => {
   return (
     <div className="flex flex-col gap-1 p-2 h-full overflow-hidden">
       <WorkHeader />
@@ -757,4 +753,4 @@ const Chat: FC = observer(() => {
   );
 });
 
-export default Chat;
+export default FileChat;

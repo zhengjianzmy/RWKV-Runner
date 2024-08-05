@@ -36,6 +36,20 @@ export const pages: NavigationItem[] = [
     top: true
   },
   {
+    label: 'UploadFile',
+    path: '/uploadfile',
+    icon: <Settings20Regular />,
+    element: lazy(() => import('./UploadFile')),
+    top: true
+  },
+  {
+    label: 'FileChat',
+    path: '/filechat',
+    icon: <Chat20Regular />,
+    element: lazy(() => import('./FileChat')),
+    top: true
+  },
+  {
     label: 'Setting',
     path: '/setting',
     icon: <Settings20Regular />,

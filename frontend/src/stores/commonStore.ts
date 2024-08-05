@@ -200,7 +200,9 @@ class CommonStore {
     others: false,
     description: '',
     contactPhone: '',
-    contactEmail: ''
+    contactEmail: '',
+    fileName: '',
+    key: '',
   };
   // about
   about: AboutContent = manifest.about;
